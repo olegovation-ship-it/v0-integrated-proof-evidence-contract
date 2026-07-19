@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/evidence_manifest.schema.json",
+  "title": "V0-IPEC Deterministic Evidence Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "state",
+    "files",
+    "metrics",
+    "deterministic_result_sha256",
+    "frozen_upstreams_modified"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "deterministic_result_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "frozen_upstreams_modified": {
+      "const": false
+    }
+  }
+}

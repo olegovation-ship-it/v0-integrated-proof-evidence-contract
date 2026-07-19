@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/validator_rule_registry.schema.json",
+  "title": "V0-IPEC WP3 Validator Rule Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "rule_namespace",
+    "rule_count",
+    "theorem_coverage",
+    "theorem_coverage_count",
+    "mapping_status",
+    "typed_outcome_binding_status",
+    "conditional_theorem_ids",
+    "rules",
+    "records_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP3_VALIDATOR_RULE_REGISTRY"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP3_RULE_BINDINGS_FROZEN"
+    },
+    "rule_namespace": {
+      "type": "string"
+    },
+    "rule_count": {
+      "const": 36
+    },
+    "theorem_coverage": {
+      "const": "T121-T156"
+    },
+    "theorem_coverage_count": {
+      "const": 36
+    },
+    "mapping_status": {
+      "const": "BOUND"
+    },
+    "typed_outcome_binding_status": {
+      "const": "DEFERRED_TO_WP4"
+    },
+    "conditional_theorem_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+      }
+    },
+    "records_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 36,
+      "maxItems": 36,
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_profile",
+        "selector",
+        "binding_class",
+        "evaluation_mode"
+      ],
+      "properties": {
+        "source_profile": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/source_profile"
+        },
+        "selector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "binding_class": {
+          "enum": [
+            "EXACT_OSAP_CONSTRUCT_BINDING",
+            "LEGACY_STRUCTURAL_PROXY_BINDING"
+          ]
+        },
+        "evaluation_mode": {
+          "enum": [
+            "DEFERRED_TO_WP4",
+            "DEFERRED_NO_SEMANTIC_CERTIFICATION"
+          ]
+        }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id",
+        "primary_theorem_id",
+        "supporting_theorem_ids",
+        "canonical_name",
+        "semantic_role",
+        "diagnostic_codes",
+        "source_bindings",
+        "claim_class",
+        "conditional",
+        "conditional_premises",
+        "statement_sha256",
+        "statement_hash_class",
+        "mapping_status",
+        "binding_owner",
+        "canonical_theorem_owner",
+        "source_release",
+        "limitations",
+        "rule_record_sha256"
+      ],
+      "properties": {
+        "rule_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+        },
+        "primary_theorem_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+        },
+        "supporting_theorem_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+          }
+        },
+        "canonical_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "semantic_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "diagnostic_codes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]{2,127}$"
+          }
+        },
+        "source_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/binding"
+          }
+        },
+        "claim_class": {
+          "enum": [
+            "PROVED_THEOREM",
+            "CONDITIONAL_THEOREM"
+          ]
+        },
+        "conditional": {
+          "type": "boolean"
+        },
+        "conditional_premises": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "statement_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "statement_hash_class": {
+          "enum": [
+            "UPSTREAM_CANONICAL_HASH",
+            "DERIVED_PHASE1_NORMALIZATION"
+          ]
+        },
+        "mapping_status": {
+          "const": "BOUND"
+        },
+        "binding_owner": {
+          "const": "V0-IPEC-0.1-WP3"
+        },
+        "canonical_theorem_owner": {
+          "const": "V0_OSAP_V1_3_0"
+        },
+        "source_release": {
+          "type": "object"
+        },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_record_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "artifact_id": "V0_IPEC_WP3_PROCEDURAL_DIAGNOSTIC_REGISTRY",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP3_PROCEDURAL_BOUNDARY_FROZEN",
+  "record_count": 11,
+  "records": [
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.MISSING_REQUIRED_KEY",
+      "code": "MISSING_REQUIRED_KEY",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "INDETERMINATE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy input lacks a required top-level key."
+    },
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.INVALID_CARRIER_SORT",
+      "code": "INVALID_CARRIER_SORT",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "REJECT",
+      "logical_effect": "BLOCKING_FAILURE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy carrier sort is outside the frozen v0.12 sort set."
+    },
+    {
+      "procedural_id": "IPEC.PROC.REFERENCE.UNKNOWN_CARRIER",
+      "code": "UNKNOWN_CARRIER_REFERENCE",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "REJECT",
+      "logical_effect": "BLOCKING_FAILURE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy atom or link references an undeclared carrier."
+    },
+    {
+      "procedural_id": "IPEC.PROC.REFERENCE.UNKNOWN_REGISTER",
+      "code": "UNKNOWN_REGISTER_REFERENCE",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "REJECT",
+      "logical_effect": "BLOCKING_FAILURE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy atom or link references an undeclared register."
+    },
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.INVALID_LINK_TYPE",
+      "code": "INVALID_LINK_TYPE",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "REJECT",
+      "logical_effect": "BLOCKING_FAILURE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy link type is outside the frozen v0.12 link set."
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.INPUT_NOT_OBJECT",
+      "code": "ADAPTER_INPUT_NOT_OBJECT",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "INDETERMINATE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Adapter input must be a JSON object."
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.UNSUPPORTED_CLAIM_KIND",
+      "code": "UNSUPPORTED_CLAIM_KIND",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "OUT_OF_SCOPE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "OSAP claim kind has no declared WP3 adapter binding."
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.UNSUPPORTED_LEGACY_INFERENCE",
+      "code": "UNSUPPORTED_LEGACY_INFERENCE",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "OUT_OF_SCOPE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Legacy structure is preserved but cannot license an OSAP semantic inference."
+    },
+    {
+      "procedural_id": "IPEC.PROC.CONTRACT.UNKNOWN_RULE_REFERENCE",
+      "code": "UNKNOWN_RULE_REFERENCE",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "INDETERMINATE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "A registry or adapter binding points to an unknown rule ID."
+    },
+    {
+      "procedural_id": "IPEC.PROC.CONTRACT.DUPLICATE_BINDING",
+      "code": "DUPLICATE_BINDING",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "INDETERMINATE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "A source selector is bound more than once to the same rule."
+    },
+    {
+      "procedural_id": "IPEC.PROC.INTEGRITY.UPSTREAM_PIN_MISMATCH",
+      "code": "UPSTREAM_PIN_MISMATCH",
+      "diagnostic_class": "PROCEDURAL",
+      "default_status": "INDETERMINATE",
+      "logical_effect": "INCONCLUSIVE",
+      "theorem_id": null,
+      "validator_rule_id": null,
+      "procedural_label": true,
+      "message_template": "Observed upstream identity differs from the frozen WP0 lock."
+    }
+  ],
+  "records_sha256": "b5de29f48173a6eed402ce0def1cc3063eaed30fedcea1651d1a8ff449eb24c2"
+}

@@ -1,0 +1,130 @@
+{
+  "artifact_id": "V0_IPEC_WP4_NEGATIVE_FIXTURE_INDEX",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "fixture_count": 24,
+  "fixtures": [
+    {
+      "fixture_id": "N01",
+      "path": "fixtures/negative/N01_theorem_backed_diagnostic_missing_theorem_id.json",
+      "expected_error_code": "THEOREM_BACKED_DIAGNOSTIC_MISSING_THEOREM_ID"
+    },
+    {
+      "fixture_id": "N02",
+      "path": "fixtures/negative/N02_procedural_diagnostic_missing_label.json",
+      "expected_error_code": "PROCEDURAL_DIAGNOSTIC_MISSING_LABEL"
+    },
+    {
+      "fixture_id": "N03",
+      "path": "fixtures/negative/N03_duplicate_theorem_owner.json",
+      "expected_error_code": "DUPLICATE_THEOREM_OWNER"
+    },
+    {
+      "fixture_id": "N04",
+      "path": "fixtures/negative/N04_unknown_theorem_id.json",
+      "expected_error_code": "UNKNOWN_THEOREM_ID"
+    },
+    {
+      "fixture_id": "N05",
+      "path": "fixtures/negative/N05_theorem_rule_semantic_role_mismatch.json",
+      "expected_error_code": "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH"
+    },
+    {
+      "fixture_id": "N06",
+      "path": "fixtures/negative/N06_phase1_derived_hash_mismatch.json",
+      "expected_error_code": "PHASE1_DERIVED_HASH_MISMATCH"
+    },
+    {
+      "fixture_id": "N07",
+      "path": "fixtures/negative/N07_upstream_statement_hash_mismatch.json",
+      "expected_error_code": "UPSTREAM_STATEMENT_HASH_MISMATCH"
+    },
+    {
+      "fixture_id": "N08",
+      "path": "fixtures/negative/N08_lean_backend_evidence_missing.json",
+      "expected_error_code": "LEAN_BACKEND_EVIDENCE_MISSING"
+    },
+    {
+      "fixture_id": "N09",
+      "path": "fixtures/negative/N09_coq_backend_evidence_missing.json",
+      "expected_error_code": "COQ_BACKEND_EVIDENCE_MISSING"
+    },
+    {
+      "fixture_id": "N10",
+      "path": "fixtures/negative/N10_backend_statement_parity_mismatch.json",
+      "expected_error_code": "BACKEND_STATEMENT_PARITY_MISMATCH"
+    },
+    {
+      "fixture_id": "N11",
+      "path": "fixtures/negative/N11_upstream_source_commit_mismatch.json",
+      "expected_error_code": "UPSTREAM_SOURCE_COMMIT_MISMATCH"
+    },
+    {
+      "fixture_id": "N12",
+      "path": "fixtures/negative/N12_release_tag_target_mismatch.json",
+      "expected_error_code": "RELEASE_TAG_TARGET_MISMATCH"
+    },
+    {
+      "fixture_id": "N13",
+      "path": "fixtures/negative/N13_input_payload_hash_mismatch.json",
+      "expected_error_code": "INPUT_PAYLOAD_HASH_MISMATCH"
+    },
+    {
+      "fixture_id": "N14",
+      "path": "fixtures/negative/N14_evidence_reference_missing.json",
+      "expected_error_code": "EVIDENCE_REFERENCE_MISSING"
+    },
+    {
+      "fixture_id": "N15",
+      "path": "fixtures/negative/N15_evidence_hash_mismatch.json",
+      "expected_error_code": "EVIDENCE_HASH_MISMATCH"
+    },
+    {
+      "fixture_id": "N16",
+      "path": "fixtures/negative/N16_duplicate_evidence_id.json",
+      "expected_error_code": "DUPLICATE_EVIDENCE_ID"
+    },
+    {
+      "fixture_id": "N17",
+      "path": "fixtures/negative/N17_evidence_provenance_cycle.json",
+      "expected_error_code": "EVIDENCE_PROVENANCE_CYCLE"
+    },
+    {
+      "fixture_id": "N18",
+      "path": "fixtures/negative/N18_unsupported_fragment_reported_as_rejection.json",
+      "expected_error_code": "UNSUPPORTED_FRAGMENT_REPORTED_AS_REJECTION"
+    },
+    {
+      "fixture_id": "N19",
+      "path": "fixtures/negative/N19_certified_without_lineage.json",
+      "expected_error_code": "CERTIFIED_WITHOUT_LINEAGE"
+    },
+    {
+      "fixture_id": "N20",
+      "path": "fixtures/negative/N20_conditional_theorem_premise_missing.json",
+      "expected_error_code": "CONDITIONAL_THEOREM_PREMISE_MISSING"
+    },
+    {
+      "fixture_id": "N21",
+      "path": "fixtures/negative/N21_canonical_serialization_mismatch.json",
+      "expected_error_code": "CANONICAL_SERIALIZATION_MISMATCH"
+    },
+    {
+      "fixture_id": "N22",
+      "path": "fixtures/negative/N22_replay_nondeterministic_result.json",
+      "expected_error_code": "REPLAY_NONDETERMINISTIC_RESULT"
+    },
+    {
+      "fixture_id": "N23",
+      "path": "fixtures/negative/N23_version_lock_tuple_mismatch.json",
+      "expected_error_code": "VERSION_LOCK_TUPLE_MISMATCH"
+    },
+    {
+      "fixture_id": "N24",
+      "path": "fixtures/negative/N24_frozen_baseline_mutation_detected.json",
+      "expected_error_code": "FROZEN_BASELINE_MUTATION_DETECTED"
+    }
+  ],
+  "records_sha256": "fe0102ad48f3ed553c1fdd4498e0bb06cf0d8ee809e5602b421676d887682cb3"
+}

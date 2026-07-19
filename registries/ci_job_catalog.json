@@ -1,0 +1,251 @@
+{
+  "artifact_id": "V0_IPEC_WP5_CI_JOB_CATALOG",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "job_count": 12,
+  "global_permissions": {
+    "contents": "read"
+  },
+  "mutation_firewall": {
+    "write_permissions": false,
+    "remote_mutation_commands": false,
+    "release_actions": false
+  },
+  "jobs": [
+    {
+      "sequence": 1,
+      "job_id": "j01_contract_schema",
+      "name": "01 Contract schema",
+      "needs": [],
+      "purpose": "Validate the complete 21-schema Draft 2020-12 bundle and committed schema manifest.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/build_wp5_schema_manifest.py --check",
+        "python scripts/verify_wp5_component.py schema"
+      ],
+      "produced_artifacts": [
+        "wp5-schema-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 2,
+      "job_id": "j02_upstream_pin_integrity",
+      "name": "02 Upstream pin integrity",
+      "needs": [
+        "j01_contract_schema"
+      ],
+      "purpose": "Verify exact immutable tags, commits, DOI identities, and the read-only upstream lock.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/verify_wp5_component.py pins"
+      ],
+      "produced_artifacts": [
+        "wp5-upstream-pin-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 3,
+      "job_id": "j03_theorem_ownership_uniqueness",
+      "name": "03 Theorem ownership uniqueness",
+      "needs": [
+        "j01_contract_schema"
+      ],
+      "purpose": "Verify one canonical OSAP owner for each theorem ID T121 through T156.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/verify_wp5_component.py ownership"
+      ],
+      "produced_artifacts": [
+        "wp5-ownership-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 4,
+      "job_id": "j04_crosswalk_totality",
+      "name": "04 Crosswalk totality",
+      "needs": [
+        "j03_theorem_ownership_uniqueness"
+      ],
+      "purpose": "Verify complete 36-of-36 theorem-to-validator-rule coverage with zero unmapped records.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/verify_wp5_component.py crosswalk"
+      ],
+      "produced_artifacts": [
+        "wp5-crosswalk-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 5,
+      "job_id": "j05_validator_v0_12_adapter",
+      "name": "05 Validator v0.12 adapter",
+      "needs": [
+        "j02_upstream_pin_integrity",
+        "j04_crosswalk_totality"
+      ],
+      "purpose": "Verify conservative read-only bindings for the frozen Validator Core source profile.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/verify_wp5_component.py validator-adapter"
+      ],
+      "produced_artifacts": [
+        "wp5-validator-adapter-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 6,
+      "job_id": "j06_osap_v1_3_0_adapter",
+      "name": "06 OSAP v1.3.0 adapter",
+      "needs": [
+        "j02_upstream_pin_integrity",
+        "j04_crosswalk_totality"
+      ],
+      "purpose": "Verify exact OSAP construct, rule, theorem, diagnostic, and outcome bindings.",
+      "execution_class": "INTEGRATION_STATIC",
+      "commands": [
+        "python scripts/verify_wp5_component.py osap-adapter"
+      ],
+      "produced_artifacts": [
+        "wp5-osap-adapter-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 7,
+      "job_id": "j07_upstream_validator_replay",
+      "name": "07 Upstream Validator replay",
+      "needs": [
+        "j05_validator_v0_12_adapter"
+      ],
+      "purpose": "Checkout the exact frozen Validator Core commit and replay static/schema verification without mutation.",
+      "execution_class": "REMOTE_UPSTREAM_REPLAY",
+      "commands": [
+        "checkout validator exact commit",
+        "python scripts/static_audit.py",
+        "python scripts/schema_validate.py"
+      ],
+      "produced_artifacts": [
+        "validator-upstream-replay"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 8,
+      "job_id": "j08_upstream_osap_python_replay",
+      "name": "08 Upstream OSAP Python replay",
+      "needs": [
+        "j06_osap_v1_3_0_adapter"
+      ],
+      "purpose": "Checkout the exact OSAP source commit and replay Python tests, schema bundle, and fixtures.",
+      "execution_class": "REMOTE_UPSTREAM_REPLAY",
+      "commands": [
+        "checkout osap exact commit",
+        "pytest -q",
+        "v0-osap-fc1 schema-bundle",
+        "v0-osap-fc1 fixtures"
+      ],
+      "produced_artifacts": [
+        "osap-python-upstream-replay"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 9,
+      "job_id": "j09_upstream_osap_lean_replay",
+      "name": "09 Upstream OSAP Lean replay",
+      "needs": [
+        "j06_osap_v1_3_0_adapter"
+      ],
+      "purpose": "Checkout the exact OSAP source commit and compile the frozen Lean 4 backend.",
+      "execution_class": "REMOTE_UPSTREAM_REPLAY",
+      "commands": [
+        "checkout osap exact commit",
+        "lake build",
+        "python scripts/check_no_proof_holes.py"
+      ],
+      "produced_artifacts": [
+        "osap-lean-upstream-replay"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 10,
+      "job_id": "j10_upstream_osap_coq_replay",
+      "name": "10 Upstream OSAP Coq replay",
+      "needs": [
+        "j06_osap_v1_3_0_adapter"
+      ],
+      "purpose": "Checkout the exact OSAP source commit and compile the frozen Coq backend.",
+      "execution_class": "REMOTE_UPSTREAM_REPLAY",
+      "commands": [
+        "checkout osap exact commit",
+        "make",
+        "python scripts/check_no_proof_holes.py"
+      ],
+      "produced_artifacts": [
+        "osap-coq-upstream-replay"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 11,
+      "job_id": "j11_negative_fixture_campaign",
+      "name": "11 Negative fixture campaign",
+      "needs": [
+        "j05_validator_v0_12_adapter",
+        "j06_osap_v1_3_0_adapter"
+      ],
+      "purpose": "Replay all 24 deliberate integration failures and all eight typed outcome envelopes.",
+      "execution_class": "LOCAL_DETERMINISTIC_REPLAY",
+      "commands": [
+        "python scripts/build_wp4_fixtures.py",
+        "python scripts/verify_wp5_component.py campaign"
+      ],
+      "produced_artifacts": [
+        "wp5-negative-campaign-report"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    },
+    {
+      "sequence": 12,
+      "job_id": "j12_gate2_preaudit",
+      "name": "12 Gate 2 pre-audit",
+      "needs": [
+        "j07_upstream_validator_replay",
+        "j08_upstream_osap_python_replay",
+        "j09_upstream_osap_lean_replay",
+        "j10_upstream_osap_coq_replay",
+        "j11_negative_fixture_campaign"
+      ],
+      "purpose": "Aggregate the 11 prerequisite jobs and verify deterministic evidence manifests before WP6.",
+      "execution_class": "PREAUDIT_AGGREGATION",
+      "commands": [
+        "python scripts/build_wp5_evidence_manifests.py --check",
+        "python scripts/verify_wp5_ci_integration.py",
+        "pytest -q"
+      ],
+      "produced_artifacts": [
+        "wp5-ci-evidence-bundle"
+      ],
+      "write_permissions": false,
+      "upstream_mutation_authorized": false
+    }
+  ]
+}

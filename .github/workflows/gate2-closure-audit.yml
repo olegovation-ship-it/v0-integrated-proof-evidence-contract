@@ -1,0 +1,28 @@
+name: V0 IPEC Gate 2 Closure Audit
+on:
+  workflow_dispatch:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  wp6-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: python -m pip install -e '.[dev]'
+      - run: PYTHONPATH=checker python scripts/build_wp6_schema_manifest.py --check
+      - run: PYTHONPATH=checker python scripts/build_wp6_gate2_audit.py --check
+      - run: PYTHONPATH=checker python scripts/verify_wp6_gate2_audit.py --allow-pending
+      - run: PYTHONPATH=checker pytest -q
+      - run: python scripts/verify_sha256s.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wp6-gate2-audit-${{ github.sha }}
+          path: |
+            audit/
+            evidence/WP6_*.json
+            release/v0.1/WP6_*.json
+            SHA256SUMS.txt
+          if-no-files-found: error

@@ -1,0 +1,804 @@
+{
+  "artifact_id": "V0_IPEC_WP4_NEGATIVE_FIXTURE",
+  "fixture_id": "N05",
+  "title": "Theorem-rule semantic role mismatch",
+  "target_type": "THEOREM_RULE_CROSSWALK",
+  "mutation_class": "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH",
+  "expected_error_code": "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH",
+  "payload": {
+    "artifact_id": "V0_IPEC_WP3_THEOREM_RULE_CROSSWALK",
+    "contract_id": "V0-IPEC-0.1",
+    "version": "0.1",
+    "date": "2026-07-19",
+    "status": "WP3_CROSSWALK_FROZEN",
+    "theorem_range": "T121-T156",
+    "theorem_count": 36,
+    "rule_count": 36,
+    "unmapped_theorem_count": 0,
+    "duplicate_primary_rule_count": 0,
+    "records": [
+      {
+        "theorem_id": "T121",
+        "canonical_name": "live_guard_has_a_live_token",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.PREREQUISITE.001",
+        "rule_ids": [
+          "IPEC.RULE.GUARD.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "UNGUARDED_VALUE_CLAIM"
+        ],
+        "statement_sha256": "babb17eac963e89433881717373d9c989ea0438f68559359ba105593e4807557",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "a6d3f730b9d144527036013068c6ad9a9233fd5e8c7bfd743d83b10f38fc704e",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "76ebad056a80e97a3544bce1e41ddfc37dc8dafa5a504cfc70e6e778efb2180b"
+      },
+      {
+        "theorem_id": "T122",
+        "canonical_name": "empty_all_of_prerequisite_family_is_vacuously_satisfied",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.PREREQUISITE.001",
+        "rule_ids": [
+          "IPEC.RULE.PREREQUISITE.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "MISSING_PREREQUISITE"
+        ],
+        "statement_sha256": "f9fbfc75b7334c765f03a90c702e67d13a67c00bd00a56966da2e831d04b4e9b",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "dca17aa0ae091cd6d787d75ee3b039f62a035b77fa922d5cacb2c1f4e9991c18",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "7f48637c3e8e4dd451ba36f5140c6461b4bdbe417dc07d9666eeefb951905783"
+      },
+      {
+        "theorem_id": "T123",
+        "canonical_name": "dle_implies_current_no_live_status",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.DLE.001",
+        "rule_ids": [
+          "IPEC.RULE.DLE.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "DLE_CONFLICTS_WITH_LIVE_TOKEN"
+        ],
+        "statement_sha256": "fb907509c5f7c7710dd739cbfe7eb8a6aed6fbb38d10981012867e7f377b7a4b",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "e50f6a5b277b727c9bf42cd00148825058a9195f10793902d7284b1b10be51d7",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "59870e138525eb6c95c8d379a67f1eb1ad4ad97a56454382b3c0d4c5c00aa154"
+      },
+      {
+        "theorem_id": "T124",
+        "canonical_name": "live_residual_obstructs_robust_relative_v0",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.RESIDUAL.001",
+        "rule_ids": [
+          "IPEC.RULE.RESIDUAL.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "LIVE_RESIDUAL_OBSTRUCTS_ROBUST_RELATIVE_V0"
+        ],
+        "statement_sha256": "a8a434dacaaffd132bb762630e9ee01c50e9963938b970e24256faa9ada40d79",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "fcfd56874f656937bf85ab12cf81e5b23e71e33927f24a51028727b0299a1b9e",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "007039215b932474a07122b4eadbd1ddef936427e57635ba408c7760a99b8187"
+      },
+      {
+        "theorem_id": "T125",
+        "canonical_name": "terminal_self_certificate_exposes_empty_internal_and_external_support",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.OBSERVER.001",
+        "rule_ids": [
+          "IPEC.RULE.OBSERVER.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "TERMINAL_SELF_CERTIFICATE_NOT_EXHAUSTED"
+        ],
+        "statement_sha256": "d92314a732e2647ccf1246b8b7f03aa2e3558df8b08fcce65d8cdefc7dae7f55",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "2e2f8ba2ad3c5ad53546cab7d8e712604dab9899dd9b4c455d9f7bdd2ffbd1b2",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "694acf4857be116bbcc6d62c94318530c369a5b8544ed782169b655a2eaba28a"
+      },
+      {
+        "theorem_id": "T126",
+        "canonical_name": "direct_branch_local_to_absolute_promotion_violates_the_firewall",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.FIREWALL.001",
+        "rule_ids": [
+          "IPEC.RULE.FIREWALL.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "ABSOLUTE_RELATIVE_FIREWALL"
+        ],
+        "statement_sha256": "1a7731bf92d9272f3f51e33b80d8cf5669acf85d545f1e3dee0a0abb8c64c252",
+        "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "f6c68a3f26ef9c02d0bc079c6a7984f56f1d080ce3634e0c3ac5ee32ca6a9780",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "6f138e47d472a07f671af70b416059ac274d9f8499302b0b076c8e836ddbc893"
+      },
+      {
+        "theorem_id": "T127",
+        "canonical_name": "closure_minimality",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CLOSURE.001",
+        "rule_ids": [
+          "IPEC.RULE.CLOSURE.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "PREREQUISITE_CLOSURE_NOT_LEAST"
+        ],
+        "statement_sha256": "65aab2064dc6d0a47652e2cba1813a8e65c9e4e174db6d343d7a145577950a54",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "fb40dad1a3275d7a09496d11079cb0ab1e9463e085f4f95cd340644f663bcdf4",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "451cbaf879bfc127fcc503112875f034cf20e904bcb0311f0184d45d7a81fc95"
+      },
+      {
+        "theorem_id": "T128",
+        "canonical_name": "alternative_support_transparency",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.SUPPORT.001",
+        "rule_ids": [
+          "IPEC.RULE.SUPPORT.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "ALTERNATIVE_SUPPORT_SELECTION_REQUIRED",
+          "INVALID_ALTERNATIVE_SUPPORT_SELECTION"
+        ],
+        "statement_sha256": "d9979d741f79844b2ac39ec8a36020eb31afc601cf89cc6231d55f90995e1bae",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "af35410c2f0e119fbe34a99e94ab66b443640b7f504491e958b7a7bb4e7ca5d6",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "898b84186e0a00a2305c812f9100541642e613f7b68c444c8598249ebdd430fd"
+      },
+      {
+        "theorem_id": "T129",
+        "canonical_name": "compatibility_preservation",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.COMPATIBILITY.001",
+        "rule_ids": [
+          "IPEC.RULE.COMPATIBILITY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "COMPATIBILITY_CONSTRAINT_VIOLATION",
+          "ACTIVE_PROFILE_REGISTER_NOT_LIVE"
+        ],
+        "statement_sha256": "737cd617596ade973388e887213e2be9e83cde2722472296f977b8ec9d351713",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "0b3a9f8ce1208518cf329f01a76ce5e40724fbd7bde3b7b3ea475fa9a9788285",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "c46b31b923ed0a6b72c1022b77acfa24cb7e2da05a8d103156b9146a04ad966a"
+      },
+      {
+        "theorem_id": "T130",
+        "canonical_name": "dimensional_readiness_soundness",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.READINESS.001",
+        "rule_ids": [
+          "IPEC.RULE.READINESS.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "PROTOCOL_READY_WITHOUT_LIVE_PREREQUISITES"
+        ],
+        "statement_sha256": "16f11c1555e11ed71f77549f4ce2cfa3d20b5fae8f380f9d0f0634ea94d69aae",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "66f1780927264eab190ee060e7c43a8cf059d2988bec232824ab472a2e0c44c2",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "d5ea652abd85480147c1447a582cabe78bcf3cd80a5976edaa734373126f21be"
+      },
+      {
+        "theorem_id": "T131",
+        "canonical_name": "undefined_is_not_zero",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.DOMAIN.001",
+        "rule_ids": [
+          "IPEC.RULE.DOMAIN.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "UNDEFINED_DOMAIN_COERCED_TO_NUMERIC",
+          "READY_VALUE_MISSING_NUMERIC"
+        ],
+        "statement_sha256": "37dd0964fb46fb2e5644b41a9ed5f24ed47c98d98adace0a205d4c41f449f923",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "082ed4582ccb516f50e95e77f37dd7022763cfafafb02dfd193e7e8af226185f",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "48bd19162344a28b33403a6d378d4580fefb539fa57c2c526a59e7444ea060e0"
+      },
+      {
+        "theorem_id": "T132",
+        "canonical_name": "dle_history_adequacy",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.DLE.002",
+        "rule_ids": [
+          "IPEC.RULE.DLE.002"
+        ],
+        "supporting_theorem_ids": [
+          "T123"
+        ],
+        "diagnostic_codes": [
+          "DLE_WITHOUT_HISTORICAL_SOURCE",
+          "DLE_CONFLICTS_WITH_LIVE_TOKEN"
+        ],
+        "statement_sha256": "6acfbb93908aa1cbd03bb638bdabbe1d7520467ed057dbed0d509a65166b6c9f",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "b9e08e8d6b9ef71eaf4ac0b94452c483709e39d9251469c24ecaf568c4f0731f",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "9ac6c0b4b4ca4a8c1f05e53f1e7ffd04105f1154c4be3de588f081ad3f28e178"
+      },
+      {
+        "theorem_id": "T133",
+        "canonical_name": "fresh_token_reactivation",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.TOKEN.001",
+        "rule_ids": [
+          "IPEC.RULE.TOKEN.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "REACTIVATION_TOKEN_ID_REUSED"
+        ],
+        "statement_sha256": "2da3a4a7ca0567b579b1f0e3cad693bc9c2df26a8db5196e5ad0a1c8b57d9373",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "cee45ab897898c00e1e3c11f73cb9b004721ade0751830578149a3b585042c9c",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "c052e3e2d58234256bf4180d87eb6b5b50353ce2a2237a9e6f2a2fcc03e98ded"
+      },
+      {
+        "theorem_id": "T134",
+        "canonical_name": "raw_residual_obstruction",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.RESIDUAL.002",
+        "rule_ids": [
+          "IPEC.RULE.RESIDUAL.002"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "LIVE_RESIDUAL_OBSTRUCTS_RAW_RELATIVE_V0"
+        ],
+        "statement_sha256": "58eab9c062025ffc1a1c792cdd11562456664f53122b2f676d820da3334f42cd",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "20b4a24ad2c0a6ae908badb1b445bf75dfc5a753b2b0f3546e8bd068b25383b2",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "48376cc7a28c4c4a891f63d6e48142fcf99d8501d0c54276db6ccce95a555236"
+      },
+      {
+        "theorem_id": "T135",
+        "canonical_name": "robust_residual_obstruction",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.RESIDUAL.003",
+        "rule_ids": [
+          "IPEC.RULE.RESIDUAL.003"
+        ],
+        "supporting_theorem_ids": [
+          "T124",
+          "T134"
+        ],
+        "diagnostic_codes": [
+          "LIVE_NONELIMINABLE_RESIDUAL_OBSTRUCTS_ROBUST_RELATIVE_V0"
+        ],
+        "statement_sha256": "73d80a3be8e1ee97942f304f68a1d91ad1e668c655d487e8894ddd62b3865301",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "c77ed9cb07b8bc248298d1920cfe0fe351484970adfde741c1db7ac52158244d",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "fd73205ed2c9e3e88fa25116e83adf1cd2133bc58817a6ec8604c11b0068e034"
+      },
+      {
+        "theorem_id": "T136",
+        "canonical_name": "relative_to_absolute_non_promotion",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.FIREWALL.002",
+        "rule_ids": [
+          "IPEC.RULE.FIREWALL.002"
+        ],
+        "supporting_theorem_ids": [
+          "T126"
+        ],
+        "diagnostic_codes": [
+          "ABSOLUTE_RELATIVE_FIREWALL"
+        ],
+        "statement_sha256": "15ac52baef0a828ad24d200d1c99b5f774bb9824e3ae66fceea71cf6d0272635",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "1e8b6d156c84fe9c6e82d18abcba5d6730cfd7f28b55319c1840eb3a9e9a0f53",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "e3d30ddb67d3628a7dd1e1ef972e479682c1697c7dbf2c2854ce75d6f5064932"
+      },
+      {
+        "theorem_id": "T137",
+        "canonical_name": "approximation_non_identity",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.FIREWALL.003",
+        "rule_ids": [
+          "IPEC.RULE.FIREWALL.003"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "APPROXIMATION_DOES_NOT_ENTAIL_V0_IDENTITY"
+        ],
+        "statement_sha256": "cb193d0dfed6153718fef1e9189c33ef35a0cfa0758da730e81ee5dfd67b4b17",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "13f6aac6147fcf2b1af5e28fb37b3307e0bdd1839089c17b067b4cc46be75cce",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "52882e1a2606d76f221418ebe883bf82bfa387cdec58d74d1b8992695584b163"
+      },
+      {
+        "theorem_id": "T138",
+        "canonical_name": "terminal_self_certification_limit",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.OBSERVER.002",
+        "rule_ids": [
+          "IPEC.RULE.OBSERVER.002"
+        ],
+        "supporting_theorem_ids": [
+          "T125"
+        ],
+        "diagnostic_codes": [
+          "SAME_STATE_SELF_CERTIFICATION_FORBIDDEN"
+        ],
+        "statement_sha256": "ce0b7004c27377f29750e0ea136d3064cfeccda9d3463bc3bd473c5dfd20a2ab",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "b230b635bc862a79d8a1f5ab1378f668ee7a54cb6d7437be7a92050fc274fdad",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "6b88a98d76870ce77ba3cb8fd3645b0a0d406e19ade2e5dfcc7f8220645c9063"
+      },
+      {
+        "theorem_id": "T139",
+        "canonical_name": "archive_non_guard_export",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.ARCHIVE.001",
+        "rule_ids": [
+          "IPEC.RULE.ARCHIVE.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "ARCHIVE_CANNOT_EXPORT_CURRENT_GUARD"
+        ],
+        "statement_sha256": "aebb1470c81703c674936edb9bfc8f344604dd81452ca4516b4996b6f203adea",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "8c5bbfc4f828b4ead19f259e436e5d648dff2da77ae66ce5ef9a623ff10eee02",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "f1b2c211c5000fba9a1792c38ab4dfc8484232f0b6579c928e5d0fe4e943a2ea"
+      },
+      {
+        "theorem_id": "T140",
+        "canonical_name": "independent_witness_conditional_sufficiency",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.WITNESS.001",
+        "rule_ids": [
+          "IPEC.RULE.WITNESS.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "INDEPENDENT_WITNESS_CERTIFICATE_UNSUPPORTED"
+        ],
+        "statement_sha256": "d304ebc9b96394e4bef4560373cce1f380908744fb26be88093db1e6e0e6ae7a",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "CONDITIONAL_THEOREM",
+        "conditional": true,
+        "ownership_record_sha256": "37aa1a9d8864d4075717f8e0583e8189a48d66352bd479195149ba72eb22d8f4",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "0c0a3c66c81f26242385f9f3698d77ef2493f34712e78e4c4f4cff6c725ed4f9"
+      },
+      {
+        "theorem_id": "T141",
+        "canonical_name": "no_container",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CONTAINMENT.001",
+        "rule_ids": [
+          "IPEC.RULE.CONTAINMENT.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "V0_ORDINARY_CONTAINS_FORBIDDEN",
+          "CONTAINMENT_REFERENCE_SORT_MISMATCH"
+        ],
+        "statement_sha256": "6fc052097ee11289e7f0a2fe67179da0e05f39cc0eac9d5d61e0801e6072b833",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "25528be3e155376ad0718d16b81e4cc15421eee13c0a66c87d1aec3d134c7d7c",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "49968654bf74c8a3e001bb614c1e91b204411fe110ba0f48104474abb0ca183c"
+      },
+      {
+        "theorem_id": "T142",
+        "canonical_name": "branch_label_insufficiency",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.BRANCH.001",
+        "rule_ids": [
+          "IPEC.RULE.BRANCH.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "BRANCH_LABELS_DO_NOT_PROVE_DISTINCTNESS",
+          "BRANCH_DISTINCTNESS_EVIDENCE_REQUIRED"
+        ],
+        "statement_sha256": "7cf7b272ad78fcecb58afa0ac951447214e8f99654132f6985b8f4bc8908f3e0",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "2842f3927e5c79debc3c5505c6955239cdff8c6e05dc28248bc6b939e35bb64b",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "4e89ee1b9d0bdf49133381dc8d7322691021bbe729aba2e05a33e54b0a307ff7"
+      },
+      {
+        "theorem_id": "T143",
+        "canonical_name": "cardinality_licensing",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CARDINALITY.001",
+        "rule_ids": [
+          "IPEC.RULE.CARDINALITY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "DEFERRED_CARDINALITY_CERT"
+        ],
+        "statement_sha256": "a2a610aebba5a9302279a3d64a74258cf4c49f01805fbfa29541118f7d3b4280",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "4b6eb18e28dbd19a419aa6ce744dd9af34de9f52eda096b7d61d5e52b70c7f80",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "a7a74b82c8b4dde9a404d720ba6c8a756e4a5ae25a5302dae8f12a95a9921d1c"
+      },
+      {
+        "theorem_id": "T144",
+        "canonical_name": "diagnostic_precedence_totality",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.DIAGNOSTIC.001",
+        "rule_ids": [
+          "IPEC.RULE.DIAGNOSTIC.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "DIAGNOSTIC_PRIMARY_STATUS_MISMATCH"
+        ],
+        "statement_sha256": "62804e8e051de8c850b24e0088d681d349852daed0ed1c17b96e58270d495218",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "823cd7bd522e01b91b6fa9253dd4138cd262eb7e855850e2ec8decee170709c1",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "533242618adf45618c1a1f885d432f683e6efd7800809f9cf8edd3d8d82e7297"
+      },
+      {
+        "theorem_id": "T145",
+        "canonical_name": "Canonical serialization determinism",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CANONICAL.001",
+        "rule_ids": [
+          "IPEC.RULE.CANONICAL.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "CANONICALIZATION_PROFILE_MISMATCH",
+          "CANONICAL_SERIALIZATION_HASH_MISMATCH"
+        ],
+        "statement_sha256": "2df8857445301e8dda38d555647c198437ed9c9f482922f0880c8be7be1b5893",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "14eff162b16aff4f16e9954d0e382f72dc3f8947a95512d5a01aada3676c6e03",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "5d9b3f573a185fc6260578f87d6ee8d4c7da7ea11212ec6f42bd2dd6192e66d0"
+      },
+      {
+        "theorem_id": "T146",
+        "canonical_name": "Round-trip identity",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CANONICAL.002",
+        "rule_ids": [
+          "IPEC.RULE.CANONICAL.002"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "ROUND_TRIP_IDENTITY_MISMATCH"
+        ],
+        "statement_sha256": "3c453a5aa785c2f52c21720087ddb0f1ed47ed2256dbad87691bd8df6f4d8478",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "099add8093abbc3d1d697b8903554c053825fa6446e72ac905a26d68a36ecfc0",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "f7b52360a8a8ad20b3598313b0662bbd534a0e60fc34774867ad5d5536347eac"
+      },
+      {
+        "theorem_id": "T147",
+        "canonical_name": "Replay determinism",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.REPLAY.001",
+        "rule_ids": [
+          "IPEC.RULE.REPLAY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "REPLAY_INPUTS_NOT_PINNED",
+          "REPLAY_NONDETERMINISTIC_RESULT"
+        ],
+        "statement_sha256": "f762e4b5037e39b17724604a05323e91ecba573f41cda648778b1e65c431434e",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "cb888967765d5009cd57b543b8820045ef247f5628fc981cebe1e732ed75b984",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "35ca47bc0fb025fe53aaec67bb4580fbdccbfed93c2da75f8913ba3efebc7c52"
+      },
+      {
+        "theorem_id": "T148",
+        "canonical_name": "Schema migration visibility",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.MIGRATION.001",
+        "rule_ids": [
+          "IPEC.RULE.MIGRATION.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "HIDDEN_SCHEMA_MIGRATION_COERCION",
+          "SCHEMA_MIGRATION_RECORD_REQUIRED"
+        ],
+        "statement_sha256": "7e0d91ab43ca45ec56177e070e4faff0346e912ccae7f1ac7b6b08f917543074",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "4aef4f71ef0164acd4812e4dfe0fa3159bff542465157e19f1980a37551fe211",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "d122e171928e948183ed47c727bd74a3c10911883dc92dc90b4957a6cb50751e"
+      },
+      {
+        "theorem_id": "T149",
+        "canonical_name": "Backend statement correspondence",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.PARITY.001",
+        "rule_ids": [
+          "IPEC.RULE.PARITY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "BACKEND_STATEMENT_HASH_MISMATCH"
+        ],
+        "statement_sha256": "761c82d404861815d936b908ef52ff2d5514f7b62c7672e010dab8d0bb8938e2",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "f9693f9356e8c17bce590e6f7137190b6a8270ef1c65c70e3cf7babdd99d8124",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "f5fa1f3564e271a0d00ce13730461da498e286f96d2de9e12892e31d2091e52a"
+      },
+      {
+        "theorem_id": "T150",
+        "canonical_name": "Accepted-fragment checker soundness",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.SOUNDNESS.001",
+        "rule_ids": [
+          "IPEC.RULE.SOUNDNESS.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "CHECKER_SOUNDNESS_PREMISES_UNPROVED",
+          "CHECKER_PASS_VIOLATES_ACCEPTED_FRAGMENT_SOUNDNESS"
+        ],
+        "statement_sha256": "1a755ddc81c06562926e634389401eb42e43fe8ea5f53a5792cd1e46a0012906",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "CONDITIONAL_THEOREM",
+        "conditional": true,
+        "ownership_record_sha256": "06e369b596ed07f6b599c440e7039e4fbba91d99b4d2420aed0b5b4ecc69360e",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "d4bad0e6da4be31347fbbbb40b5ed43a30fecf5b5b34131379fa86b7492e0200"
+      },
+      {
+        "theorem_id": "T151",
+        "canonical_name": "Explicit extension provenance",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.EXTENSION.001",
+        "rule_ids": [
+          "IPEC.RULE.EXTENSION.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "EXTENSION_PROVENANCE_RECORD_REQUIRED",
+          "EXTENSION_BASE_CEILING_MISMATCH",
+          "EXTENSION_THEOREM_RANGE_MISMATCH"
+        ],
+        "statement_sha256": "71b249ed11c2d9db6378b5ccbdd868a62321d4ff7d5c60a200b344b965c7042f",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "4d3431fac55eb702f8a9d88b3980965a731d073bd1164007c930821140a979bf",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "732e833564be94907ee8c240635e7674ef1e886cad0e7d0277bf7946667ffc32"
+      },
+      {
+        "theorem_id": "T152",
+        "canonical_name": "Declared claim-vocabulary closure",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.VOCABULARY.001",
+        "rule_ids": [
+          "IPEC.RULE.VOCABULARY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "UNDECLARED_EXTENSION_CLAIM_KIND"
+        ],
+        "statement_sha256": "3fbe6f0a13dcd52915789ceb436da7ae4cad1c2bcca4f72c1103a7798917033a",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "e9703c0959ec457f6c18c67530fed0adb5f3b3b46b26abd8e8c6d552fe535215",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "9336c86f9d5edf9268ddfbd351eaf64776f44474207da4ccc2d5c1259de8d746"
+      },
+      {
+        "theorem_id": "T153",
+        "canonical_name": "Diagnostic envelope determinism",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.DIAGNOSTIC.002",
+        "rule_ids": [
+          "IPEC.RULE.DIAGNOSTIC.002"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "DIAGNOSTIC_REPLAY_INPUTS_NOT_PINNED",
+          "DIAGNOSTIC_ENVELOPE_NONDETERMINISTIC"
+        ],
+        "statement_sha256": "11c2da228164740868dcbad94fd08e073d8eaca1b6c3a6e31fbac6f9267648d6",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "7744713eb5a66a5482e42619a6bb1369407332d113257226fb591b07ca7370ac",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "08973f6c99a14934e77e37195c5461c80afddc894913893e98c7c4214fcdba90"
+      },
+      {
+        "theorem_id": "T154",
+        "canonical_name": "Evidence provenance acyclicity",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.PROVENANCE.001",
+        "rule_ids": [
+          "IPEC.RULE.PROVENANCE.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "EVIDENCE_PROVENANCE_CYCLE"
+        ],
+        "statement_sha256": "58385a599ea3e1854a9536a752b8bf7873c7f5e0fbc3ca3338c8379338cd861c",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "751964e1d2fe92aca316f7177dba2b3236d3859ff56d23a3d6bbe9b02515aeae",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "3909adfc6a59833f8c5253e2dda4cedf6c3daaa11f58f4011beb00cb68b58a8c"
+      },
+      {
+        "theorem_id": "T155",
+        "canonical_name": "Version-lock coherence",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.VERSION.001",
+        "rule_ids": [
+          "IPEC.RULE.VERSION.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "VERSION_LOCK_RECORD_REQUIRED",
+          "VERSION_LOCK_TUPLE_MISMATCH"
+        ],
+        "statement_sha256": "50ff01353da45dc93e4684801ee108cc3c82e1c4e2fc670ec9fbebb96a5986c2",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "PROVED_THEOREM",
+        "conditional": false,
+        "ownership_record_sha256": "8dc3fc3eb8ad71b977eb5819451cdfe2219e5777c6f4ce41134751262b3627dc",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "63746d58841f3ed057449bbb3e2fbda1de7760767bea98465df84097b3148e41"
+      },
+      {
+        "theorem_id": "T156",
+        "canonical_name": "Conservative extension non-interference",
+        "canonical_owner": "V0_OSAP_V1_3_0",
+        "primary_rule_id": "IPEC.RULE.CONSERVATIVITY.001",
+        "rule_ids": [
+          "IPEC.RULE.CONSERVATIVITY.001"
+        ],
+        "supporting_theorem_ids": [],
+        "diagnostic_codes": [
+          "CONSERVATIVE_EXTENSION_PREMISES_UNPROVED",
+          "BASELINE_RESULT_CHANGED_BY_EXTENSION"
+        ],
+        "statement_sha256": "5eaaa1c210ee125c70fd5dfdc83fd1f4ccb46b54baa6d4e58086adc5e1cc495a",
+        "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+        "claim_class": "CONDITIONAL_THEOREM",
+        "conditional": true,
+        "ownership_record_sha256": "e66fc0443c3ba90bffdc7c6c53d7b97167f268da76962cc8264935090f7f10ce",
+        "coverage_status": "BOUND",
+        "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+        "crosswalk_record_sha256": "feabea89fe0ae331c4356595592a44887d11b5ea984cbd5c4c7d829130ff7721"
+      }
+    ],
+    "records_sha256": "5e2dae2b17a99db1b5515bcb2f47f9514cb968c98fe03ee58ba65df0d36d441c"
+  },
+  "auxiliary": {}
+}

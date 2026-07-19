@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/gate2_closure_record.schema.json",
+  "title": "V0-IPEC Gate 2 Closure Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "decision",
+    "gate2_closed",
+    "closure_authorized",
+    "reason",
+    "required_next_evidence",
+    "release_actions",
+    "nonclaims"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP6_GATE2_CLOSURE_RECORD"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "CLOSE_GATE2",
+        "HOLD_FOR_HOSTED_CI",
+        "REJECT_CLOSURE"
+      ]
+    },
+    "gate2_closed": {
+      "type": "boolean"
+    },
+    "closure_authorized": {
+      "type": "boolean"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "required_next_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "release_actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag_created",
+        "github_release_created",
+        "zenodo_published",
+        "doi_mutated"
+      ],
+      "properties": {
+        "tag_created": {
+          "const": false
+        },
+        "github_release_created": {
+          "const": false
+        },
+        "zenodo_published": {
+          "const": false
+        },
+        "doi_mutated": {
+          "const": false
+        }
+      }
+    },
+    "nonclaims": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

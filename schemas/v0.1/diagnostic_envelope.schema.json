@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/diagnostic_envelope.schema.json",
+  "title": "V0-IPEC Diagnostic Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "envelope_id",
+    "aggregation_profile",
+    "primary_diagnostic_id",
+    "diagnostics"
+  ],
+  "properties": {
+    "envelope_id": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+    },
+    "aggregation_profile": {
+      "const": "V0-IPEC-WP4-TYPED-OUTCOME-1"
+    },
+    "primary_diagnostic_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    }
+  },
+  "$defs": {
+    "diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnostic_id",
+        "code",
+        "diagnostic_class",
+        "diagnostic_status",
+        "logical_effect",
+        "message",
+        "instance_path",
+        "theorem_id",
+        "validator_rule_id",
+        "rule_binding_status",
+        "procedural_label",
+        "related_ids",
+        "evidence_reference_ids"
+      ],
+      "properties": {
+        "diagnostic_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+        },
+        "code": {
+          "pattern": "^[A-Z][A-Z0-9_]{2,127}$",
+          "type": "string"
+        },
+        "diagnostic_class": {
+          "enum": [
+            "THEOREM_BACKED",
+            "PROCEDURAL"
+          ]
+        },
+        "diagnostic_status": {
+          "enum": [
+            "REJECT",
+            "DEFERRED",
+            "INDETERMINATE",
+            "OUT_OF_SCOPE",
+            "INFO"
+          ]
+        },
+        "logical_effect": {
+          "enum": [
+            "BLOCKING_FAILURE",
+            "NONBLOCKING_WARNING",
+            "INCONCLUSIVE",
+            "NONE"
+          ]
+        },
+        "message": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        },
+        "instance_path": {
+          "type": "string"
+        },
+        "theorem_id": {
+          "oneOf": [
+            {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validator_rule_id": {
+          "oneOf": [
+            {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rule_binding_status": {
+          "enum": [
+            "BOUND",
+            "DEFERRED_TO_WP3",
+            "PROCEDURAL_NOT_APPLICABLE"
+          ]
+        },
+        "procedural_label": {
+          "type": "boolean"
+        },
+        "related_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+          }
+        },
+        "evidence_reference_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "diagnostic_class": {
+                "const": "THEOREM_BACKED"
+              }
+            },
+            "required": [
+              "diagnostic_class"
+            ]
+          },
+          "then": {
+            "properties": {
+              "theorem_id": {
+                "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+              },
+              "procedural_label": {
+                "const": false
+              },
+              "rule_binding_status": {
+                "enum": [
+                  "BOUND",
+                  "DEFERRED_TO_WP3"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "diagnostic_class": {
+                "const": "PROCEDURAL"
+              }
+            },
+            "required": [
+              "diagnostic_class"
+            ]
+          },
+          "then": {
+            "properties": {
+              "theorem_id": {
+                "type": "null"
+              },
+              "validator_rule_id": {
+                "type": "null"
+              },
+              "procedural_label": {
+                "const": true
+              },
+              "rule_binding_status": {
+                "const": "PROCEDURAL_NOT_APPLICABLE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "rule_binding_status": {
+                "const": "BOUND"
+              }
+            },
+            "required": [
+              "rule_binding_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "validator_rule_id": {
+                "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/theorem_rule_crosswalk.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "theorem_range",
+    "theorem_count",
+    "rule_count",
+    "unmapped_theorem_count",
+    "duplicate_primary_rule_count",
+    "records",
+    "records_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP3_THEOREM_RULE_CROSSWALK"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP3_CROSSWALK_FROZEN"
+    },
+    "theorem_range": {
+      "const": "T121-T156"
+    },
+    "theorem_count": {
+      "const": 36
+    },
+    "rule_count": {
+      "const": 36
+    },
+    "unmapped_theorem_count": {
+      "const": 0
+    },
+    "duplicate_primary_rule_count": {
+      "const": 0
+    },
+    "records_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 36,
+      "maxItems": 36,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "theorem_id",
+          "canonical_name",
+          "canonical_owner",
+          "primary_rule_id",
+          "rule_ids",
+          "supporting_theorem_ids",
+          "diagnostic_codes",
+          "statement_sha256",
+          "statement_hash_class",
+          "claim_class",
+          "conditional",
+          "ownership_record_sha256",
+          "coverage_status",
+          "typed_outcome_binding_status",
+          "crosswalk_record_sha256"
+        ],
+        "properties": {
+          "theorem_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+          },
+          "canonical_name": {
+            "type": "string"
+          },
+          "canonical_owner": {
+            "const": "V0_OSAP_V1_3_0"
+          },
+          "primary_rule_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+          },
+          "rule_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+            }
+          },
+          "supporting_theorem_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+            }
+          },
+          "diagnostic_codes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_sha256": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+          },
+          "statement_hash_class": {
+            "enum": [
+              "UPSTREAM_CANONICAL_HASH",
+              "DERIVED_PHASE1_NORMALIZATION"
+            ]
+          },
+          "claim_class": {
+            "enum": [
+              "PROVED_THEOREM",
+              "CONDITIONAL_THEOREM"
+            ]
+          },
+          "conditional": {
+            "type": "boolean"
+          },
+          "ownership_record_sha256": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+          },
+          "coverage_status": {
+            "const": "BOUND"
+          },
+          "typed_outcome_binding_status": {
+            "const": "DEFERRED_TO_WP4"
+          },
+          "crosswalk_record_sha256": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+          }
+        }
+      }
+    }
+  }
+}

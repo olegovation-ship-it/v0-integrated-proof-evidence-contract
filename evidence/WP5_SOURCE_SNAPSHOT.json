@@ -1,0 +1,45 @@
+{
+  "contract_id": "V0-IPEC-0.1",
+  "profile": "WP5_DETERMINISTIC_SOURCE_SNAPSHOT",
+  "upstreams": [
+    {
+      "upstream_id": "V0_VALIDATOR_CORE_V0_12",
+      "source_ref": "v0.12-compiler-passed-freeze",
+      "exact_source_commit": "3540f47198140ca0a3612f247cfe356fa7fba2cb",
+      "doi": "10.5281/zenodo.21285577"
+    },
+    {
+      "upstream_id": "V0_OSAP_V1_3_0",
+      "source_ref": "v1.3.0",
+      "exact_source_commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+      "doi": "10.5281/zenodo.21346728"
+    }
+  ],
+  "files": {
+    "locks/upstreams.lock.json": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26",
+    "baseline/theorem_ownership_T121_T156.json": "1839950a1b5540cac7d39897eb1f0ea4affd731fb4f713d7c543ee58f5459069",
+    "registries/theorem_rule_crosswalk.json": "202cdd32c397b54eb7787325e06c151d52c5d70dfa47cf54240349f55066df19",
+    "registries/validator_rules.json": "ea16af86d0a9a41d4a1d2f4d85ddf9d9ce7f146246d1eaca9dd7861b1dfba591",
+    "registries/adapter_bindings.json": "521c104f7ac2eccd0801705a6658660cf6ddc3f4363403f01df59e38a4470e0a",
+    "registries/typed_outcomes.json": "07001017c831a4d60f41ed04729a2cc836badb079f08b851a54437dd8da0abd5",
+    "registries/outcome_bindings.json": "d8edc2673e1d75052223ecef6d0892ed19cdc39ab4c40cb2fda7464dcfccf4e4",
+    "fixtures/expected/WP4_NEGATIVE_CAMPAIGN_REPORT.json": "a4cb616a853e38ce6a2cf718c131d52306c4d3ed003ba1c90225be9efbee1f60",
+    "registries/ci_job_catalog.json": "8743ad17a6678acb82844743202c4a53ea20496d2aacc2c33865ea9eefb04d1f"
+  },
+  "metrics": {
+    "theorem_owners": 36,
+    "theorem_rule_bindings": 36,
+    "validator_rules": 36,
+    "adapter_bindings": 40,
+    "typed_outcomes": 8,
+    "procedural_bindings": 11,
+    "negative_fixtures": 24,
+    "negative_fixtures_rejected": 24,
+    "conditional_theorems": [
+      "T140",
+      "T150",
+      "T156"
+    ]
+  },
+  "frozen_upstreams_modified": false
+}

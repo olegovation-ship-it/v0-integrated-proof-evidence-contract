@@ -1,0 +1,15 @@
+{
+  "ev.wp4.t124.trace": {
+    "kind": "trace",
+    "tid": "T124",
+    "outcome": "REJECTED_LIVE_RESIDUAL"
+  },
+  "ev.wp4.t124.lean": {
+    "kind": "lean",
+    "tid": "T124"
+  },
+  "ev.wp4.t124.coq": {
+    "kind": "coq",
+    "tid": "T124"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "artifact_id": "V0_IPEC_WP6_GATE2_AUDIT_MANIFEST",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "state": "GATE2_AUDIT_COMPLETE_CLOSURE_HOLD_HOSTED_CI_PENDING",
+  "files": {
+    "baseline/WP5_BASELINE_REFERENCE.json": "1f4181ee1b30b21af70c726ddc448624a4ae98f3c4878034793fe40894b7dc4c",
+    "schemas/v0.1/schema_bundle_manifest.json": "4112dc7cd5ca56ea607c862448156d9ef12c61e849b0189ba0f555006f64b42c",
+    "audit/WP6_GATE2_ACCEPTANCE_GATES.json": "5e6084cdc0baad5c3f33ff04eba23f9b51354a509baba7f87074eb0f1a9c40c0",
+    "audit/WP6_GATE2_AUDIT_RESULT.json": "08f57d52f53d22a681db2b6d97557befba26eaa61f43939df7fa71a0913f18e2",
+    "evidence/WP6_LOCAL_AUDIT_EVIDENCE.json": "5aee32a5bcf0a20681924b2b1869e53c98343a3758d4f7ea4f986dea42fdbe36",
+    "evidence/WP6_CLOSURE_ELIGIBILITY_REPORT.json": "7702b448fc7ba1a5116983db1fdb77d314f5aa97fbb008ff0c868c3edcff7a2c",
+    "evidence/WP6_HOSTED_CI_EVIDENCE_INTAKE_TEMPLATE.json": "7a7630ea84c901932f58b9d8fa238e5cda538d2bd9d0216286d83efbfcf34dbd",
+    "release/v0.1/WP6_GATE2_CLOSURE_RECORD.json": "958e0a4e8dfca093ab7c3a91bfb4d82d997a7364da3ccfbbf6f30f9cb453ef26",
+    "WP6_GATE2_AUDIT_AND_CLOSURE_SPECIFICATION.md": "fc58133d59c78ab76a46f4172ec4b3a08a5b68197f113d27294f9c9b13e02e99",
+    ".github/workflows/gate2-closure-audit.yml": "431aaa7c80e550bb5c7a3b08dac3838492bac027ed08d14c7ae76c7f80860f3f"
+  },
+  "gate_summary": {
+    "total": 20,
+    "pass": 19,
+    "pending": 1,
+    "fail": 0
+  },
+  "decision": "HOLD_FOR_HOSTED_CI",
+  "audit_payload_sha256": "25d7e370930e73e2120e44a18418695567b91cb1b74ac481e615479fb308fd04",
+  "frozen_upstreams_modified": false
+}

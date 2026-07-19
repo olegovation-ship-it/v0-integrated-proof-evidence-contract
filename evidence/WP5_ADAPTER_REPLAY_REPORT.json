@@ -1,0 +1,11 @@
+{
+  "artifact_id": "V0_IPEC_WP5_ADAPTER_REPLAY_REPORT",
+  "status": "PASS",
+  "binding_count": 40,
+  "source_profiles": [
+    "OSAP_FC1_V1_1_REGISTRY",
+    "VALIDATOR_CORE_V0_12_FINITE_MODEL"
+  ],
+  "mode": "STATIC_BINDING_REPLAY",
+  "upstream_runtime_replay": "DEFINED_IN_GITHUB_ACTIONS_PENDING"
+}

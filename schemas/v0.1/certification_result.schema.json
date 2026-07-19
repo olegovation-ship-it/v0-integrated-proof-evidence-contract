@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/certification_result.schema.json",
+  "title": "V0-IPEC WP4 Certification Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "execution_status",
+    "logical_verdict",
+    "typed_outcome_code",
+    "typed_outcome_registry_version",
+    "outcome_binding_status",
+    "certification_claimed",
+    "resolution_basis"
+  ],
+  "properties": {
+    "execution_status": {
+      "enum": [
+        "COMPLETED",
+        "CONTRACT_ERROR",
+        "TOOL_ERROR"
+      ]
+    },
+    "logical_verdict": {
+      "enum": [
+        "NOT_EVALUATED",
+        "SATISFIED",
+        "VIOLATED",
+        "INCONCLUSIVE",
+        "DEFERRED"
+      ]
+    },
+    "typed_outcome_code": {
+      "oneOf": [
+        {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/typed_outcome_code"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "typed_outcome_registry_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outcome_binding_status": {
+      "enum": [
+        "BOUND",
+        "NOT_APPLICABLE_EXECUTION_FAILURE"
+      ]
+    },
+    "certification_claimed": {
+      "type": "boolean"
+    },
+    "resolution_basis": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "const": "COMPLETED"
+          }
+        },
+        "required": [
+          "execution_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "outcome_binding_status": {
+            "const": "BOUND"
+          },
+          "typed_outcome_code": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/typed_outcome_code"
+          },
+          "typed_outcome_registry_version": {
+            "const": "0.1"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_status": {
+            "enum": [
+              "CONTRACT_ERROR",
+              "TOOL_ERROR"
+            ]
+          }
+        },
+        "required": [
+          "execution_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "typed_outcome_code": {
+            "type": "null"
+          },
+          "typed_outcome_registry_version": {
+            "type": "null"
+          },
+          "outcome_binding_status": {
+            "const": "NOT_APPLICABLE_EXECUTION_FAILURE"
+          },
+          "certification_claimed": {
+            "const": false
+          },
+          "logical_verdict": {
+            "const": "NOT_EVALUATED"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "typed_outcome_code": {
+            "const": "CERTIFIED"
+          }
+        },
+        "required": [
+          "typed_outcome_code"
+        ]
+      },
+      "then": {
+        "properties": {
+          "logical_verdict": {
+            "const": "SATISFIED"
+          },
+          "certification_claimed": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "typed_outcome_code": {
+            "enum": [
+              "REJECTED_GUARD_FAILURE",
+              "REJECTED_DLE_FAILURE",
+              "REJECTED_LIVE_RESIDUAL",
+              "REJECTED_NONELIM_OBSTRUCTION",
+              "REJECTED_BRANCH_PROMOTION",
+              "BACKEND_PARITY_FAILURE"
+            ]
+          }
+        },
+        "required": [
+          "typed_outcome_code"
+        ]
+      },
+      "then": {
+        "properties": {
+          "logical_verdict": {
+            "const": "VIOLATED"
+          },
+          "certification_claimed": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "typed_outcome_code": {
+            "const": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT"
+          }
+        },
+        "required": [
+          "typed_outcome_code"
+        ]
+      },
+      "then": {
+        "properties": {
+          "logical_verdict": {
+            "const": "INCONCLUSIVE"
+          },
+          "certification_claimed": {
+            "const": false
+          }
+        }
+      }
+    }
+  ]
+}

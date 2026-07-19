@@ -1,0 +1,22 @@
+{
+  "artifact_id": "V0_IPEC_WP3_RULE_CROSSWALK_MANIFEST",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "state": "WP3_PASS_36_OF_36_RULE_BINDINGS_ZERO_UNMAPPED_TWO_ADAPTERS_WP4_AUTHORIZED",
+  "files": {
+    "baseline/WP2_BASELINE_REFERENCE.json": "84eb0ef6a55506f1e17283f374a7358b34dbaa9b15a373c77366acf072ee538d",
+    "baseline/theorem_ownership_T121_T156.json": "1839950a1b5540cac7d39897eb1f0ea4affd731fb4f713d7c543ee58f5459069",
+    "locks/upstreams.lock.json": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26",
+    "registries/validator_rules.json": "ea16af86d0a9a41d4a1d2f4d85ddf9d9ce7f146246d1eaca9dd7861b1dfba591",
+    "registries/theorem_rule_crosswalk.json": "202cdd32c397b54eb7787325e06c151d52c5d70dfa47cf54240349f55066df19",
+    "registries/adapter_bindings.json": "521c104f7ac2eccd0801705a6658660cf6ddc3f4363403f01df59e38a4470e0a",
+    "registries/procedural_diagnostics.json": "3e7cd15c6729fde738b784ba7fc0cc71ed0b1a60c501ea49bab811d0069204ea",
+    "schemas/v0.1/schema_bundle_manifest.json": "fe6420775dafb7298d26cc2ef350d7216e0cdacc8df16e743d8bab02759af899",
+    "checker/ipec_wp3/adapters.py": "29553249d39eea5231ea40910621a6f665ef1e3951eb9a82e73073835f400039",
+    "checker/ipec_wp3/crosswalk.py": "d3d8229beb95c5ad30c7c28d37782da0faa805a3aff65476689694bbcacb1afc",
+    "scripts/verify_wp3_rule_crosswalk.py": "475af686d1e245519e7b4254fbfa81e1515bc5d216dd70afaad1b900570ddc5c",
+    "tests/test_wp3_rule_crosswalk.py": "a9de873fee6ee8dc7cba4d12fec074f50d4a9a54e191054ffa695ffc690b90a2",
+    "audit/WP3_ACCEPTANCE_GATES.json": "0593f374fde7a76bd0f0250b4a7af6d3d0f1de6ba5b667c6976a17066123ed3c"
+  }
+}

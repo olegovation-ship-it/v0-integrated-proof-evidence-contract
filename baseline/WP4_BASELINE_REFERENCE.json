@@ -1,0 +1,41 @@
+{
+  "artifact_id": "V0_IPEC_WP5_WP4_BASELINE_REFERENCE",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "predecessor": "WP4_TYPED_OUTCOMES_AND_NEGATIVE_FIXTURE_CAMPAIGN",
+  "wp4_package_filename": "V0_Integrated_Proof_Evidence_Contract_v0.1_WP4_Typed_Outcomes_and_Negative_Fixture_Campaign_Patch_2026-07-19_package.zip",
+  "wp4_package_sha256": "f48760925d738e4b0d461a0f7f27c7ea9dbeebcd85c21f3d510d41b6cbf4dfbb",
+  "baseline_files": {
+    "WP4_TYPED_OUTCOMES_AND_NEGATIVE_FIXTURE_CAMPAIGN_SPECIFICATION.md": {
+      "path": "baseline/wp4_predecessor_baseline/WP4_TYPED_OUTCOMES_AND_NEGATIVE_FIXTURE_CAMPAIGN_SPECIFICATION.md",
+      "sha256": "aa39686fae6d573b637a7af81f3110e78e9895799682578276c8fa3427e30602"
+    },
+    "WP4_AUDIT_REPORT.md": {
+      "path": "baseline/wp4_predecessor_baseline/WP4_AUDIT_REPORT.md",
+      "sha256": "2aa49e5879beb53fe9f3a3c2447244bf8ded60ffa64adf59e4a66d5085d10779"
+    },
+    "WP4_TYPED_OUTCOME_CAMPAIGN_MANIFEST.json": {
+      "path": "baseline/wp4_predecessor_baseline/WP4_TYPED_OUTCOME_CAMPAIGN_MANIFEST.json",
+      "sha256": "ea2c2254dd558e0925ae1c33c7b03fb286287a414122363a71565361a42a447f"
+    },
+    "typed_outcomes.json": {
+      "path": "baseline/wp4_predecessor_baseline/typed_outcomes.json",
+      "sha256": "07001017c831a4d60f41ed04729a2cc836badb079f08b851a54437dd8da0abd5"
+    },
+    "outcome_bindings.json": {
+      "path": "baseline/wp4_predecessor_baseline/outcome_bindings.json",
+      "sha256": "d8edc2673e1d75052223ecef6d0892ed19cdc39ab4c40cb2fda7464dcfccf4e4"
+    },
+    "WP4_NEGATIVE_CAMPAIGN_REPORT.json": {
+      "path": "baseline/wp4_predecessor_baseline/WP4_NEGATIVE_CAMPAIGN_REPORT.json",
+      "sha256": "a4cb616a853e38ce6a2cf718c131d52306c4d3ed003ba1c90225be9efbee1f60"
+    },
+    "negative_fixture_index.json": {
+      "path": "baseline/wp4_predecessor_baseline/negative_fixture_index.json",
+      "sha256": "06281df79b8bb96251610a4b59f8028b45b4bcf2c30cbe5188a748873deb9cb6"
+    }
+  },
+  "frozen": true,
+  "mutation_authorized": false
+}

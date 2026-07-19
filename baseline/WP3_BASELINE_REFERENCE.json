@@ -1,0 +1,47 @@
+{
+  "artifact_id": "V0_IPEC_WP4_WP3_BASELINE_REFERENCE",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP3_PREDECESSOR_FROZEN_READ_ONLY",
+  "wp3_package_name": "V0_Integrated_Proof_Evidence_Contract_v0.1_WP3_Validator_Rule_Crosswalk_and_Adapter_Bindings_Patch_2026-07-19_package.zip",
+  "wp3_package_sha256": "fd2229ace6ff207c97a9bd8ff49dfe8134465f0dc182511ba28a907ed805aede",
+  "baseline_files": {
+    "upstreams_lock": {
+      "path": "baseline/wp3_predecessor_baseline/upstreams.lock.json",
+      "sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26"
+    },
+    "theorem_ownership": {
+      "path": "baseline/wp3_predecessor_baseline/theorem_ownership_T121_T156.json",
+      "sha256": "1839950a1b5540cac7d39897eb1f0ea4affd731fb4f713d7c543ee58f5459069"
+    },
+    "validator_rules": {
+      "path": "baseline/wp3_predecessor_baseline/validator_rules.json",
+      "sha256": "ea16af86d0a9a41d4a1d2f4d85ddf9d9ce7f146246d1eaca9dd7861b1dfba591"
+    },
+    "theorem_rule_crosswalk": {
+      "path": "baseline/wp3_predecessor_baseline/theorem_rule_crosswalk.json",
+      "sha256": "202cdd32c397b54eb7787325e06c151d52c5d70dfa47cf54240349f55066df19"
+    },
+    "adapter_bindings": {
+      "path": "baseline/wp3_predecessor_baseline/adapter_bindings.json",
+      "sha256": "521c104f7ac2eccd0801705a6658660cf6ddc3f4363403f01df59e38a4470e0a"
+    },
+    "procedural_diagnostics": {
+      "path": "baseline/wp3_predecessor_baseline/procedural_diagnostics.json",
+      "sha256": "3e7cd15c6729fde738b784ba7fc0cc71ed0b1a60c501ea49bab811d0069204ea"
+    },
+    "wp3_manifest": {
+      "path": "baseline/wp3_predecessor_baseline/WP3_RULE_CROSSWALK_MANIFEST.json",
+      "sha256": "d3e3154914a447f64684cd0f28ec26486e12ac2c0965ff0e37cf16a2fafe1361"
+    },
+    "wp3_audit": {
+      "path": "baseline/wp3_predecessor_baseline/WP3_AUDIT_REPORT.md",
+      "sha256": "d20eb7c8f13cb6f71742cba1cc429c5f7cdfca394ed57697caab26fd3eae517b"
+    },
+    "wp3_schema_manifest": {
+      "path": "baseline/wp3_predecessor_baseline/schema_bundle_manifest.json",
+      "sha256": "fe6420775dafb7298d26cc2ef350d7216e0cdacc8df16e743d8bab02759af899"
+    }
+  }
+}

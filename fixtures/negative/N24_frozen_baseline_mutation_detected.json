@@ -1,0 +1,13 @@
+{
+  "artifact_id": "V0_IPEC_WP4_NEGATIVE_FIXTURE",
+  "fixture_id": "N24",
+  "title": "Frozen predecessor baseline hash mutation",
+  "target_type": "BASELINE_HASH_SET",
+  "mutation_class": "FROZEN_BASELINE_MUTATION_DETECTED",
+  "expected_error_code": "FROZEN_BASELINE_MUTATION_DETECTED",
+  "payload": {
+    "expected_sha256": "fd2229ace6ff207c97a9bd8ff49dfe8134465f0dc182511ba28a907ed805aede",
+    "observed_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "auxiliary": {}
+}

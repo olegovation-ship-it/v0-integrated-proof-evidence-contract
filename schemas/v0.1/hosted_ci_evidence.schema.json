@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/hosted_ci_evidence.schema.json",
+  "title": "V0-IPEC Hosted CI Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "repository",
+    "branch",
+    "workflow",
+    "run_id",
+    "run_url",
+    "head_sha",
+    "overall_status",
+    "jobs",
+    "evidence_source"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP6_HOSTED_CI_EVIDENCE"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "workflow": {
+      "const": "V0 IPEC Gate 2 CI Integration"
+    },
+    "run_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "run_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "head_sha": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      ]
+    },
+    "overall_status": {
+      "enum": [
+        "PENDING",
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "evidence_source": {
+      "enum": [
+        "NOT_RECORDED",
+        "GITHUB_ACTIONS"
+      ]
+    },
+    "jobs": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "job_id",
+          "name",
+          "status",
+          "job_id_numeric",
+          "artifact_sha256"
+        ],
+        "properties": {
+          "job_id": {
+            "enum": [
+              "j07_upstream_validator_replay",
+              "j08_upstream_osap_python_replay",
+              "j09_upstream_osap_lean_replay",
+              "j10_upstream_osap_coq_replay"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "PASS",
+              "FAIL"
+            ]
+          },
+          "job_id_numeric": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "artifact_sha256": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

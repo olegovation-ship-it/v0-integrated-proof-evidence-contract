@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/canonicalization_profile.schema.json",
+  "title": "V0-IPEC-CJ-1 Canonicalization Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "encoding",
+    "object_key_order",
+    "array_order",
+    "number_domain",
+    "whitespace",
+    "trailing_newline",
+    "digest_algorithm",
+    "digest_view"
+  ],
+  "properties": {
+    "profile_id": {
+      "const": "V0-IPEC-CJ-1"
+    },
+    "encoding": {
+      "const": "UTF-8"
+    },
+    "object_key_order": {
+      "const": "LEXICOGRAPHIC_UNICODE_CODEPOINT"
+    },
+    "array_order": {
+      "const": "PRESERVE_INPUT_ORDER"
+    },
+    "number_domain": {
+      "const": "INTEGERS_ONLY_NO_FLOATS"
+    },
+    "whitespace": {
+      "const": "NONE_OUTSIDE_JSON_STRINGS"
+    },
+    "trailing_newline": {
+      "const": false
+    },
+    "digest_algorithm": {
+      "const": "SHA-256"
+    },
+    "digest_view": {
+      "const": "OMIT_integrity.canonical_sha256_AND_integrity.canonical_size_bytes"
+    }
+  }
+}

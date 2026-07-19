@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/ci_job_catalog.schema.json",
+  "title": "V0-IPEC CI Job Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "job_count",
+    "jobs",
+    "global_permissions",
+    "mutation_firewall"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP5_CI_JOB_CATALOG"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "job_count": {
+      "const": 12
+    },
+    "global_permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contents"
+      ],
+      "properties": {
+        "contents": {
+          "const": "read"
+        }
+      }
+    },
+    "mutation_firewall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "write_permissions",
+        "remote_mutation_commands",
+        "release_actions"
+      ],
+      "properties": {
+        "write_permissions": {
+          "const": false
+        },
+        "remote_mutation_commands": {
+          "const": false
+        },
+        "release_actions": {
+          "const": false
+        }
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sequence",
+          "job_id",
+          "name",
+          "needs",
+          "purpose",
+          "execution_class",
+          "commands",
+          "produced_artifacts",
+          "write_permissions",
+          "upstream_mutation_authorized"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "job_id": {
+            "type": "string",
+            "pattern": "^j[0-9]{2}_[a-z0-9_]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "needs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^j[0-9]{2}_[a-z0-9_]+$"
+            },
+            "uniqueItems": true
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 10
+          },
+          "execution_class": {
+            "enum": [
+              "INTEGRATION_STATIC",
+              "LOCAL_DETERMINISTIC_REPLAY",
+              "REMOTE_UPSTREAM_REPLAY",
+              "PREAUDIT_AGGREGATION"
+            ]
+          },
+          "commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "produced_artifacts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "write_permissions": {
+            "const": false
+          },
+          "upstream_mutation_authorized": {
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

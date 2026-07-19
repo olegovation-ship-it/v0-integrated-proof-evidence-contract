@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "reports": 9,
+  "ci_jobs": 12,
+  "deterministic_replay": "2/2"
+}

@@ -1,0 +1,64 @@
+{
+  "artifact_id": "V0_IPEC_WP5_DETERMINISTIC_REPLAY_RUN",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "run_id": "RUN_1",
+  "execution_mode": "LOCAL_REFERENCE_REPLAY",
+  "source_snapshot_sha256": "11104568ffcb9d57752400fdab108b302180e869cc551a8030edb30627e48319",
+  "result_payload_sha256": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b",
+  "status": "PASS",
+  "metrics": {
+    "theorem_owners": 36,
+    "theorem_rule_bindings": 36,
+    "validator_rules": 36,
+    "adapter_bindings": 40,
+    "typed_outcomes": 8,
+    "procedural_bindings": 11,
+    "negative_fixtures": 24,
+    "negative_fixtures_rejected": 24,
+    "conditional_theorems": [
+      "T140",
+      "T150",
+      "T156"
+    ]
+  },
+  "checks": [
+    {
+      "check_id": "UPSTREAM_PINS_EXACT",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OWNERSHIP_36_OF_36",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CROSSWALK_36_OF_36",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADAPTER_BINDINGS_40",
+      "status": "PASS"
+    },
+    {
+      "check_id": "OUTCOMES_8_OF_8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PROCEDURAL_BINDINGS_11_OF_11",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NEGATIVE_FIXTURES_24_OF_24",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONDITIONALITY_PRESERVED",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NO_UPSTREAM_MUTATION",
+      "status": "PASS"
+    }
+  ]
+}

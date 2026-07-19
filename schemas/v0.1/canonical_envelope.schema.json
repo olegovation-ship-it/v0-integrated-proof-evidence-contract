@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/canonical_envelope.schema.json",
+  "title": "V0-IPEC Canonical Proof-Evidence Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "artifact_id",
+    "contract_id",
+    "contract_schema_version",
+    "canonicalization_profile",
+    "envelope_id",
+    "generated_at_utc",
+    "request",
+    "upstream_lock",
+    "ownership_map",
+    "obligations",
+    "diagnostic_envelope",
+    "evidence_lineage",
+    "result",
+    "reproducibility",
+    "integrity"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://v0-ipec.example/spec/v0.1/canonical_envelope.schema.json"
+    },
+    "artifact_id": {
+      "const": "V0_IPEC_CANONICAL_PROOF_EVIDENCE_ENVELOPE"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "contract_schema_version": {
+      "const": "0.1"
+    },
+    "canonicalization_profile": {
+      "const": "V0-IPEC-CJ-1"
+    },
+    "envelope_id": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+    },
+    "generated_at_utc": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/utc_timestamp"
+    },
+    "request": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/integration_request.schema.json"
+    },
+    "upstream_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "lock_sha256",
+        "validator_core",
+        "osap"
+      ],
+      "properties": {
+        "artifact_id": {
+          "const": "V0_IPEC_WP0_UPSTREAMS_LOCK"
+        },
+        "lock_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "validator_core": {
+          "$ref": "#/$defs/upstream_identity"
+        },
+        "osap": {
+          "$ref": "#/$defs/upstream_identity"
+        }
+      }
+    },
+    "ownership_map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "sha256",
+        "records_sha256",
+        "theorem_range",
+        "record_count"
+      ],
+      "properties": {
+        "artifact_id": {
+          "const": "V0_IPEC_WP1_THEOREM_OWNERSHIP_MAP"
+        },
+        "sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "records_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "theorem_range": {
+          "const": "T121-T156"
+        },
+        "record_count": {
+          "const": 36
+        }
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/proof_obligation.schema.json"
+      }
+    },
+    "diagnostic_envelope": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/diagnostic_envelope.schema.json"
+    },
+    "evidence_lineage": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/evidence_reference.schema.json"
+      }
+    },
+    "result": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/certification_result.schema.json"
+    },
+    "reproducibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "run_sequence",
+        "implementation_version",
+        "schema_bundle_sha256",
+        "environment"
+      ],
+      "properties": {
+        "run_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+        },
+        "run_sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "implementation_version": {
+          "const": "v0-ipec-wp4/0.1.0.dev1"
+        },
+        "schema_bundle_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "python",
+            "jsonschema"
+          ],
+          "properties": {
+            "python": {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+            },
+            "jsonschema": {
+              "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+            }
+          }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "digest_profile",
+        "digest_view",
+        "canonical_sha256",
+        "canonical_size_bytes"
+      ],
+      "properties": {
+        "digest_profile": {
+          "const": "SHA-256/V0-IPEC-CJ-1"
+        },
+        "digest_view": {
+          "const": "OMIT_integrity.canonical_sha256_AND_integrity.canonical_size_bytes"
+        },
+        "canonical_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "canonical_size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  },
+  "$defs": {
+    "upstream_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "upstream_id",
+        "repository",
+        "source_ref",
+        "exact_source_commit",
+        "doi"
+      ],
+      "properties": {
+        "upstream_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+        },
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "source_ref": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        },
+        "exact_source_commit": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/git_sha"
+        },
+        "doi": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        }
+      }
+    }
+  }
+}

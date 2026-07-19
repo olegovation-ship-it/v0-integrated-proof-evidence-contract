@@ -1,0 +1,66 @@
+[WP5] $ /opt/pyvenv/bin/python scripts/build_wp5_schema_manifest.py --check
+{
+  "status": "PASS",
+  "schema_count": 21
+}
+
+[WP5] $ /opt/pyvenv/bin/python scripts/build_wp5_evidence_manifests.py --check
+{
+  "status": "PASS",
+  "reports": 9,
+  "ci_jobs": 12,
+  "deterministic_replay": "2/2"
+}
+
+[WP5] $ /opt/pyvenv/bin/python scripts/verify_wp5_ci_integration.py
+{
+  "status": "PASS",
+  "schema_count": 21,
+  "ci_jobs": "12/12",
+  "theorem_ownership": "36/36",
+  "crosswalk": "36/36",
+  "adapter_bindings": 40,
+  "typed_outcomes": "8/8",
+  "negative_fixtures": "24/24",
+  "deterministic_replay": "2/2",
+  "global_permissions": "contents:read",
+  "remote_ci_execution": "PENDING_IN_STANDALONE_PATCH",
+  "frozen_upstreams_modified": false,
+  "next_deliverable": "WP6_GATE2_AUDIT_AND_CLOSURE"
+}
+
+[WP5] $ /opt/pyvenv/bin/python -m pytest -q
+...............                                                          [100%]
+15 passed in 2.22s
+
+[WP5] $ /opt/pyvenv/bin/python scripts/verify_sha256s.py
+PASS SHA256SUMS
+
+[WP6] $ /opt/pyvenv/bin/python scripts/build_wp6_schema_manifest.py --check
+{
+  "status": "PASS",
+  "schema_count": 25
+}
+
+[WP6] $ /opt/pyvenv/bin/python scripts/build_wp6_gate2_audit.py --check
+{
+  "status": "HOLD",
+  "gates": "19/20 PASS",
+  "pending": "G2-20 hosted CI evidence",
+  "gate2_closed": false
+}
+
+[WP6] $ /opt/pyvenv/bin/python scripts/verify_wp6_gate2_audit.py --allow-pending
+{
+  "status": "HOLD_ACCEPTED",
+  "local_gates": "19/19",
+  "hosted_gate": "PENDING",
+  "gate2_closed": false
+}
+
+[WP6] $ /opt/pyvenv/bin/python -m pytest -q
+..................                                                       [100%]
+18 passed in 1.75s
+
+[WP6] $ /opt/pyvenv/bin/python scripts/verify_sha256s.py
+PASS SHA256SUMS

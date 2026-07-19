@@ -1,0 +1,12 @@
+{
+  "artifact_id": "V0_IPEC_WP5_DETERMINISTIC_REPLAY_COMPARISON",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "run_a": "RUN_1",
+  "run_b": "RUN_2",
+  "result_payload_sha256": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b",
+  "same_result_sha256": true,
+  "deterministic": true,
+  "status": "PASS"
+}
