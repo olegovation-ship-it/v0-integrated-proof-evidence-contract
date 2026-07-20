@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/v0-ipec/schemas/v0.1/post_merge_archival_closeout_record.schema.json",
+  "title": "V0-IPEC post-merge archival closeout record",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "repository",
+    "merged_pr",
+    "merge_commit",
+    "gate2_closure_preserved",
+    "post_merge_ci",
+    "branch_relation",
+    "status",
+    "decision",
+    "release_actions"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_POST_MERGE_ARCHIVAL_CLOSEOUT_RECORD"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "repository": {
+      "const": "olegovation-ship-it/v0-integrated-proof-evidence-contract"
+    },
+    "merged_pr": {
+      "const": 1
+    },
+    "merge_commit": {
+      "const": "820947103d24153e00b215ced53ee8b33ef0c7bf"
+    },
+    "gate2_closure_preserved": {
+      "const": true
+    },
+    "post_merge_ci": {
+      "enum": [
+        "PASS_OBSERVED_ID_PENDING",
+        "PASS_AUTHENTICATED"
+      ]
+    },
+    "branch_relation": {
+      "enum": [
+        "PENDING_REF_CAPTURE",
+        "BASELINE_MAIN_CONTAINED",
+        "SYNCHRONIZED_TO_CURRENT_MAIN",
+        "FAST_FORWARD_AVAILABLE",
+        "DIVERGED"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "release_actions": {
+      "type": "object",
+      "properties": {
+        "tag": {
+          "const": false
+        },
+        "github_release": {
+          "const": false
+        },
+        "zenodo": {
+          "const": false
+        },
+        "doi": {
+          "const": false
+        }
+      },
+      "required": [
+        "tag",
+        "github_release",
+        "zenodo",
+        "doi"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

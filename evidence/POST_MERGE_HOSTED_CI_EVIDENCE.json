@@ -1,0 +1,159 @@
+{
+  "artifact_id": "V0_IPEC_POST_MERGE_HOSTED_CI_EVIDENCE",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
+  "workflow": "V0 IPEC Gate 2 CI Integration",
+  "workflow_file": "gate2-integration.yml",
+  "workflow_run_number": 9,
+  "workflow_run_id": 29736605593,
+  "workflow_run_url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593",
+  "head_branch": "main",
+  "head_sha": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "event": "push",
+  "status": "completed",
+  "conclusion": "success",
+  "evidence_state": "AUTHENTIC_GITHUB_API_EVIDENCE_RECORDED",
+  "observation_source": "GITHUB_CLI_API",
+  "observation_time_utc": "2026-07-20T10:55:15Z",
+  "created_at": "2026-07-20T10:53:32Z",
+  "updated_at": "2026-07-20T10:55:15Z",
+  "jobs": [
+    {
+      "name": "01 Contract schema",
+      "job_id": 88333305691,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:53:35Z",
+      "completed_at": "2026-07-20T10:53:45Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333305691"
+    },
+    {
+      "name": "03 Theorem ownership uniqueness",
+      "job_id": 88333344489,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:53:47Z",
+      "completed_at": "2026-07-20T10:53:57Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333344489"
+    },
+    {
+      "name": "02 Upstream pin integrity",
+      "job_id": 88333344547,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:53:48Z",
+      "completed_at": "2026-07-20T10:54:02Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333344547"
+    },
+    {
+      "name": "04 Crosswalk totality",
+      "job_id": 88333380017,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:53:59Z",
+      "completed_at": "2026-07-20T10:54:11Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333380017"
+    },
+    {
+      "name": "05 Validator v0.12 adapter",
+      "job_id": 88333423875,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:13Z",
+      "completed_at": "2026-07-20T10:54:25Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333423875"
+    },
+    {
+      "name": "06 OSAP v1.3.0 adapter",
+      "job_id": 88333423893,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:13Z",
+      "completed_at": "2026-07-20T10:54:28Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333423893"
+    },
+    {
+      "name": "07 Upstream Validator replay",
+      "job_id": 88333467674,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:27Z",
+      "completed_at": "2026-07-20T10:54:31Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333467674"
+    },
+    {
+      "name": "10 Upstream OSAP Coq replay",
+      "job_id": 88333476662,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:30Z",
+      "completed_at": "2026-07-20T10:54:58Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476662"
+    },
+    {
+      "name": "09 Upstream OSAP Lean replay",
+      "job_id": 88333476665,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:31Z",
+      "completed_at": "2026-07-20T10:54:46Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476665"
+    },
+    {
+      "name": "08 Upstream OSAP Python replay",
+      "job_id": 88333476674,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:30Z",
+      "completed_at": "2026-07-20T10:54:42Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476674"
+    },
+    {
+      "name": "11 Negative fixture campaign",
+      "job_id": 88333476708,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:54:30Z",
+      "completed_at": "2026-07-20T10:54:44Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476708"
+    },
+    {
+      "name": "12 Gate 2 pre-audit",
+      "job_id": 88333568909,
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-07-20T10:55:00Z",
+      "completed_at": "2026-07-20T10:55:14Z",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333568909"
+    }
+  ],
+  "mandatory_jobs": {
+    "07": {
+      "name": "07 Upstream Validator replay",
+      "job_id": 88333467674,
+      "conclusion": "success",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333467674"
+    },
+    "08": {
+      "name": "08 Upstream OSAP Python replay",
+      "job_id": 88333476674,
+      "conclusion": "success",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476674"
+    },
+    "09": {
+      "name": "09 Upstream OSAP Lean replay",
+      "job_id": 88333476665,
+      "conclusion": "success",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476665"
+    },
+    "10": {
+      "name": "10 Upstream OSAP Coq replay",
+      "job_id": 88333476662,
+      "conclusion": "success",
+      "url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29736605593/job/88333476662"
+    }
+  },
+  "canonical_sha256": "e41fc85258142fb3b2cfac9e540f9114f9f66a0dade5da9f6678f0a436d88f02"
+}
