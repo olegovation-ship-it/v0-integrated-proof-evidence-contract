@@ -5,7 +5,8 @@
   "date": "2026-07-19",
   "baseline_wp5_schema_count": 21,
   "wp6_added_schema_count": 4,
-  "schema_count": 25,
+  "post_merge_added_schema_count": 3,
+  "schema_count": 28,
   "files": {
     "adapter_binding_registry.schema.json": {
       "sha256": "b42537edef911d77ca3204bbb0296827ec89a4fd40f10617aa3b3a5664745e35",
@@ -38,6 +39,10 @@
     "common.schema.json": {
       "sha256": "72c40c17a15746502740df793d88e9afdf3e9924673ae53be0407aafb5cb0ad9",
       "id": "https://v0-ipec.example/spec/v0.1/common.schema.json"
+    },
+    "development_branch_synchronization_record.schema.json": {
+      "sha256": "4243923e276930be4d3e4b74336f847bd98352875e7888ce955e2a981e3e40de",
+      "id": "https://example.invalid/v0-ipec/schemas/v0.1/development_branch_synchronization_record.schema.json"
     },
     "diagnostic_envelope.schema.json": {
       "sha256": "f53ab2b9bfa144d8597c04092faba7e1af50b09279eeffc4743023b3a962b1ed",
@@ -78,6 +83,14 @@
     "outcome_binding_registry.schema.json": {
       "sha256": "18451298eafd92f7767d00d06f1da1d18e8e10e0638c46f8176a2b5dd4b7157a",
       "id": "https://v0-ipec.example/spec/v0.1/outcome_binding_registry.schema.json"
+    },
+    "post_merge_archival_closeout_record.schema.json": {
+      "sha256": "d91de7768a1644ac143da0daff25e78a755960d13373693c59ac9e8642af4243",
+      "id": "https://example.invalid/v0-ipec/schemas/v0.1/post_merge_archival_closeout_record.schema.json"
+    },
+    "post_merge_hosted_ci_evidence.schema.json": {
+      "sha256": "d6ce46d4426b83f85a12f71132e0ae197d19078d329b290084090e335e0a9e46",
+      "id": "https://example.invalid/v0-ipec/schemas/v0.1/post_merge_hosted_ci_evidence.schema.json"
     },
     "procedural_diagnostic_registry.schema.json": {
       "sha256": "e1d1d6e601d446a6a89a535891fc5ea0dc8588f215f63239623f01e92a2d043f",

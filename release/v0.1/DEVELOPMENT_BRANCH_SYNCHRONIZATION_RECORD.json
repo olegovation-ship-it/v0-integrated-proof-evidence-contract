@@ -1,0 +1,20 @@
+{
+  "artifact_id": "V0_IPEC_DEVELOPMENT_BRANCH_SYNCHRONIZATION_RECORD",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
+  "development_branch": "gate2-development",
+  "main_branch": "main",
+  "sync_mode": "FAST_FORWARD_ONLY",
+  "baseline_merge_commit": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "pre_sync_development_tip": "fad1d22152c68f82048b2f462b61660f4fe5b38e",
+  "observed_main_tip": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "current_development_tip": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "current_main_tip": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "relation": "SYNCHRONIZED_TO_CURRENT_MAIN",
+  "status": "SYNCHRONIZED_TO_CURRENT_MAIN",
+  "history_rewrite_authorized": false,
+  "branch_deletion_authorized": true,
+  "final_sync_required_after_closeout_merge": true
+}

@@ -1,0 +1,28 @@
+{
+  "artifact_id": "V0_IPEC_POST_MERGE_PATCH_MANIFEST",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "package_name": "V0_Integrated_Proof_Evidence_Contract_v0.1_Post_Merge_Archival_Closeout_and_Development_Branch_Synchronization_Patch_v0.1",
+  "repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
+  "baseline": {
+    "merged_pr": 1,
+    "pre_merge_main": "d251a60e2472eb75373b0f2a42a95ae522e71181",
+    "closure_commit": "fad1d22152c68f82048b2f462b61660f4fe5b38e",
+    "merge_commit": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+    "merged_at": "2026-07-20T10:53:30Z",
+    "post_merge_workflow_run_number": 9,
+    "post_merge_workflow_conclusion": "success"
+  },
+  "application_state": "READY_FOR_APPLICATION",
+  "strict_closure_requires": [
+    "authenticated_workflow_run_id",
+    "successful_mandatory_job_ids_07_10",
+    "development_branch_fast_forward",
+    "strict_verifier_pass",
+    "closeout_pr_merge",
+    "final_main_development_ref_equality"
+  ],
+  "release_actions_authorized": false,
+  "file_count_excluding_ledgers": 18
+}

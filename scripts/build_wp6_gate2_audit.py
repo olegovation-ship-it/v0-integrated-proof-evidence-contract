@@ -10,7 +10,7 @@ def objects():
  gates=[
  ('G2-01','WP5 predecessor package and selected baseline hashes are exact','PASS',['baseline/WP5_BASELINE_REFERENCE.json']),
  ('G2-02','Validator Core and OSAP immutable source pins are preserved','PASS',['locks/upstreams.lock.json']),
- ('G2-03','JSON Schema bundle contains 25 valid Draft 2020-12 schemas','PASS',['schemas/v0.1/schema_bundle_manifest.json']),
+ ('G2-03','JSON Schema bundle contains 28 valid Draft 2020-12 schemas','PASS',['schemas/v0.1/schema_bundle_manifest.json']),
  ('G2-04','Theorem ownership coverage is 36 of 36','PASS',['baseline/theorem_ownership_T121_T156.json']),
  ('G2-05','Theorem owner collisions are zero','PASS',['baseline/theorem_ownership_T121_T156.json']),
  ('G2-06','Theorem-rule crosswalk coverage is 36 of 36','PASS',['registries/theorem_rule_crosswalk.json']),

@@ -6,9 +6,9 @@
   "state": "GATE2_CLOSED_HOSTED_CI_VERIFIED",
   "files": {
     "baseline/WP5_BASELINE_REFERENCE.json": "1f4181ee1b30b21af70c726ddc448624a4ae98f3c4878034793fe40894b7dc4c",
-    "schemas/v0.1/schema_bundle_manifest.json": "4112dc7cd5ca56ea607c862448156d9ef12c61e849b0189ba0f555006f64b42c",
-    "audit/WP6_GATE2_ACCEPTANCE_GATES.json": "86722ff6b20aefe0ac1c68a75771e119f70e4f3656ee568f4ddb3d5ea974c4d1",
-    "audit/WP6_GATE2_AUDIT_RESULT.json": "cfc54f13bac91b0c19b1870db94dad2072cf3c50c95676acb574d067a673ccf3",
+    "schemas/v0.1/schema_bundle_manifest.json": "dbb584e117c9980a1d6b759a4a58a54ffd9d77f304e7f7fefcbb181a5279cc63",
+    "audit/WP6_GATE2_ACCEPTANCE_GATES.json": "03c20e7652631b6720d23dad7083e536921de94e7c276ab798d00b8ed8de7c86",
+    "audit/WP6_GATE2_AUDIT_RESULT.json": "d3e3a480822836fe96e3c0cfe8b906aa0b02901c900b900036342390a4501cce",
     "evidence/WP6_LOCAL_AUDIT_EVIDENCE.json": "453bd98967272d57387c7a62e940e222fb426cac6651bf3a5cb5f484737c1f71",
     "evidence/WP6_CLOSURE_ELIGIBILITY_REPORT.json": "113b3a2d504e09d5a83295a28020b763c7fbdda2dea6e18aeedb694debfac98e",
     "evidence/WP6_HOSTED_CI_EVIDENCE_INTAKE_TEMPLATE.json": "11cf5e005057599857b28e7912121c9292e789d0444605864bad2d07733901d4",
@@ -23,6 +23,6 @@
     "fail": 0
   },
   "decision": "CLOSE_GATE2",
-  "audit_payload_sha256": "0a1a286c838c885d9d3ff4e9fed7cff8704d79ae95ee352025480de794ea0ba6",
+  "audit_payload_sha256": "72137af7c0766a1f0ee2e438687603f56034be3185c4450f845a181fd4f24926",
   "frozen_upstreams_modified": false
 }

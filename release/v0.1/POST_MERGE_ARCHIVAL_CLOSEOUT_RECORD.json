@@ -1,0 +1,37 @@
+{
+  "artifact_id": "V0_IPEC_POST_MERGE_ARCHIVAL_CLOSEOUT_RECORD",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
+  "merged_pr": 1,
+  "pre_merge_main": "d251a60e2472eb75373b0f2a42a95ae522e71181",
+  "closure_commit": "fad1d22152c68f82048b2f462b61660f4fe5b38e",
+  "merge_commit": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "merged_at": "2026-07-20T10:53:30Z",
+  "gate2_closure_preserved": true,
+  "gate2_acceptance_gates": {
+    "pass": 20,
+    "total": 20,
+    "pending": 0,
+    "fail": 0
+  },
+  "post_merge_ci": "PASS_AUTHENTICATED",
+  "post_merge_ci_run_id": 29736605593,
+  "post_merge_ci_run_number": 9,
+  "branch_relation": "SYNCHRONIZED_TO_CURRENT_MAIN",
+  "observed_head": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "observed_branch": "gate2-development",
+  "observed_origin_main": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "observed_origin_gate2_development": "820947103d24153e00b215ced53ee8b33ef0c7bf",
+  "status": "POST_MERGE_CLOSEOUT_READY_FOR_PR",
+  "decision": "OPEN_CLOSEOUT_PR",
+  "frozen_upstreams_modified": false,
+  "paper_b_baseline_modified": false,
+  "release_actions": {
+    "tag": false,
+    "github_release": false,
+    "zenodo": false,
+    "doi": false
+  }
+}

@@ -11,7 +11,7 @@ def fail(e):print(json.dumps({'status':'FAIL','errors':e},indent=2));return 1
 def main():
     c=sys.argv[1] if len(sys.argv)>1 else '';errors=[]
     if c=='schema':
-        _,s=schema_registry();errors+=[] if len(s)==25 else [f'SCHEMA_COUNT:{len(s)}']
+        _,s=schema_registry();errors+=[] if len(s)==28 else [f'SCHEMA_COUNT:{len(s)}']
     elif c=='pins':
         lock=load('locks/upstreams.lock.json');exp={'V0_VALIDATOR_CORE_V0_12':('v0.12-compiler-passed-freeze','3540f47198140ca0a3612f247cfe356fa7fba2cb'),'V0_OSAP_V1_3_0':('v1.3.0','13bf095688bcabd5b090f188e9bd28a16237edeb')}
         for x in lock['upstreams']:

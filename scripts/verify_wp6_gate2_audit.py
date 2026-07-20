@@ -13,7 +13,7 @@ def main():
  for m in ref['baseline_files'].values():
   if sha(m['path'])!=m['sha256']:e.append('WP5_BASELINE_HASH_MISMATCH:'+m['path'])
  _,schemas=schema_registry()
- if len(schemas)!=25:e.append('SCHEMA_COUNT_MISMATCH:'+str(len(schemas)))
+ if len(schemas)!=28:e.append('SCHEMA_COUNT_MISMATCH:'+str(len(schemas)))
  for p,sid in [('evidence/WP6_HOSTED_CI_EVIDENCE_INTAKE_TEMPLATE.json','https://v0-ipec.example/spec/v0.1/hosted_ci_evidence.schema.json'),('audit/WP6_GATE2_ACCEPTANCE_GATES.json','https://v0-ipec.example/spec/v0.1/gate2_acceptance_gates.schema.json'),('audit/WP6_GATE2_AUDIT_RESULT.json','https://v0-ipec.example/spec/v0.1/gate2_audit_result.schema.json'),('release/v0.1/WP6_GATE2_CLOSURE_RECORD.json','https://v0-ipec.example/spec/v0.1/gate2_closure_record.schema.json')]:e+=validate_instance(load(p),sid)
  m=metrics();expected={'theorem_owners':36,'unique_theorem_ids':36,'theorem_rule_bindings':36,'unmapped':0,'validator_rules':36,'unique_rule_ids':36,'adapter_bindings':40,'typed_outcomes':8,'procedural_bindings':11,'negative_fixtures':24,'negative_fixtures_rejected':24,'typed_outcomes_exercised':8,'ci_jobs':12}
  for k,v in expected.items():

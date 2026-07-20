@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/v0-ipec/schemas/v0.1/development_branch_synchronization_record.schema.json",
+  "title": "V0-IPEC development branch synchronization record",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "repository",
+    "development_branch",
+    "main_branch",
+    "sync_mode",
+    "baseline_merge_commit",
+    "status",
+    "history_rewrite_authorized",
+    "branch_deletion_authorized"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_DEVELOPMENT_BRANCH_SYNCHRONIZATION_RECORD"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "repository": {
+      "const": "olegovation-ship-it/v0-integrated-proof-evidence-contract"
+    },
+    "development_branch": {
+      "const": "gate2-development"
+    },
+    "main_branch": {
+      "const": "main"
+    },
+    "sync_mode": {
+      "const": "FAST_FORWARD_ONLY"
+    },
+    "baseline_merge_commit": {
+      "const": "820947103d24153e00b215ced53ee8b33ef0c7bf"
+    },
+    "status": {
+      "type": "string"
+    },
+    "history_rewrite_authorized": {
+      "const": false
+    },
+    "branch_deletion_authorized": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

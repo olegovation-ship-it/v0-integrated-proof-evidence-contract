@@ -35,6 +35,6 @@
     "local_replay_digest": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b"
   },
   "single_blocker": null,
-  "audit_payload_sha256": "0a1a286c838c885d9d3ff4e9fed7cff8704d79ae95ee352025480de794ea0ba6",
+  "audit_payload_sha256": "72137af7c0766a1f0ee2e438687603f56034be3185c4450f845a181fd4f24926",
   "frozen_upstreams_modified": false
 }

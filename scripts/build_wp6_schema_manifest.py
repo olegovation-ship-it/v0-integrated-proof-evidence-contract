@@ -8,7 +8,7 @@ def build():
  files={}
  for p in sorted(SD.glob('*.schema.json')):
   x=json.loads(p.read_text());Draft202012Validator.check_schema(x);files[p.name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'id':x['$id']}
- return {'artifact_id':'V0_IPEC_WP6_SCHEMA_BUNDLE','contract_id':'V0-IPEC-0.1','version':'0.1','date':'2026-07-19','baseline_wp5_schema_count':21,'wp6_added_schema_count':4,'schema_count':len(files),'files':files}
+ return {'artifact_id':'V0_IPEC_WP6_SCHEMA_BUNDLE','contract_id':'V0-IPEC-0.1','version':'0.1','date':'2026-07-19','baseline_wp5_schema_count':21,'wp6_added_schema_count':4,'post_merge_added_schema_count':3,'schema_count':len(files),'files':files}
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');a=ap.parse_args();o=build();t=json.dumps(o,indent=2)+'\n'
  if a.check:

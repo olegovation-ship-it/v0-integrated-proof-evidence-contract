@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/v0-ipec/schemas/v0.1/post_merge_hosted_ci_evidence.schema.json",
+  "title": "V0-IPEC post-merge hosted CI evidence",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "repository",
+    "workflow",
+    "workflow_run_number",
+    "head_branch",
+    "head_sha",
+    "event",
+    "conclusion",
+    "evidence_state",
+    "mandatory_jobs"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_POST_MERGE_HOSTED_CI_EVIDENCE"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "repository": {
+      "const": "olegovation-ship-it/v0-integrated-proof-evidence-contract"
+    },
+    "workflow": {
+      "const": "V0 IPEC Gate 2 CI Integration"
+    },
+    "workflow_file": {
+      "const": "gate2-integration.yml"
+    },
+    "workflow_run_number": {
+      "const": 9
+    },
+    "workflow_run_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "workflow_run_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "head_branch": {
+      "const": "main"
+    },
+    "head_sha": {
+      "const": "820947103d24153e00b215ced53ee8b33ef0c7bf"
+    },
+    "event": {
+      "const": "push"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "observed_completed"
+      ]
+    },
+    "conclusion": {
+      "const": "success"
+    },
+    "evidence_state": {
+      "enum": [
+        "OBSERVED_PASS_RUN_NUMBER_RECORDED_RUN_ID_PENDING_CAPTURE",
+        "AUTHENTIC_GITHUB_API_EVIDENCE_RECORDED"
+      ]
+    },
+    "jobs": {
+      "type": "array"
+    },
+    "mandatory_jobs": {
+      "type": "object",
+      "required": [
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "properties": {
+        "07": {
+          "type": "object",
+          "required": [
+            "name",
+            "conclusion"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "job_id": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "conclusion": {
+              "enum": [
+                "success",
+                "observed_success"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "08": {
+          "type": "object",
+          "required": [
+            "name",
+            "conclusion"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "job_id": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "conclusion": {
+              "enum": [
+                "success",
+                "observed_success"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "09": {
+          "type": "object",
+          "required": [
+            "name",
+            "conclusion"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "job_id": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "conclusion": {
+              "enum": [
+                "success",
+                "observed_success"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "10": {
+          "type": "object",
+          "required": [
+            "name",
+            "conclusion"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "job_id": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "conclusion": {
+              "enum": [
+                "success",
+                "observed_success"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "canonical_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": true
+}
