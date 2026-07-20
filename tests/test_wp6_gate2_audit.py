@@ -6,7 +6,7 @@ from ipec_wp5.ci_catalog import audit_catalog,audit_workflow_text
 from ipec_wp6.audit import ROOT,load,metrics,hosted_pass
 
 def sha(rel):return hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()
-def test_schema_bundle_has_twenty_five_schemas():_,s=schema_registry();assert len(s)==25
+def test_schema_bundle_has_twenty_eight_schemas():_,s=schema_registry();assert len(s)==28
 def test_wp5_predecessor_selected_hashes_are_exact():
  x=load('baseline/WP5_BASELINE_REFERENCE.json');assert x['frozen'] and not x['mutation_authorized'];assert all(sha(m['path'])==m['sha256'] for m in x['baseline_files'].values())
 def test_gate_registry_has_twenty_gates_and_consistent_closure_state():
