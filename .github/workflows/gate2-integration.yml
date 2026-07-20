@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
       - run: python -m pip install -e '.[dev]'
-      - run: python scripts/build_wp5_schema_manifest.py --check
+      - run: python scripts/build_wp6_schema_manifest.py --check
       - run: python scripts/verify_wp5_component.py schema
   j02_upstream_pin_integrity:
     name: 02 Upstream pin integrity
@@ -152,8 +152,9 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
       - run: python -m pip install -e '.[dev]'
-      - run: python scripts/build_wp5_evidence_manifests.py --check
-      - run: python scripts/verify_wp5_ci_integration.py
+      - run: python scripts/build_wp6_schema_manifest.py --check
+      - run: PYTHONPATH=checker python scripts/build_wp6_gate2_audit.py --check
+      - run: PYTHONPATH=checker python scripts/verify_wp6_gate2_audit.py --allow-pending
       - run: pytest -q
       - run: python scripts/verify_sha256s.py
       - uses: actions/upload-artifact@v4

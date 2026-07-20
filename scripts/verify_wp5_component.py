@@ -11,7 +11,7 @@ def fail(e):print(json.dumps({'status':'FAIL','errors':e},indent=2));return 1
 def main():
     c=sys.argv[1] if len(sys.argv)>1 else '';errors=[]
     if c=='schema':
-        _,s=schema_registry();errors+=[] if len(s)==21 else [f'SCHEMA_COUNT:{len(s)}']
+        _,s=schema_registry();errors+=[] if len(s)==25 else [f'SCHEMA_COUNT:{len(s)}']
     elif c=='pins':
         lock=load('locks/upstreams.lock.json');exp={'V0_VALIDATOR_CORE_V0_12':('v0.12-compiler-passed-freeze','3540f47198140ca0a3612f247cfe356fa7fba2cb'),'V0_OSAP_V1_3_0':('v1.3.0','13bf095688bcabd5b090f188e9bd28a16237edeb')}
         for x in lock['upstreams']:
@@ -26,7 +26,11 @@ def main():
     elif c in {'validator-adapter','osap-adapter'}:
         profile='VALIDATOR_CORE_V0_12_FINITE_MODEL' if c.startswith('validator') else 'OSAP_FC1_V1_1_REGISTRY';b=[x for x in load('registries/adapter_bindings.json')['bindings'] if x['source_profile']==profile]
         if not b:errors.append('ADAPTER_PROFILE_EMPTY')
-        if any(x.get('mutation_authorized') is not False for x in b):errors.append('ADAPTER_MUTATION_AUTHORIZED')
+        expected_class='LEGACY_STRUCTURAL_PROXY_BINDING' if c.startswith('validator') else 'EXACT_OSAP_CONSTRUCT_BINDING'
+        expected_mode='DEFERRED_NO_SEMANTIC_CERTIFICATION' if c.startswith('validator') else 'DEFERRED_TO_WP4'
+        if any(x.get('binding_class')!=expected_class or x.get('evaluation_mode')!=expected_mode for x in b):errors.append('ADAPTER_BINDING_POLICY_MISMATCH')
+        lock=load('locks/upstreams.lock.json')
+        if any(x.get('mutation_authorized') is not False for x in lock['upstreams']):errors.append('ADAPTER_UPSTREAM_MUTATION_AUTHORIZED')
     elif c=='campaign':
         idx=load('fixtures/negative_fixture_index.json')
         if len(idx['fixtures'])!=24:errors.append('NEGATIVE_FIXTURE_COUNT')
