@@ -1,0 +1,170 @@
+name: V0 IPEC Gate 2 CI Integration
+on:
+  push:
+    branches: [main, gate2-development]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  VALIDATOR_COMMIT: 3540f47198140ca0a3612f247cfe356fa7fba2cb
+  OSAP_COMMIT: 13bf095688bcabd5b090f188e9bd28a16237edeb
+jobs:
+  j01_contract_schema:
+    name: 01 Contract schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/build_wp6_schema_manifest.py --check
+      - run: python scripts/verify_wp5_component.py schema
+  j02_upstream_pin_integrity:
+    name: 02 Upstream pin integrity
+    needs: j01_contract_schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/verify_wp5_component.py pins
+      - run: |
+          git clone --filter=blob:none https://github.com/olegovation-ship-it/v0-validator-core.git /tmp/validator
+          git -C /tmp/validator fetch --force --tags
+          test "$(git -C /tmp/validator rev-list -n 1 v0.12-compiler-passed-freeze)" = "$VALIDATOR_COMMIT"
+          git clone --filter=blob:none https://github.com/olegovation-ship-it/v0-osap-formal-core.git /tmp/osap
+          git -C /tmp/osap fetch --force --tags
+          test "$(git -C /tmp/osap rev-list -n 1 v1.3.0)" = "$OSAP_COMMIT"
+  j03_theorem_ownership_uniqueness:
+    name: 03 Theorem ownership uniqueness
+    needs: j01_contract_schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/verify_wp5_component.py ownership
+  j04_crosswalk_totality:
+    name: 04 Crosswalk totality
+    needs: j03_theorem_ownership_uniqueness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/verify_wp5_component.py crosswalk
+  j05_validator_v0_12_adapter:
+    name: 05 Validator v0.12 adapter
+    needs: [j02_upstream_pin_integrity, j04_crosswalk_totality]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/verify_wp5_component.py validator-adapter
+  j06_osap_v1_3_0_adapter:
+    name: 06 OSAP v1.3.0 adapter
+    needs: [j02_upstream_pin_integrity, j04_crosswalk_totality]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/verify_wp5_component.py osap-adapter
+  j07_upstream_validator_replay:
+    name: 07 Upstream Validator replay
+    needs: j05_validator_v0_12_adapter
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/olegovation-ship-it/v0-validator-core.git upstream
+      - run: git -C upstream checkout --detach "$VALIDATOR_COMMIT"
+      - working-directory: upstream
+        run: python3 scripts/static_audit.py
+      - working-directory: upstream
+        run: python3 scripts/schema_validate.py --schema schemas/finite_model_schema.json --model examples/sample_finite_model.json
+  j08_upstream_osap_python_replay:
+    name: 08 Upstream OSAP Python replay
+    needs: j06_osap_v1_3_0_adapter
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone --no-tags https://github.com/olegovation-ship-it/v0-osap-formal-core.git upstream
+      - run: git -C upstream checkout --detach "$OSAP_COMMIT"
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - working-directory: upstream
+        run: python -m pip install -e '.[dev]'
+      - working-directory: upstream
+        env:
+          PYTHONPATH: .
+        run: python -m pytest -q
+      - working-directory: upstream
+        run: v0-osap-fc1 schema-bundle
+      - working-directory: upstream
+        run: v0-osap-fc1 fixtures
+  j09_upstream_osap_lean_replay:
+    name: 09 Upstream OSAP Lean replay
+    needs: j06_osap_v1_3_0_adapter
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/olegovation-ship-it/v0-osap-formal-core.git upstream
+      - run: git -C upstream checkout --detach "$OSAP_COMMIT"
+      - run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - working-directory: upstream/lean
+        run: lake build
+      - working-directory: upstream
+        run: python scripts/check_no_proof_holes.py
+  j10_upstream_osap_coq_replay:
+    name: 10 Upstream OSAP Coq replay
+    needs: j06_osap_v1_3_0_adapter
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/olegovation-ship-it/v0-osap-formal-core.git upstream
+      - run: git -C upstream checkout --detach "$OSAP_COMMIT"
+      - run: sudo apt-get update && sudo apt-get install -y coq
+      - working-directory: upstream/coq
+        run: make
+      - working-directory: upstream
+        run: python scripts/check_no_proof_holes.py
+  j11_negative_fixture_campaign:
+    name: 11 Negative fixture campaign
+    needs: [j05_validator_v0_12_adapter, j06_osap_v1_3_0_adapter]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/build_wp4_fixtures.py
+      - run: git diff --exit-code -- fixtures/expected/WP4_NEGATIVE_CAMPAIGN_REPORT.json
+      - run: python scripts/verify_wp5_component.py campaign
+  j12_gate2_preaudit:
+    name: 12 Gate 2 pre-audit
+    needs: [j07_upstream_validator_replay, j08_upstream_osap_python_replay, j09_upstream_osap_lean_replay, j10_upstream_osap_coq_replay, j11_negative_fixture_campaign]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: python -m pip install -e '.[dev]'
+      - run: python scripts/build_wp6_schema_manifest.py --check
+      - run: PYTHONPATH=checker python scripts/build_wp6_gate2_audit.py --check
+      - run: PYTHONPATH=checker python scripts/verify_wp6_gate2_audit.py --allow-pending
+      - run: pytest -q
+      - run: python scripts/verify_sha256s.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wp5-ci-evidence-${{ github.sha }}
+          path: |
+            evidence/
+            release/v0.1/
+            audit/
+            SHA256SUMS.txt
+          if-no-files-found: error

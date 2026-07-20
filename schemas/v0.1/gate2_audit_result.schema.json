@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/gate2_audit_result.schema.json",
+  "title": "V0-IPEC Gate 2 Audit Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "decision",
+    "gate2_closed",
+    "closure_eligible",
+    "gate_summary",
+    "metrics",
+    "single_blocker",
+    "audit_payload_sha256",
+    "frozen_upstreams_modified"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP6_GATE2_AUDIT_RESULT"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "HOLD",
+        "FAIL"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "CLOSE_GATE2",
+        "HOLD_FOR_HOSTED_CI",
+        "REJECT_CLOSURE"
+      ]
+    },
+    "gate2_closed": {
+      "type": "boolean"
+    },
+    "closure_eligible": {
+      "type": "boolean"
+    },
+    "gate_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total",
+        "pass",
+        "pending",
+        "fail"
+      ],
+      "properties": {
+        "total": {
+          "const": 20
+        },
+        "pass": {
+          "type": "integer"
+        },
+        "pending": {
+          "type": "integer"
+        },
+        "fail": {
+          "type": "integer"
+        }
+      }
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "single_blocker": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "audit_payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "frozen_upstreams_modified": {
+      "const": false
+    }
+  }
+}

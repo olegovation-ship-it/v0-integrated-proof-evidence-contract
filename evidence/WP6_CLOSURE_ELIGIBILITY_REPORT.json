@@ -1,0 +1,10 @@
+{
+  "artifact_id": "V0_IPEC_WP6_CLOSURE_ELIGIBILITY_REPORT",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "status": "PASS",
+  "closure_eligible_after_hosted_ci": true,
+  "remaining_blockers": [],
+  "automatic_reaudit_condition": "Replace the pending hosted-CI intake record with authentic GitHub Actions evidence and rerun the WP6 verifier."
+}

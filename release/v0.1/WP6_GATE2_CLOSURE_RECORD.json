@@ -1,0 +1,22 @@
+{
+  "artifact_id": "V0_IPEC_WP6_GATE2_CLOSURE_RECORD",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "decision": "CLOSE_GATE2",
+  "gate2_closed": true,
+  "closure_authorized": true,
+  "reason": "All Gate 2 acceptance conditions are satisfied.",
+  "required_next_evidence": [],
+  "release_actions": {
+    "tag_created": false,
+    "github_release_created": false,
+    "zenodo_published": false,
+    "doi_mutated": false
+  },
+  "nonclaims": [
+    "Gate 2 CI is not peer review.",
+    "Gate 2 CI is not empirical or physical validation.",
+    "Structural correspondence is not proof-term identity or checker completeness."
+  ]
+}

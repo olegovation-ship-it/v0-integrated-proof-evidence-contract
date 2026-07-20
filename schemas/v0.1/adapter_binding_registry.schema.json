@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/adapter_binding_registry.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "adapters",
+    "binding_count",
+    "bindings",
+    "procedural_registry",
+    "typed_outcome_binding_status",
+    "records_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP3_ADAPTER_BINDING_REGISTRY"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP3_ADAPTER_BINDINGS_FROZEN"
+    },
+    "adapters": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object"
+      }
+    },
+    "binding_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "binding_id",
+          "source_profile",
+          "source_selector",
+          "rule_id",
+          "theorem_id",
+          "binding_class",
+          "evaluation_mode"
+        ],
+        "properties": {
+          "binding_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+          },
+          "source_profile": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/source_profile"
+          },
+          "source_selector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+          },
+          "theorem_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+          },
+          "binding_class": {
+            "enum": [
+              "EXACT_OSAP_CONSTRUCT_BINDING",
+              "LEGACY_STRUCTURAL_PROXY_BINDING"
+            ]
+          },
+          "evaluation_mode": {
+            "enum": [
+              "DEFERRED_TO_WP4",
+              "DEFERRED_NO_SEMANTIC_CERTIFICATION"
+            ]
+          }
+        }
+      }
+    },
+    "procedural_registry": {
+      "const": "registries/procedural_diagnostics.json"
+    },
+    "typed_outcome_binding_status": {
+      "const": "DEFERRED_TO_WP4"
+    },
+    "records_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    }
+  }
+}

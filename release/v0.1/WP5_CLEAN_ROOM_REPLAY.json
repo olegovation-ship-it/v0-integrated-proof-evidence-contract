@@ -1,0 +1,17 @@
+{
+  "artifact_id": "V0_IPEC_WP5_CLEAN_ROOM_REPLAY",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "PASS",
+  "execution_mode": "EXTRACTED_STANDALONE_PACKAGE",
+  "commands": [
+    "python scripts/build_wp5_schema_manifest.py --check",
+    "python scripts/build_wp5_evidence_manifests.py --check",
+    "python scripts/verify_wp5_ci_integration.py",
+    "pytest -q"
+  ],
+  "schema_count": 21,
+  "tests_expected": 15,
+  "remote_ci_execution": "NOT_PART_OF_STANDALONE_REPLAY",
+  "frozen_upstreams_modified": false
+}

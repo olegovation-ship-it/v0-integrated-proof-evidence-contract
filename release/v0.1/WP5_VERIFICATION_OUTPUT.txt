@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "schema_count": 21,
+  "ci_jobs": "12/12",
+  "theorem_ownership": "36/36",
+  "crosswalk": "36/36",
+  "adapter_bindings": 40,
+  "typed_outcomes": "8/8",
+  "negative_fixtures": "24/24",
+  "deterministic_replay": "2/2",
+  "global_permissions": "contents:read",
+  "remote_ci_execution": "PENDING_IN_STANDALONE_PATCH",
+  "frozen_upstreams_modified": false,
+  "next_deliverable": "WP6_GATE2_AUDIT_AND_CLOSURE"
+}

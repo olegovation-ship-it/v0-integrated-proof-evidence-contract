@@ -1,0 +1,201 @@
+{
+  "$schema": "https://v0-ipec.example/spec/v0.1/canonical_envelope.schema.json",
+  "artifact_id": "V0_IPEC_CANONICAL_PROOF_EVIDENCE_ENVELOPE",
+  "contract_id": "V0-IPEC-0.1",
+  "contract_schema_version": "0.1",
+  "canonicalization_profile": "V0-IPEC-CJ-1",
+  "envelope_id": "WP4.INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+  "generated_at_utc": "2026-07-19T20:40:00Z",
+  "request": {
+    "request_id": "REQ.WP4.INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "contract_id": "V0-IPEC-0.1",
+    "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+    "input_identity": {
+      "registry_state_id": "WP4FixtureRegistry",
+      "schema_version": "v1.1",
+      "language_version": "FC-1-v1.1",
+      "payload_sha256": "998d48d2d286b01afda8d25a572bc13dd6176a7b039d3fc5e7092f5012f4909b",
+      "payload_size_bytes": 66
+    },
+    "upstream_lock_reference": {
+      "artifact_id": "V0_IPEC_WP0_UPSTREAMS_LOCK",
+      "sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26"
+    },
+    "requested_operations": [
+      "SCHEMA_VALIDATE",
+      "ADAPT",
+      "EVALUATE_OBLIGATIONS",
+      "COLLECT_EVIDENCE",
+      "BUILD_CANONICAL_ENVELOPE"
+    ],
+    "payload_location": null
+  },
+  "upstream_lock": {
+    "artifact_id": "V0_IPEC_WP0_UPSTREAMS_LOCK",
+    "lock_sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26",
+    "validator_core": {
+      "upstream_id": "V0_VALIDATOR_CORE_V0_12",
+      "repository": "olegovation-ship-it/v0-validator-core",
+      "source_ref": "v0.12-compiler-passed-freeze",
+      "exact_source_commit": "3540f47198140ca0a3612f247cfe356fa7fba2cb",
+      "doi": "10.5281/zenodo.21285577"
+    },
+    "osap": {
+      "upstream_id": "V0_OSAP_V1_3_0",
+      "repository": "olegovation-ship-it/v0-osap-formal-core",
+      "source_ref": "v1.3.0",
+      "exact_source_commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+      "doi": "10.5281/zenodo.21346728"
+    }
+  },
+  "ownership_map": {
+    "artifact_id": "V0_IPEC_WP1_THEOREM_OWNERSHIP_MAP",
+    "sha256": "1839950a1b5540cac7d39897eb1f0ea4affd731fb4f713d7c543ee58f5459069",
+    "records_sha256": "aa775f3cb3bccb3cb286c8efb6736fe89807a165ebb3698245bd84009b7800c2",
+    "theorem_range": "T121-T156",
+    "record_count": 36
+  },
+  "obligations": [
+    {
+      "obligation_id": "obl.wp4.t152",
+      "origin": "THEOREM_BACKED",
+      "state": "UNSUPPORTED",
+      "blocking": true,
+      "primary_theorem_id": "T152",
+      "supporting_theorem_ids": [],
+      "validator_rule_id": "IPEC.RULE.VOCABULARY.001",
+      "rule_binding_status": "BOUND",
+      "subject_refs": [
+        "fixture:T152"
+      ],
+      "premises": [
+        "Frozen theorem-rule binding and represented fixture premises."
+      ],
+      "evidence_reference_ids": [
+        "ev.wp4.t152.trace"
+      ]
+    }
+  ],
+  "diagnostic_envelope": {
+    "envelope_id": "DIAG.WP4.INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "aggregation_profile": "V0-IPEC-WP4-TYPED-OUTCOME-1",
+    "primary_diagnostic_id": "diag.wp4.proc.unsupported_claim_kind",
+    "diagnostics": [
+      {
+        "diagnostic_id": "diag.wp4.proc.unsupported_claim_kind",
+        "code": "UNSUPPORTED_CLAIM_KIND",
+        "diagnostic_class": "PROCEDURAL",
+        "diagnostic_status": "OUT_OF_SCOPE",
+        "logical_effect": "INCONCLUSIVE",
+        "message": "Unsupported construct remains outside the theorem-backed fragment.",
+        "instance_path": "/claims/0",
+        "theorem_id": null,
+        "validator_rule_id": null,
+        "rule_binding_status": "PROCEDURAL_NOT_APPLICABLE",
+        "procedural_label": true,
+        "related_ids": [
+          "unsupported"
+        ],
+        "evidence_reference_ids": []
+      }
+    ]
+  },
+  "evidence_lineage": [
+    {
+      "evidence_id": "ev.wp4.t152.trace",
+      "evidence_type": "VALIDATOR_TRACE",
+      "theorem_id": "T152",
+      "validator_rule_id": "IPEC.RULE.VOCABULARY.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "PYTHON",
+      "proof_status": "VERIFIED",
+      "evidence_sha256": "581824064c0d9d17a18df2569f9bcb6d3d86b1b0b404030c46c7ba6d5d16654b",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "provenance_parent_ids": []
+    },
+    {
+      "evidence_id": "ev.wp4.t152.lean",
+      "evidence_type": "BACKEND_PROOF",
+      "theorem_id": "T152",
+      "validator_rule_id": "IPEC.RULE.VOCABULARY.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "LEAN4",
+      "proof_status": "PROVED",
+      "evidence_sha256": "f5f864e870ddbae08524a499f68fb81d60888c235db8b361e2be0ec8a72fb1d4",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "provenance_parent_ids": []
+    },
+    {
+      "evidence_id": "ev.wp4.t152.coq",
+      "evidence_type": "BACKEND_PROOF",
+      "theorem_id": "T152",
+      "validator_rule_id": "IPEC.RULE.VOCABULARY.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "COQ",
+      "proof_status": "PROVED",
+      "evidence_sha256": "fad663de354bba45af775960496ba03aa7aad016bb74e9a12a1a2b6bdcf6fd46",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "provenance_parent_ids": []
+    }
+  ],
+  "result": {
+    "execution_status": "COMPLETED",
+    "logical_verdict": "INCONCLUSIVE",
+    "typed_outcome_code": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "typed_outcome_registry_version": "0.1",
+    "outcome_binding_status": "BOUND",
+    "certification_claimed": false,
+    "resolution_basis": [
+      "procedural:UNSUPPORTED_CLAIM_KIND"
+    ]
+  },
+  "reproducibility": {
+    "run_id": "RUN.WP4.INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "run_sequence": 1,
+    "implementation_version": "v0-ipec-wp4/0.1.0.dev1",
+    "schema_bundle_sha256": "13dbf1563e1ee1ddc35b92bd46c928388de6fdb0162d2582cd46ea7fd2dee98b",
+    "environment": {
+      "python": "3.12",
+      "jsonschema": "4.x"
+    }
+  },
+  "integrity": {
+    "digest_profile": "SHA-256/V0-IPEC-CJ-1",
+    "digest_view": "OMIT_integrity.canonical_sha256_AND_integrity.canonical_size_bytes",
+    "canonical_sha256": "402ccf5846a01628dcc63ff468d68f13243c3112673bb6db25aa588083cff04a",
+    "canonical_size_bytes": 5663
+  }
+}

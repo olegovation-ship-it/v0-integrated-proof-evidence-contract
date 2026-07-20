@@ -1,0 +1,117 @@
+{
+  "artifact_id": "V0_IPEC_WP4_TYPED_OUTCOME_REGISTRY",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP4_TYPED_OUTCOMES_BOUND",
+  "outcome_count": 8,
+  "precedence": [
+    "BACKEND_PARITY_FAILURE",
+    "REJECTED_BRANCH_PROMOTION",
+    "REJECTED_NONELIM_OBSTRUCTION",
+    "REJECTED_LIVE_RESIDUAL",
+    "REJECTED_DLE_FAILURE",
+    "REJECTED_GUARD_FAILURE",
+    "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "CERTIFIED"
+  ],
+  "outcomes": [
+    {
+      "code": "BACKEND_PARITY_FAILURE",
+      "priority": 700,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "BACKEND_PARITY",
+      "description": "Lean/Coq statement correspondence or required backend evidence failed.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "REJECTED_BRANCH_PROMOTION",
+      "priority": 650,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "BRANCH_OR_TIER_FIREWALL",
+      "description": "A relative, branch-local, approximation, containment, or label-only basis was promoted beyond its licensed scope.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "REJECTED_NONELIM_OBSTRUCTION",
+      "priority": 600,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "NONELIMINABILITY",
+      "description": "A live non-eliminable residual obstructs the requested robust claim.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "REJECTED_LIVE_RESIDUAL",
+      "priority": 550,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "LIVE_RESIDUAL",
+      "description": "A live residual obstructs the requested raw or robust relative claim.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "REJECTED_DLE_FAILURE",
+      "priority": 500,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "DOMAIN_LICENSE_EXHAUSTION",
+      "description": "The DLE history/current-state obligations failed.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "REJECTED_GUARD_FAILURE",
+      "priority": 450,
+      "logical_verdict": "VIOLATED",
+      "certification_claimed": false,
+      "trigger_class": "GUARD_AND_STRUCTURAL_DISCIPLINE",
+      "description": "A theorem-backed guard, prerequisite, support, compatibility, readiness, token, observer, archive, witness, cardinality, or diagnostic obligation failed.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "priority": 300,
+      "logical_verdict": "INCONCLUSIVE",
+      "certification_claimed": false,
+      "trigger_class": "UNSUPPORTED_OR_PROCEDURAL",
+      "description": "The request cannot receive a theorem-backed logical verdict because syntax, evidence, governance, version, provenance, or execution prerequisites are unsupported or incomplete.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    },
+    {
+      "code": "CERTIFIED",
+      "priority": 0,
+      "logical_verdict": "SATISFIED",
+      "certification_claimed": true,
+      "trigger_class": "ALL_BLOCKING_OBLIGATIONS_SATISFIED",
+      "description": "All supported blocking obligations are satisfied with non-empty, coherent evidence lineage and required dual-backend evidence.",
+      "nonclaims": [
+        "No checker completeness or unrestricted global soundness is claimed.",
+        "No peer review, empirical confirmation, physical validation, or cosmological validation is implied."
+      ]
+    }
+  ],
+  "records_sha256": "4e05803bd53ecc7ed0c7926fddfb9ad517c8b14b3c795217df511a11cae60bfb"
+}

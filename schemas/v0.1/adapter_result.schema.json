@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/adapter_result.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "adapter_id",
+    "adapter_version",
+    "source_profile",
+    "input_sha256",
+    "status",
+    "obligations",
+    "diagnostics",
+    "evidence_lineage",
+    "mapping_summary"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP3_ADAPTER_RESULT"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "adapter_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adapter_version": {
+      "const": "0.1.0.dev1"
+    },
+    "source_profile": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/source_profile"
+    },
+    "input_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    },
+    "status": {
+      "enum": [
+        "ADAPTED",
+        "PARTIAL",
+        "REJECTED_PROCEDURAL"
+      ]
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/proof_obligation.schema.json"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/diagnostic_envelope.schema.json#/$defs/diagnostic"
+      }
+    },
+    "evidence_lineage": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/evidence_reference.schema.json"
+      }
+    },
+    "mapping_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bound_obligation_count",
+        "procedural_diagnostic_count",
+        "unmapped_construct_count",
+        "semantic_evaluation_performed",
+        "typed_outcomes_bound"
+      ],
+      "properties": {
+        "bound_obligation_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "procedural_diagnostic_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unmapped_construct_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "semantic_evaluation_performed": {
+          "const": false
+        },
+        "typed_outcomes_bound": {
+          "const": false
+        }
+      }
+    }
+  }
+}

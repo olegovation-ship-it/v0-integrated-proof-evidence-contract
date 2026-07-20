@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/gate2_acceptance_gates.schema.json",
+  "title": "V0-IPEC Gate 2 Acceptance Gates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "gate_count",
+    "pass_count",
+    "pending_count",
+    "fail_count",
+    "gates",
+    "gate2_closed"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP6_GATE2_ACCEPTANCE_GATES"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "HOLD",
+        "FAIL"
+      ]
+    },
+    "gate_count": {
+      "const": 20
+    },
+    "pass_count": {
+      "type": "integer"
+    },
+    "pending_count": {
+      "type": "integer"
+    },
+    "fail_count": {
+      "type": "integer"
+    },
+    "gate2_closed": {
+      "type": "boolean"
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gate_id",
+          "requirement",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "gate_id": {
+            "type": "string",
+            "pattern": "^G2-[0-9]{2}$"
+          },
+          "requirement": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "PENDING_EXTERNAL_EXECUTION",
+              "FAIL"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

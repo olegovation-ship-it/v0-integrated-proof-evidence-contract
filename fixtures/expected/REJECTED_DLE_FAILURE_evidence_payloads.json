@@ -1,0 +1,15 @@
+{
+  "ev.wp4.t132.trace": {
+    "kind": "trace",
+    "tid": "T132",
+    "outcome": "REJECTED_DLE_FAILURE"
+  },
+  "ev.wp4.t132.lean": {
+    "kind": "lean",
+    "tid": "T132"
+  },
+  "ev.wp4.t132.coq": {
+    "kind": "coq",
+    "tid": "T132"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "artifact_id": "V0_IPEC_WP5_ACCEPTANCE_GATES",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP5_PASS_REMOTE_CI_EXECUTION_PENDING",
+  "gates": [
+    {
+      "gate_id": "WP5-G01",
+      "requirement": "WP4 predecessor package and selected baseline hashes exact",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G02",
+      "requirement": "JSON Schema bundle validates with 21 schemas",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G03",
+      "requirement": "CI catalog contains exactly 12 unique acyclic jobs",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G04",
+      "requirement": "Workflow global permission is contents read",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G05",
+      "requirement": "No remote mutation or release command is present",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G06",
+      "requirement": "Validator and OSAP exact source pins preserved",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G07",
+      "requirement": "Theorem ownership coverage 36 of 36",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G08",
+      "requirement": "Theorem-rule crosswalk coverage 36 of 36 with zero unmapped",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G09",
+      "requirement": "Adapter binding registry contains 40 read-only bindings",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G10",
+      "requirement": "Typed outcomes 8 of 8 and procedural bindings 11 of 11",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G11",
+      "requirement": "Negative fixtures 24 of 24 reject as specified",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G12",
+      "requirement": "Conditionality T140, T150, T156 preserved",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G13",
+      "requirement": "Two local reference replays have identical result payload SHA-256",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G14",
+      "requirement": "Deterministic evidence and CI manifests validate and reproduce",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "WP5-G15",
+      "requirement": "Remote upstream jobs must be green before WP6 may close Gate 2",
+      "status": "PENDING_EXTERNAL_EXECUTION"
+    }
+  ],
+  "wp5_closed": true,
+  "gate2_closed": false,
+  "next_deliverable": "V0_Integrated_Proof_Evidence_Contract_v0.1_WP6_Gate2_Audit_and_Closure_Patch"
+}

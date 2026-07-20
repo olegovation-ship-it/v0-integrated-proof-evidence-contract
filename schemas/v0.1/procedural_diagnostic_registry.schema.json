@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/procedural_diagnostic_registry.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "record_count",
+    "records",
+    "records_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP3_PROCEDURAL_DIAGNOSTIC_REGISTRY"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP3_PROCEDURAL_BOUNDARY_FROZEN"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "records_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "procedural_id",
+          "code",
+          "diagnostic_class",
+          "default_status",
+          "logical_effect",
+          "theorem_id",
+          "validator_rule_id",
+          "procedural_label",
+          "message_template"
+        ],
+        "properties": {
+          "procedural_id": {
+            "type": "string",
+            "pattern": "^IPEC\\.PROC\\."
+          },
+          "code": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]{2,127}$"
+          },
+          "diagnostic_class": {
+            "const": "PROCEDURAL"
+          },
+          "default_status": {
+            "enum": [
+              "REJECT",
+              "INDETERMINATE",
+              "OUT_OF_SCOPE"
+            ]
+          },
+          "logical_effect": {
+            "enum": [
+              "BLOCKING_FAILURE",
+              "INCONCLUSIVE"
+            ]
+          },
+          "theorem_id": {
+            "type": "null"
+          },
+          "validator_rule_id": {
+            "type": "null"
+          },
+          "procedural_label": {
+            "const": true
+          },
+          "message_template": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

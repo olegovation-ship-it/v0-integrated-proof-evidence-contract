@@ -1,0 +1,332 @@
+{
+  "artifact_id": "V0_IPEC_WP4_OUTCOME_BINDING_REGISTRY",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP4_OUTCOME_BINDINGS_FROZEN",
+  "rule_binding_count": 36,
+  "procedural_binding_count": 11,
+  "rule_bindings": [
+    {
+      "rule_id": "IPEC.RULE.GUARD.001",
+      "theorem_id": "T121",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.PREREQUISITE.001",
+      "theorem_id": "T122",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.DLE.001",
+      "theorem_id": "T123",
+      "on_violation_outcome": "REJECTED_DLE_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.001",
+      "theorem_id": "T124",
+      "on_violation_outcome": "REJECTED_LIVE_RESIDUAL",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.OBSERVER.001",
+      "theorem_id": "T125",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.001",
+      "theorem_id": "T126",
+      "on_violation_outcome": "REJECTED_BRANCH_PROMOTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.CLOSURE.001",
+      "theorem_id": "T127",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.SUPPORT.001",
+      "theorem_id": "T128",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.COMPATIBILITY.001",
+      "theorem_id": "T129",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.READINESS.001",
+      "theorem_id": "T130",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.DOMAIN.001",
+      "theorem_id": "T131",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.DLE.002",
+      "theorem_id": "T132",
+      "on_violation_outcome": "REJECTED_DLE_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.TOKEN.001",
+      "theorem_id": "T133",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.002",
+      "theorem_id": "T134",
+      "on_violation_outcome": "REJECTED_LIVE_RESIDUAL",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.003",
+      "theorem_id": "T135",
+      "on_violation_outcome": "REJECTED_NONELIM_OBSTRUCTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.002",
+      "theorem_id": "T136",
+      "on_violation_outcome": "REJECTED_BRANCH_PROMOTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.003",
+      "theorem_id": "T137",
+      "on_violation_outcome": "REJECTED_BRANCH_PROMOTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.OBSERVER.002",
+      "theorem_id": "T138",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.ARCHIVE.001",
+      "theorem_id": "T139",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.WITNESS.001",
+      "theorem_id": "T140",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": true
+    },
+    {
+      "rule_id": "IPEC.RULE.CONTAINMENT.001",
+      "theorem_id": "T141",
+      "on_violation_outcome": "REJECTED_BRANCH_PROMOTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.BRANCH.001",
+      "theorem_id": "T142",
+      "on_violation_outcome": "REJECTED_BRANCH_PROMOTION",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.CARDINALITY.001",
+      "theorem_id": "T143",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.DIAGNOSTIC.001",
+      "theorem_id": "T144",
+      "on_violation_outcome": "REJECTED_GUARD_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.CANONICAL.001",
+      "theorem_id": "T145",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.CANONICAL.002",
+      "theorem_id": "T146",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.REPLAY.001",
+      "theorem_id": "T147",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.MIGRATION.001",
+      "theorem_id": "T148",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.PARITY.001",
+      "theorem_id": "T149",
+      "on_violation_outcome": "BACKEND_PARITY_FAILURE",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.SOUNDNESS.001",
+      "theorem_id": "T150",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": true
+    },
+    {
+      "rule_id": "IPEC.RULE.EXTENSION.001",
+      "theorem_id": "T151",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.VOCABULARY.001",
+      "theorem_id": "T152",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.DIAGNOSTIC.002",
+      "theorem_id": "T153",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.PROVENANCE.001",
+      "theorem_id": "T154",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.VERSION.001",
+      "theorem_id": "T155",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": false
+    },
+    {
+      "rule_id": "IPEC.RULE.CONSERVATIVITY.001",
+      "theorem_id": "T156",
+      "on_violation_outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "binding_basis": "WP4 total violation-to-outcome classification over the frozen 36-rule WP3 crosswalk.",
+      "conditional": true
+    }
+  ],
+  "procedural_bindings": [
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.MISSING_REQUIRED_KEY",
+      "code": "MISSING_REQUIRED_KEY",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.INVALID_CARRIER_SORT",
+      "code": "INVALID_CARRIER_SORT",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.REFERENCE.UNKNOWN_CARRIER",
+      "code": "UNKNOWN_CARRIER_REFERENCE",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.REFERENCE.UNKNOWN_REGISTER",
+      "code": "UNKNOWN_REGISTER_REFERENCE",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.SCHEMA.INVALID_LINK_TYPE",
+      "code": "INVALID_LINK_TYPE",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.INPUT_NOT_OBJECT",
+      "code": "ADAPTER_INPUT_NOT_OBJECT",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.UNSUPPORTED_CLAIM_KIND",
+      "code": "UNSUPPORTED_CLAIM_KIND",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.ADAPTER.UNSUPPORTED_LEGACY_INFERENCE",
+      "code": "UNSUPPORTED_LEGACY_INFERENCE",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.CONTRACT.UNKNOWN_RULE_REFERENCE",
+      "code": "UNKNOWN_RULE_REFERENCE",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.CONTRACT.DUPLICATE_BINDING",
+      "code": "DUPLICATE_BINDING",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    },
+    {
+      "procedural_id": "IPEC.PROC.INTEGRITY.UPSTREAM_PIN_MISMATCH",
+      "code": "UPSTREAM_PIN_MISMATCH",
+      "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+      "logical_policy": "PROCEDURAL_DIAGNOSTIC_NEVER_BECOMES_THEOREM_BACKED_REJECTION"
+    }
+  ],
+  "records_sha256": "b6036362ef76e5e496feb66fed8b85257eafc7c1849b3eed8f7df4d0a5ade153"
+}

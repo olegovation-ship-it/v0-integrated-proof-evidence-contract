@@ -1,0 +1,15 @@
+{
+  "ev.wp4.t152.trace": {
+    "kind": "trace",
+    "tid": "T152",
+    "outcome": "INCONCLUSIVE_UNSUPPORTED_FRAGMENT"
+  },
+  "ev.wp4.t152.lean": {
+    "kind": "lean",
+    "tid": "T152"
+  },
+  "ev.wp4.t152.coq": {
+    "kind": "coq",
+    "tid": "T152"
+  }
+}

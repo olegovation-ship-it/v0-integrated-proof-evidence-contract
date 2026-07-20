@@ -1,0 +1,25 @@
+{
+  "artifact_id": "V0_IPEC_WP5_UPSTREAM_PIN_REPORT",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "PASS",
+  "upstreams": [
+    {
+      "upstream_id": "V0_VALIDATOR_CORE_V0_12",
+      "source_ref": "v0.12-compiler-passed-freeze",
+      "exact_source_commit": "3540f47198140ca0a3612f247cfe356fa7fba2cb",
+      "doi": "10.5281/zenodo.21285577",
+      "mutation_authorized": false
+    },
+    {
+      "upstream_id": "V0_OSAP_V1_3_0",
+      "source_ref": "v1.3.0",
+      "exact_source_commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+      "doi": "10.5281/zenodo.21346728",
+      "mutation_authorized": false
+    }
+  ],
+  "lock_sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26",
+  "remote_resolution_execution": "DEFINED_IN_GITHUB_ACTIONS_PENDING"
+}

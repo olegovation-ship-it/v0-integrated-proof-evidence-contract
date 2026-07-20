@@ -1,0 +1,181 @@
+{
+  "artifact_id": "V0_IPEC_WP6_GATE2_ACCEPTANCE_GATES",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "status": "PASS",
+  "gate_count": 20,
+  "pass_count": 20,
+  "pending_count": 0,
+  "fail_count": 0,
+  "gates": [
+    {
+      "gate_id": "G2-01",
+      "requirement": "WP5 predecessor package and selected baseline hashes are exact",
+      "status": "PASS",
+      "evidence": [
+        "baseline/WP5_BASELINE_REFERENCE.json"
+      ]
+    },
+    {
+      "gate_id": "G2-02",
+      "requirement": "Validator Core and OSAP immutable source pins are preserved",
+      "status": "PASS",
+      "evidence": [
+        "locks/upstreams.lock.json"
+      ]
+    },
+    {
+      "gate_id": "G2-03",
+      "requirement": "JSON Schema bundle contains 25 valid Draft 2020-12 schemas",
+      "status": "PASS",
+      "evidence": [
+        "schemas/v0.1/schema_bundle_manifest.json"
+      ]
+    },
+    {
+      "gate_id": "G2-04",
+      "requirement": "Theorem ownership coverage is 36 of 36",
+      "status": "PASS",
+      "evidence": [
+        "baseline/theorem_ownership_T121_T156.json"
+      ]
+    },
+    {
+      "gate_id": "G2-05",
+      "requirement": "Theorem owner collisions are zero",
+      "status": "PASS",
+      "evidence": [
+        "baseline/theorem_ownership_T121_T156.json"
+      ]
+    },
+    {
+      "gate_id": "G2-06",
+      "requirement": "Theorem-rule crosswalk coverage is 36 of 36",
+      "status": "PASS",
+      "evidence": [
+        "registries/theorem_rule_crosswalk.json"
+      ]
+    },
+    {
+      "gate_id": "G2-07",
+      "requirement": "Unmapped theorem records and rule-ID collisions are zero",
+      "status": "PASS",
+      "evidence": [
+        "registries/theorem_rule_crosswalk.json",
+        "registries/validator_rules.json"
+      ]
+    },
+    {
+      "gate_id": "G2-08",
+      "requirement": "Read-only adapter bindings total 40",
+      "status": "PASS",
+      "evidence": [
+        "registries/adapter_bindings.json"
+      ]
+    },
+    {
+      "gate_id": "G2-09",
+      "requirement": "Every diagnostic is theorem-backed or explicitly procedural; procedural bindings total 11",
+      "status": "PASS",
+      "evidence": [
+        "registries/procedural_diagnostics.json",
+        "registries/outcome_bindings.json"
+      ]
+    },
+    {
+      "gate_id": "G2-10",
+      "requirement": "Typed outcome registry contains exactly eight outcomes",
+      "status": "PASS",
+      "evidence": [
+        "registries/typed_outcomes.json"
+      ]
+    },
+    {
+      "gate_id": "G2-11",
+      "requirement": "All eight typed outcomes are exercised by canonical fixtures",
+      "status": "PASS",
+      "evidence": [
+        "fixtures/expected/WP4_NEGATIVE_CAMPAIGN_REPORT.json"
+      ]
+    },
+    {
+      "gate_id": "G2-12",
+      "requirement": "All 24 deliberate negative integration fixtures are rejected as specified",
+      "status": "PASS",
+      "evidence": [
+        "fixtures/expected/WP4_NEGATIVE_CAMPAIGN_REPORT.json"
+      ]
+    },
+    {
+      "gate_id": "G2-13",
+      "requirement": "Unsupported or procedural fragments resolve to INCONCLUSIVE, not theorem-backed rejection",
+      "status": "PASS",
+      "evidence": [
+        "registries/outcome_bindings.json",
+        "registries/typed_outcomes.json"
+      ]
+    },
+    {
+      "gate_id": "G2-14",
+      "requirement": "CERTIFIED requires non-empty lineage and Lean 4 plus Coq evidence",
+      "status": "PASS",
+      "evidence": [
+        "fixtures/outcomes/CERTIFIED.json",
+        "fixtures/negative/N19_certified_without_lineage.json"
+      ]
+    },
+    {
+      "gate_id": "G2-15",
+      "requirement": "Conditionality is preserved exactly for T140, T150, and T156",
+      "status": "PASS",
+      "evidence": [
+        "registries/validator_rules.json"
+      ]
+    },
+    {
+      "gate_id": "G2-16",
+      "requirement": "Evidence provenance acyclicity is enforced",
+      "status": "PASS",
+      "evidence": [
+        "fixtures/negative/N17_evidence_provenance_cycle.json",
+        "fixtures/expected/WP4_NEGATIVE_CAMPAIGN_REPORT.json"
+      ]
+    },
+    {
+      "gate_id": "G2-17",
+      "requirement": "Two local clean reference replays have identical canonical result hash",
+      "status": "PASS",
+      "evidence": [
+        "evidence/WP5_DETERMINISTIC_REPLAY_COMPARISON.json"
+      ]
+    },
+    {
+      "gate_id": "G2-18",
+      "requirement": "The 12-job CI graph is acyclic, read-only, and contains no release mutation command",
+      "status": "PASS",
+      "evidence": [
+        "registries/ci_job_catalog.json",
+        ".github/workflows/gate2-integration.yml"
+      ]
+    },
+    {
+      "gate_id": "G2-19",
+      "requirement": "WP5 deterministic manifests, regression baseline, and internal hashes reproduce",
+      "status": "PASS",
+      "evidence": [
+        "release/v0.1/WP5_DETERMINISTIC_EVIDENCE_MANIFEST.json",
+        "SHA256SUMS.txt"
+      ]
+    },
+    {
+      "gate_id": "G2-20",
+      "requirement": "Hosted Validator, OSAP Python, OSAP Lean 4, and OSAP Coq replay jobs are green",
+      "status": "PASS",
+      "evidence": [
+        "evidence/WP6_HOSTED_CI_EVIDENCE_INTAKE_TEMPLATE.json"
+      ]
+    }
+  ],
+  "gate2_closed": true
+}

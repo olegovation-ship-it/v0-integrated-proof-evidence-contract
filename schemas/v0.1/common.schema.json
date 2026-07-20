@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/common.schema.json",
+  "title": "V0-IPEC Common Definitions",
+  "type": "object",
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "git_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "theorem_id": {
+      "type": "string",
+      "pattern": "^T(12[1-9]|1[3-4][0-9]|15[0-6])$"
+    },
+    "rule_id": {
+      "type": "string",
+      "pattern": "^IPEC\\.RULE\\.[A-Z][A-Z0-9_]*\\.[0-9]{3}$"
+    },
+    "utc_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "nonempty_string": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_profile": {
+      "enum": [
+        "VALIDATOR_CORE_V0_12_FINITE_MODEL",
+        "OSAP_FC1_V1_1_REGISTRY"
+      ]
+    },
+    "backend": {
+      "enum": [
+        "LEAN4",
+        "COQ",
+        "BOTH",
+        "PYTHON",
+        "SCHEMA",
+        "PROCEDURAL",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "proof_status": {
+      "enum": [
+        "PROVED",
+        "VERIFIED",
+        "NOT_MAPPED",
+        "FAILED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "typed_outcome_code": {
+      "enum": [
+        "CERTIFIED",
+        "REJECTED_GUARD_FAILURE",
+        "REJECTED_DLE_FAILURE",
+        "REJECTED_LIVE_RESIDUAL",
+        "REJECTED_NONELIM_OBSTRUCTION",
+        "REJECTED_BRANCH_PROMOTION",
+        "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+        "BACKEND_PARITY_FAILURE"
+      ]
+    }
+  }
+}

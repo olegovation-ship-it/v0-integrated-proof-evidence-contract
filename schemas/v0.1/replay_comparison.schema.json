@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/replay_comparison.schema.json",
+  "title": "V0-IPEC Replay Comparison",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "run_a",
+    "run_b",
+    "result_payload_sha256",
+    "same_result_sha256",
+    "deterministic",
+    "status"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP5_DETERMINISTIC_REPLAY_COMPARISON"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "run_a": {
+      "const": "RUN_1"
+    },
+    "run_b": {
+      "const": "RUN_2"
+    },
+    "result_payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "same_result_sha256": {
+      "const": true
+    },
+    "deterministic": {
+      "const": true
+    },
+    "status": {
+      "const": "PASS"
+    }
+  }
+}

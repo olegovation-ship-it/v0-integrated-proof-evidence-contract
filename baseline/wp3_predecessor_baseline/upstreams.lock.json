@@ -1,0 +1,85 @@
+{
+  "$schema": "../schemas/v0.1/upstreams.lock.schema.json",
+  "artifact_id": "V0_IPEC_WP0_UPSTREAMS_LOCK",
+  "contract_id": "V0-IPEC-0.1",
+  "lock_version": "0.1",
+  "lock_date": "2026-07-19",
+  "status": "WP0_BASELINE_FROZEN",
+  "integration_repository": {
+    "planned_repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
+    "planned_development_branch": "gate2-development",
+    "package_version": "0.1.0.dev1",
+    "release_status": "DEVELOPMENT_NOT_RELEASED"
+  },
+  "upstreams": [
+    {
+      "upstream_id": "V0_VALIDATOR_CORE_V0_12",
+      "role": "LEGACY_VALIDATOR_EXECUTABLE_AND_SCHEMA_SOURCE",
+      "repository": "olegovation-ship-it/v0-validator-core",
+      "source_ref_type": "tag",
+      "source_ref": "v0.12-compiler-passed-freeze",
+      "exact_source_commit": "3540f47198140ca0a3612f247cfe356fa7fba2cb",
+      "doi": "10.5281/zenodo.21285577",
+      "zenodo_record_id": 21285577,
+      "release_date": "2026-07-09",
+      "theorem_ownership": "NONE_FOR_T121_T156",
+      "lock_policy": "READ_ONLY_EXACT_REF",
+      "mutation_authorized": false,
+      "evidence_snapshot": "evidence/V0_Validator_Core_v0.12_release_identity_snapshot.json"
+    },
+    {
+      "upstream_id": "V0_OSAP_V1_3_0",
+      "role": "CANONICAL_THEOREM_AND_DUAL_BACKEND_OWNER",
+      "repository": "olegovation-ship-it/v0-osap-formal-core",
+      "source_ref_type": "tag",
+      "source_ref": "v1.3.0",
+      "exact_source_commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+      "doi": "10.5281/zenodo.21346728",
+      "zenodo_record_id": 21346728,
+      "release_date": "2026-07-13",
+      "theorem_range": "T121-T156",
+      "theorem_record_count": 36,
+      "crosswalk_count": 6,
+      "checker_component": "0.7.0.dev1",
+      "conditional_theorem_ids": [
+        "T140",
+        "T150",
+        "T156"
+      ],
+      "lock_policy": "READ_ONLY_EXACT_REF",
+      "mutation_authorized": false,
+      "evidence_snapshot": "evidence/V0_OSAP_v1.3.0_release_identity_snapshot.json"
+    }
+  ],
+  "evidence_baselines": [
+    {
+      "baseline_id": "PAPER_B_SUBMITTED_FROZEN_BASELINE",
+      "role": "DERIVED_STATEMENT_CORRESPONDENCE_AND_REPLAY_EVIDENCE",
+      "journal": "Science of Computer Programming",
+      "manuscript_id": "SCICO-D-26-00508",
+      "submission_date": "2026-07-19",
+      "bounded_status": "SUBMITTED_RECEIVED_INITIAL_CHECK_PENDING",
+      "frozen": true,
+      "source_mutation_authorized": false,
+      "theorem_range": "T121-T156",
+      "record_count": 36,
+      "upstream_canonical_hash_verified": 30,
+      "phase1_patch_normalized": 6,
+      "records_sha256": "887ac9ba2adbff6b0c2a487d866e8a3756589de9a2540ba8deff5a031524b3eb",
+      "evidence_paths": [
+        "evidence/Paper_B_v0.5.4_Cross_Backend_Audit_Result.json",
+        "evidence/Paper_B_v0.5.4_Cross_Backend_Theorem_Inventory.json",
+        "evidence/Paper_B_SCP_submission_received_SCICO-D-26-00508_2026-07-19.txt"
+      ]
+    }
+  ],
+  "global_firewall": {
+    "frozen_tags_may_move": false,
+    "frozen_doi_metadata_may_be_rewritten": false,
+    "frozen_archives_may_be_rebuilt": false,
+    "paper_b_submitted_baseline_may_be_edited": false,
+    "integration_changes_location": "NEW_INTEGRATION_REPOSITORY_ONLY",
+    "write_permissions_required_for_audit": false,
+    "new_theorem_ids_created_in_wp0": false
+  }
+}

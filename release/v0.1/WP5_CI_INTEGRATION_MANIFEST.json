@@ -1,0 +1,19 @@
+{
+  "artifact_id": "V0_IPEC_WP5_CI_INTEGRATION_MANIFEST",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "state": "CI_INTEGRATION_DEFINED_LOCAL_REPLAY_PASS_REMOTE_EXECUTION_PENDING",
+  "files": {
+    "registries/ci_job_catalog.json": "8743ad17a6678acb82844743202c4a53ea20496d2aacc2c33865ea9eefb04d1f",
+    ".github/workflows/gate2-integration.yml": "dd731f7b8c60adc1581bbd02468423827aa9a818ee35dfa8d419b5f12d78d4b9"
+  },
+  "metrics": {
+    "ci_jobs": 12,
+    "local_deterministic_runs": 2,
+    "remote_upstream_replay_jobs": 4,
+    "remote_ci_executed_in_standalone_patch": false
+  },
+  "deterministic_result_sha256": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b",
+  "frozen_upstreams_modified": false
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "v0-ipec-wp6"
+version = "0.1.0.dev1"
+description = "V0-IPEC Gate 2 final audit and closure-decision package"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.23,<5", "referencing>=0.35,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools]
+package-dir = {"" = "checker"}
+[tool.setuptools.packages.find]
+where = ["checker"]
+[tool.pytest.ini_options]
+pythonpath = ["checker"]
+testpaths = ["tests"]
+addopts = "-ra"

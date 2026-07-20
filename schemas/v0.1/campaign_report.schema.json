@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/campaign_report.schema.json",
+  "title": "V0-IPEC WP4 Campaign Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "typed_outcome_count",
+    "typed_outcomes_exercised",
+    "negative_fixture_count",
+    "negative_fixtures_rejected",
+    "deterministic_replay",
+    "results",
+    "report_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP4_NEGATIVE_CAMPAIGN_REPORT"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP4_CAMPAIGN_PASS"
+    },
+    "typed_outcome_count": {
+      "const": 8
+    },
+    "typed_outcomes_exercised": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/typed_outcome_code"
+      }
+    },
+    "negative_fixture_count": {
+      "const": 24
+    },
+    "negative_fixtures_rejected": {
+      "const": 24
+    },
+    "deterministic_replay": {
+      "const": true
+    },
+    "results": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fixture_id",
+          "expected_error_code",
+          "observed_error_codes",
+          "passed"
+        ],
+        "properties": {
+          "fixture_id": {
+            "type": "string"
+          },
+          "expected_error_code": {
+            "type": "string"
+          },
+          "observed_error_codes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "passed": {
+            "const": true
+          }
+        }
+      }
+    },
+    "report_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    }
+  }
+}

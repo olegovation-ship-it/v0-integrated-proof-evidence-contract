@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/evidence_reference.schema.json",
+  "title": "V0-IPEC Evidence Reference",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "evidence_type",
+    "theorem_id",
+    "validator_rule_id",
+    "fixture_id",
+    "backend",
+    "proof_status",
+    "evidence_sha256",
+    "schema_version",
+    "toolchain",
+    "source_release",
+    "provenance_parent_ids"
+  ],
+  "properties": {
+    "evidence_id": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+    },
+    "evidence_type": {
+      "enum": [
+        "BACKEND_PROOF",
+        "STATEMENT_HASH",
+        "FIXTURE",
+        "VALIDATOR_TRACE",
+        "RELEASE_MANIFEST",
+        "SCHEMA_VALIDATION",
+        "PROCEDURAL_LOG",
+        "PUBLICATION_RECORD",
+        "MANUSCRIPT_SOURCE"
+      ]
+    },
+    "theorem_id": {
+      "oneOf": [
+        {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "validator_rule_id": {
+      "oneOf": [
+        {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "fixture_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "backend": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/backend"
+    },
+    "proof_status": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/proof_status"
+    },
+    "evidence_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    },
+    "schema_version": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+    },
+    "toolchain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        },
+        "version": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        }
+      }
+    },
+    "source_release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "commit"
+      ],
+      "properties": {
+        "repository": {
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+          "type": "string"
+        },
+        "ref": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        },
+        "commit": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/git_sha"
+        },
+        "doi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance_parent_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+      }
+    }
+  }
+}

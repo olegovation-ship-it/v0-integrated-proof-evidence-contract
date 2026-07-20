@@ -1,0 +1,15 @@
+{
+  "ev.wp4.t135.trace": {
+    "kind": "trace",
+    "tid": "T135",
+    "outcome": "REJECTED_NONELIM_OBSTRUCTION"
+  },
+  "ev.wp4.t135.lean": {
+    "kind": "lean",
+    "tid": "T135"
+  },
+  "ev.wp4.t135.coq": {
+    "kind": "coq",
+    "tid": "T135"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/replay_report.schema.json",
+  "title": "V0-IPEC Deterministic Replay Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "run_id",
+    "execution_mode",
+    "source_snapshot_sha256",
+    "result_payload_sha256",
+    "status",
+    "metrics",
+    "checks"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP5_DETERMINISTIC_REPLAY_RUN"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "run_id": {
+      "enum": [
+        "RUN_1",
+        "RUN_2"
+      ]
+    },
+    "execution_mode": {
+      "const": "LOCAL_REFERENCE_REPLAY"
+    },
+    "source_snapshot_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "result_payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "check_id",
+          "status"
+        ],
+        "properties": {
+          "check_id": {
+            "type": "string"
+          },
+          "status": {
+            "const": "PASS"
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

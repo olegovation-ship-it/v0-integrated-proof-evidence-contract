@@ -1,0 +1,40 @@
+{
+  "artifact_id": "V0_IPEC_WP6_GATE2_AUDIT_RESULT",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-20",
+  "status": "PASS",
+  "decision": "CLOSE_GATE2",
+  "gate2_closed": true,
+  "closure_eligible": true,
+  "gate_summary": {
+    "total": 20,
+    "pass": 20,
+    "pending": 0,
+    "fail": 0
+  },
+  "metrics": {
+    "theorem_owners": 36,
+    "unique_theorem_ids": 36,
+    "theorem_rule_bindings": 36,
+    "unmapped": 0,
+    "validator_rules": 36,
+    "unique_rule_ids": 36,
+    "adapter_bindings": 40,
+    "typed_outcomes": 8,
+    "procedural_bindings": 11,
+    "negative_fixtures": 24,
+    "negative_fixtures_rejected": 24,
+    "typed_outcomes_exercised": 8,
+    "ci_jobs": 12,
+    "conditional_theorems": [
+      "T140",
+      "T150",
+      "T156"
+    ],
+    "local_replay_digest": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b"
+  },
+  "single_blocker": null,
+  "audit_payload_sha256": "0a1a286c838c885d9d3ff4e9fed7cff8704d79ae95ee352025480de794ea0ba6",
+  "frozen_upstreams_modified": false
+}

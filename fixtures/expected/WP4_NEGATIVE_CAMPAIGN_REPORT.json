@@ -1,0 +1,223 @@
+{
+  "artifact_id": "V0_IPEC_WP4_NEGATIVE_CAMPAIGN_REPORT",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP4_CAMPAIGN_PASS",
+  "typed_outcome_count": 8,
+  "typed_outcomes_exercised": [
+    "BACKEND_PARITY_FAILURE",
+    "CERTIFIED",
+    "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "REJECTED_BRANCH_PROMOTION",
+    "REJECTED_DLE_FAILURE",
+    "REJECTED_GUARD_FAILURE",
+    "REJECTED_LIVE_RESIDUAL",
+    "REJECTED_NONELIM_OBSTRUCTION"
+  ],
+  "negative_fixture_count": 24,
+  "negative_fixtures_rejected": 24,
+  "deterministic_replay": true,
+  "results": [
+    {
+      "fixture_id": "N01",
+      "expected_error_code": "THEOREM_BACKED_DIAGNOSTIC_MISSING_THEOREM_ID",
+      "observed_error_codes": [
+        "THEOREM_BACKED_DIAGNOSTIC_MISSING_THEOREM_ID",
+        "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH",
+        "UNKNOWN_THEOREM_ID"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N02",
+      "expected_error_code": "PROCEDURAL_DIAGNOSTIC_MISSING_LABEL",
+      "observed_error_codes": [
+        "PROCEDURAL_DIAGNOSTIC_MISSING_LABEL"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N03",
+      "expected_error_code": "DUPLICATE_THEOREM_OWNER",
+      "observed_error_codes": [
+        "DUPLICATE_THEOREM_OWNER"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N04",
+      "expected_error_code": "UNKNOWN_THEOREM_ID",
+      "observed_error_codes": [
+        "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH",
+        "UNKNOWN_THEOREM_ID"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N05",
+      "expected_error_code": "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH",
+      "observed_error_codes": [
+        "THEOREM_RULE_SEMANTIC_ROLE_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N06",
+      "expected_error_code": "PHASE1_DERIVED_HASH_MISMATCH",
+      "observed_error_codes": [
+        "PHASE1_DERIVED_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N07",
+      "expected_error_code": "UPSTREAM_STATEMENT_HASH_MISMATCH",
+      "observed_error_codes": [
+        "UPSTREAM_STATEMENT_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N08",
+      "expected_error_code": "LEAN_BACKEND_EVIDENCE_MISSING",
+      "observed_error_codes": [
+        "LEAN_BACKEND_EVIDENCE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N09",
+      "expected_error_code": "COQ_BACKEND_EVIDENCE_MISSING",
+      "observed_error_codes": [
+        "COQ_BACKEND_EVIDENCE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N10",
+      "expected_error_code": "BACKEND_STATEMENT_PARITY_MISMATCH",
+      "observed_error_codes": [
+        "BACKEND_STATEMENT_PARITY_MISMATCH",
+        "EVIDENCE_REFERENCE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N11",
+      "expected_error_code": "UPSTREAM_SOURCE_COMMIT_MISMATCH",
+      "observed_error_codes": [
+        "UPSTREAM_SOURCE_COMMIT_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N12",
+      "expected_error_code": "RELEASE_TAG_TARGET_MISMATCH",
+      "observed_error_codes": [
+        "RELEASE_TAG_TARGET_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N13",
+      "expected_error_code": "INPUT_PAYLOAD_HASH_MISMATCH",
+      "observed_error_codes": [
+        "INPUT_PAYLOAD_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N14",
+      "expected_error_code": "EVIDENCE_REFERENCE_MISSING",
+      "observed_error_codes": [
+        "EVIDENCE_REFERENCE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N15",
+      "expected_error_code": "EVIDENCE_HASH_MISMATCH",
+      "observed_error_codes": [
+        "EVIDENCE_HASH_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N16",
+      "expected_error_code": "DUPLICATE_EVIDENCE_ID",
+      "observed_error_codes": [
+        "DUPLICATE_EVIDENCE_ID"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N17",
+      "expected_error_code": "EVIDENCE_PROVENANCE_CYCLE",
+      "observed_error_codes": [
+        "EVIDENCE_PROVENANCE_CYCLE"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N18",
+      "expected_error_code": "UNSUPPORTED_FRAGMENT_REPORTED_AS_REJECTION",
+      "observed_error_codes": [
+        "UNSUPPORTED_FRAGMENT_REPORTED_AS_REJECTION"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N19",
+      "expected_error_code": "CERTIFIED_WITHOUT_LINEAGE",
+      "observed_error_codes": [
+        "CERTIFIED_WITHOUT_LINEAGE",
+        "COQ_BACKEND_EVIDENCE_MISSING",
+        "EVIDENCE_REFERENCE_MISSING",
+        "LEAN_BACKEND_EVIDENCE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N20",
+      "expected_error_code": "CONDITIONAL_THEOREM_PREMISE_MISSING",
+      "observed_error_codes": [
+        "CONDITIONAL_THEOREM_PREMISE_MISSING"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N21",
+      "expected_error_code": "CANONICAL_SERIALIZATION_MISMATCH",
+      "observed_error_codes": [
+        "CANONICAL_SERIALIZATION_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N22",
+      "expected_error_code": "REPLAY_NONDETERMINISTIC_RESULT",
+      "observed_error_codes": [
+        "REPLAY_NONDETERMINISTIC_RESULT"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N23",
+      "expected_error_code": "VERSION_LOCK_TUPLE_MISMATCH",
+      "observed_error_codes": [
+        "VERSION_LOCK_TUPLE_MISMATCH"
+      ],
+      "passed": true
+    },
+    {
+      "fixture_id": "N24",
+      "expected_error_code": "FROZEN_BASELINE_MUTATION_DETECTED",
+      "observed_error_codes": [
+        "FROZEN_BASELINE_MUTATION_DETECTED"
+      ],
+      "passed": true
+    }
+  ],
+  "report_sha256": "d966601fc89ba6a510b4fd4e726a332536666510684206218293b01a56908139"
+}

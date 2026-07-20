@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/proof_obligation.schema.json",
+  "title": "V0-IPEC Proof Obligation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "obligation_id",
+    "origin",
+    "state",
+    "blocking",
+    "primary_theorem_id",
+    "supporting_theorem_ids",
+    "validator_rule_id",
+    "rule_binding_status",
+    "subject_refs",
+    "premises",
+    "evidence_reference_ids"
+  ],
+  "properties": {
+    "obligation_id": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+    },
+    "origin": {
+      "enum": [
+        "THEOREM_BACKED",
+        "PROCEDURAL"
+      ]
+    },
+    "state": {
+      "enum": [
+        "SATISFIED",
+        "VIOLATED",
+        "UNSUPPORTED",
+        "DEFERRED"
+      ]
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "primary_theorem_id": {
+      "oneOf": [
+        {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "supporting_theorem_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+      }
+    },
+    "validator_rule_id": {
+      "oneOf": [
+        {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rule_binding_status": {
+      "enum": [
+        "BOUND",
+        "DEFERRED_TO_WP3",
+        "PROCEDURAL_NOT_APPLICABLE"
+      ]
+    },
+    "subject_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+      }
+    },
+    "premises": {
+      "type": "array",
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+      }
+    },
+    "evidence_reference_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "origin": {
+            "const": "THEOREM_BACKED"
+          }
+        },
+        "required": [
+          "origin"
+        ]
+      },
+      "then": {
+        "properties": {
+          "primary_theorem_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/theorem_id"
+          },
+          "rule_binding_status": {
+            "enum": [
+              "BOUND",
+              "DEFERRED_TO_WP3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "origin": {
+            "const": "PROCEDURAL"
+          }
+        },
+        "required": [
+          "origin"
+        ]
+      },
+      "then": {
+        "properties": {
+          "primary_theorem_id": {
+            "type": "null"
+          },
+          "supporting_theorem_ids": {
+            "maxItems": 0
+          },
+          "validator_rule_id": {
+            "type": "null"
+          },
+          "rule_binding_status": {
+            "const": "PROCEDURAL_NOT_APPLICABLE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "rule_binding_status": {
+            "const": "BOUND"
+          }
+        },
+        "required": [
+          "rule_binding_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "validator_rule_id": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/rule_id"
+          }
+        }
+      }
+    }
+  ]
+}

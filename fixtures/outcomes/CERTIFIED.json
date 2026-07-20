@@ -1,0 +1,183 @@
+{
+  "$schema": "https://v0-ipec.example/spec/v0.1/canonical_envelope.schema.json",
+  "artifact_id": "V0_IPEC_CANONICAL_PROOF_EVIDENCE_ENVELOPE",
+  "contract_id": "V0-IPEC-0.1",
+  "contract_schema_version": "0.1",
+  "canonicalization_profile": "V0-IPEC-CJ-1",
+  "envelope_id": "WP4.CERTIFIED",
+  "generated_at_utc": "2026-07-19T20:40:00Z",
+  "request": {
+    "request_id": "REQ.WP4.CERTIFIED",
+    "contract_id": "V0-IPEC-0.1",
+    "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+    "input_identity": {
+      "registry_state_id": "WP4FixtureRegistry",
+      "schema_version": "v1.1",
+      "language_version": "FC-1-v1.1",
+      "payload_sha256": "998d48d2d286b01afda8d25a572bc13dd6176a7b039d3fc5e7092f5012f4909b",
+      "payload_size_bytes": 66
+    },
+    "upstream_lock_reference": {
+      "artifact_id": "V0_IPEC_WP0_UPSTREAMS_LOCK",
+      "sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26"
+    },
+    "requested_operations": [
+      "SCHEMA_VALIDATE",
+      "ADAPT",
+      "EVALUATE_OBLIGATIONS",
+      "COLLECT_EVIDENCE",
+      "BUILD_CANONICAL_ENVELOPE"
+    ],
+    "payload_location": null
+  },
+  "upstream_lock": {
+    "artifact_id": "V0_IPEC_WP0_UPSTREAMS_LOCK",
+    "lock_sha256": "f807a1619147af1bb1aeb7bc5ce601c4f3ed54d77259e41d92f6e9202ed78a26",
+    "validator_core": {
+      "upstream_id": "V0_VALIDATOR_CORE_V0_12",
+      "repository": "olegovation-ship-it/v0-validator-core",
+      "source_ref": "v0.12-compiler-passed-freeze",
+      "exact_source_commit": "3540f47198140ca0a3612f247cfe356fa7fba2cb",
+      "doi": "10.5281/zenodo.21285577"
+    },
+    "osap": {
+      "upstream_id": "V0_OSAP_V1_3_0",
+      "repository": "olegovation-ship-it/v0-osap-formal-core",
+      "source_ref": "v1.3.0",
+      "exact_source_commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+      "doi": "10.5281/zenodo.21346728"
+    }
+  },
+  "ownership_map": {
+    "artifact_id": "V0_IPEC_WP1_THEOREM_OWNERSHIP_MAP",
+    "sha256": "1839950a1b5540cac7d39897eb1f0ea4affd731fb4f713d7c543ee58f5459069",
+    "records_sha256": "aa775f3cb3bccb3cb286c8efb6736fe89807a165ebb3698245bd84009b7800c2",
+    "theorem_range": "T121-T156",
+    "record_count": 36
+  },
+  "obligations": [
+    {
+      "obligation_id": "obl.wp4.t121",
+      "origin": "THEOREM_BACKED",
+      "state": "SATISFIED",
+      "blocking": true,
+      "primary_theorem_id": "T121",
+      "supporting_theorem_ids": [],
+      "validator_rule_id": "IPEC.RULE.GUARD.001",
+      "rule_binding_status": "BOUND",
+      "subject_refs": [
+        "fixture:T121"
+      ],
+      "premises": [
+        "Frozen theorem-rule binding and represented fixture premises."
+      ],
+      "evidence_reference_ids": [
+        "ev.wp4.t121.trace"
+      ]
+    }
+  ],
+  "diagnostic_envelope": {
+    "envelope_id": "DIAG.WP4.CERTIFIED",
+    "aggregation_profile": "V0-IPEC-WP4-TYPED-OUTCOME-1",
+    "primary_diagnostic_id": null,
+    "diagnostics": []
+  },
+  "evidence_lineage": [
+    {
+      "evidence_id": "ev.wp4.t121.trace",
+      "evidence_type": "VALIDATOR_TRACE",
+      "theorem_id": "T121",
+      "validator_rule_id": "IPEC.RULE.GUARD.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "PYTHON",
+      "proof_status": "VERIFIED",
+      "evidence_sha256": "14984b64cb210cde2365ce4facd214b6a78254cdfb3ebe83a14ec71c5dbcf47c",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "provenance_parent_ids": []
+    },
+    {
+      "evidence_id": "ev.wp4.t121.lean",
+      "evidence_type": "BACKEND_PROOF",
+      "theorem_id": "T121",
+      "validator_rule_id": "IPEC.RULE.GUARD.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "LEAN4",
+      "proof_status": "PROVED",
+      "evidence_sha256": "4aa283518b32264008f851ee66d62e87395fa399a06163e1065e3b217e79cd10",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "provenance_parent_ids": []
+    },
+    {
+      "evidence_id": "ev.wp4.t121.coq",
+      "evidence_type": "BACKEND_PROOF",
+      "theorem_id": "T121",
+      "validator_rule_id": "IPEC.RULE.GUARD.001",
+      "fixture_id": "WP4.OUTCOME.FIXTURE",
+      "backend": "COQ",
+      "proof_status": "PROVED",
+      "evidence_sha256": "267b384d1795faa8774e5976376dec45699e22102f6099ccaab5943284f5c653",
+      "schema_version": "WP4-0.1",
+      "toolchain": {
+        "name": "V0-IPEC-WP4 fixture builder",
+        "version": "0.1.0.dev1"
+      },
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "provenance_parent_ids": []
+    }
+  ],
+  "result": {
+    "execution_status": "COMPLETED",
+    "logical_verdict": "SATISFIED",
+    "typed_outcome_code": "CERTIFIED",
+    "typed_outcome_registry_version": "0.1",
+    "outcome_binding_status": "BOUND",
+    "certification_claimed": true,
+    "resolution_basis": [
+      "all_blocking_obligations_satisfied"
+    ]
+  },
+  "reproducibility": {
+    "run_id": "RUN.WP4.CERTIFIED",
+    "run_sequence": 1,
+    "implementation_version": "v0-ipec-wp4/0.1.0.dev1",
+    "schema_bundle_sha256": "13dbf1563e1ee1ddc35b92bd46c928388de6fdb0162d2582cd46ea7fd2dee98b",
+    "environment": {
+      "python": "3.12",
+      "jsonschema": "4.x"
+    }
+  },
+  "integrity": {
+    "digest_profile": "SHA-256/V0-IPEC-CJ-1",
+    "digest_view": "OMIT_integrity.canonical_sha256_AND_integrity.canonical_size_bytes",
+    "canonical_sha256": "0e0ba08898604fe14e35363d10cef9778b8c3acec359d91c310faa50460c8548",
+    "canonical_size_bytes": 5015
+  }
+}

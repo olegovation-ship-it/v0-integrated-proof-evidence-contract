@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/integration_request.schema.json",
+  "title": "V0-IPEC Integration Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "contract_id",
+    "source_profile",
+    "input_identity",
+    "upstream_lock_reference",
+    "requested_operations"
+  ],
+  "properties": {
+    "request_id": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "source_profile": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/source_profile"
+    },
+    "input_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registry_state_id",
+        "schema_version",
+        "payload_sha256",
+        "payload_size_bytes"
+      ],
+      "properties": {
+        "registry_state_id": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/identifier"
+        },
+        "schema_version": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/nonempty_string"
+        },
+        "language_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payload_sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        },
+        "payload_size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "upstream_lock_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "sha256"
+      ],
+      "properties": {
+        "artifact_id": {
+          "const": "V0_IPEC_WP0_UPSTREAMS_LOCK"
+        },
+        "sha256": {
+          "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+        }
+      }
+    },
+    "requested_operations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "SCHEMA_VALIDATE",
+          "ADAPT",
+          "EVALUATE_OBLIGATIONS",
+          "COLLECT_EVIDENCE",
+          "BUILD_CANONICAL_ENVELOPE"
+        ]
+      }
+    },
+    "payload_location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "artifact_id": "V0_IPEC_WP5_OWNERSHIP_REPORT",
+  "status": "PASS",
+  "records": 36,
+  "unique_theorem_ids": 36,
+  "owner_collisions": 0,
+  "canonical_owner": "V0_OSAP_V1_3_0"
+}

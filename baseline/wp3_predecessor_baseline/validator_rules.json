@@ -1,0 +1,1485 @@
+{
+  "artifact_id": "V0_IPEC_WP3_VALIDATOR_RULE_REGISTRY",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "status": "WP3_RULE_BINDINGS_FROZEN",
+  "rule_namespace": "IPEC.RULE.<DOMAIN>.<NNN>",
+  "rule_count": 36,
+  "theorem_coverage": "T121-T156",
+  "theorem_coverage_count": 36,
+  "mapping_status": "BOUND",
+  "typed_outcome_binding_status": "DEFERRED_TO_WP4",
+  "conditional_theorem_ids": [
+    "T140",
+    "T150",
+    "T156"
+  ],
+  "rules": [
+    {
+      "rule_id": "IPEC.RULE.GUARD.001",
+      "primary_theorem_id": "T121",
+      "supporting_theorem_ids": [],
+      "canonical_name": "live_guard_has_a_live_token",
+      "semantic_role": "live-token guard audit",
+      "diagnostic_codes": [
+        "UNGUARDED_VALUE_CLAIM"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=has_value]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        },
+        {
+          "source_profile": "VALIDATOR_CORE_V0_12_FINITE_MODEL",
+          "selector": "/dom_has/*",
+          "binding_class": "LEGACY_STRUCTURAL_PROXY_BINDING",
+          "evaluation_mode": "DEFERRED_NO_SEMANTIC_CERTIFICATION"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "babb17eac963e89433881717373d9c989ea0438f68559359ba105593e4807557",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "18cab909609263adcd8f0ec88b32a4f0aa13d084273ec7c30483dc50a41cc1f6"
+    },
+    {
+      "rule_id": "IPEC.RULE.PREREQUISITE.001",
+      "primary_theorem_id": "T122",
+      "supporting_theorem_ids": [],
+      "canonical_name": "empty_all_of_prerequisite_family_is_vacuously_satisfied",
+      "semantic_role": "empty all_of and prerequisite-family audit",
+      "diagnostic_codes": [
+        "MISSING_PREREQUISITE"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/prerequisite_families[mode=all_of]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "f9fbfc75b7334c765f03a90c702e67d13a67c00bd00a56966da2e831d04b4e9b",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "872117875af73ce298e699e6fd3dd440cb903690aaaff7bfe12dc36ba22a309e"
+    },
+    {
+      "rule_id": "IPEC.RULE.DLE.001",
+      "primary_theorem_id": "T123",
+      "supporting_theorem_ids": [],
+      "canonical_name": "dle_implies_current_no_live_status",
+      "semantic_role": "current no-live consequence of DLE",
+      "diagnostic_codes": [
+        "DLE_CONFLICTS_WITH_LIVE_TOKEN"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=dle]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "fb907509c5f7c7710dd739cbfe7eb8a6aed6fbb38d10981012867e7f377b7a4b",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "e00aaad09eb9ddfa2ff1bd0b05af8a1905dcf42cefa71cf4f7efe660df50d1f9"
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.001",
+      "primary_theorem_id": "T124",
+      "supporting_theorem_ids": [],
+      "canonical_name": "live_residual_obstructs_robust_relative_v0",
+      "semantic_role": "robust relative-V0 live-residual audit",
+      "diagnostic_codes": [
+        "LIVE_RESIDUAL_OBSTRUCTS_ROBUST_RELATIVE_V0"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=robust_relative_v0]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        },
+        {
+          "source_profile": "VALIDATOR_CORE_V0_12_FINITE_MODEL",
+          "selector": "/links[type=ResidueLink]",
+          "binding_class": "LEGACY_STRUCTURAL_PROXY_BINDING",
+          "evaluation_mode": "DEFERRED_NO_SEMANTIC_CERTIFICATION"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "a8a434dacaaffd132bb762630e9ee01c50e9963938b970e24256faa9ada40d79",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "e52fcaad64f47552d3edbf1ae96e1ead60befc5058bfac549ab0b932d4cbc006"
+    },
+    {
+      "rule_id": "IPEC.RULE.OBSERVER.001",
+      "primary_theorem_id": "T125",
+      "supporting_theorem_ids": [],
+      "canonical_name": "terminal_self_certificate_exposes_empty_internal_and_external_support",
+      "semantic_role": "terminal support-exhaustion audit",
+      "diagnostic_codes": [
+        "TERMINAL_SELF_CERTIFICATE_NOT_EXHAUSTED"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=observer_terminal_self_certificate]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "d92314a732e2647ccf1246b8b7f03aa2e3558df8b08fcce65d8cdefc7dae7f55",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "34390faa104f85cf7d110f67b3c07a19a994ba86854de02850f4d20f0c78abf0"
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.001",
+      "primary_theorem_id": "T126",
+      "supporting_theorem_ids": [],
+      "canonical_name": "direct_branch_local_to_absolute_promotion_violates_the_firewall",
+      "semantic_role": "direct branch-local or relative-to-absolute promotion firewall",
+      "diagnostic_codes": [
+        "ABSOLUTE_RELATIVE_FIREWALL"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=absolute_v0]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "1a7731bf92d9272f3f51e33b80d8cf5669acf85d545f1e3dee0a0abb8c64c252",
+      "statement_hash_class": "DERIVED_PHASE1_NORMALIZATION",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase1.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "c77778b77a87a5a9fbd8f3137dd26a0575ab651534c85b51bf020c70647c537f"
+    },
+    {
+      "rule_id": "IPEC.RULE.CLOSURE.001",
+      "primary_theorem_id": "T127",
+      "supporting_theorem_ids": [],
+      "canonical_name": "closure_minimality",
+      "semantic_role": "least prerequisite closure audit",
+      "diagnostic_codes": [
+        "PREREQUISITE_CLOSURE_NOT_LEAST"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=prerequisite_closure]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "65aab2064dc6d0a47652e2cba1813a8e65c9e4e174db6d343d7a145577950a54",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "a546201c07e0d050a71d5210ecc35eda82c9c1a715bca905d44fc061124707a1"
+    },
+    {
+      "rule_id": "IPEC.RULE.SUPPORT.001",
+      "primary_theorem_id": "T128",
+      "supporting_theorem_ids": [],
+      "canonical_name": "alternative_support_transparency",
+      "semantic_role": "one_of support-selection transparency",
+      "diagnostic_codes": [
+        "ALTERNATIVE_SUPPORT_SELECTION_REQUIRED",
+        "INVALID_ALTERNATIVE_SUPPORT_SELECTION"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=one_of_support_selection]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "d9979d741f79844b2ac39ec8a36020eb31afc601cf89cc6231d55f90995e1bae",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "fdaa6a955b7529f468d02970db822ab2beb38a0f8e4d49171dd35ad1c386f3d8"
+    },
+    {
+      "rule_id": "IPEC.RULE.COMPATIBILITY.001",
+      "primary_theorem_id": "T129",
+      "supporting_theorem_ids": [],
+      "canonical_name": "compatibility_preservation",
+      "semantic_role": "active-profile compatibility preservation",
+      "diagnostic_codes": [
+        "COMPATIBILITY_CONSTRAINT_VIOLATION",
+        "ACTIVE_PROFILE_REGISTER_NOT_LIVE"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=activation_profile]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "737cd617596ade973388e887213e2be9e83cde2722472296f977b8ec9d351713",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "457f2b166d89c629379103fe93d34d409e765115fcf366cbfc86bf2c0b798cc5"
+    },
+    {
+      "rule_id": "IPEC.RULE.READINESS.001",
+      "primary_theorem_id": "T130",
+      "supporting_theorem_ids": [],
+      "canonical_name": "dimensional_readiness_soundness",
+      "semantic_role": "protocol readiness prerequisite audit",
+      "diagnostic_codes": [
+        "PROTOCOL_READY_WITHOUT_LIVE_PREREQUISITES"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=protocol_readiness]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "16f11c1555e11ed71f77549f4ce2cfa3d20b5fae8f380f9d0f0634ea94d69aae",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "7114d8d6dbc11a9f195c9975442463cc1db03788d1100a482c56b96b1ebd6d7f"
+    },
+    {
+      "rule_id": "IPEC.RULE.DOMAIN.001",
+      "primary_theorem_id": "T131",
+      "supporting_theorem_ids": [],
+      "canonical_name": "undefined_is_not_zero",
+      "semantic_role": "undefined-domain and numeric-value disjointness",
+      "diagnostic_codes": [
+        "UNDEFINED_DOMAIN_COERCED_TO_NUMERIC",
+        "READY_VALUE_MISSING_NUMERIC"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=dimension_result]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "37dd0964fb46fb2e5644b41a9ed5f24ed47c98d98adace0a205d4c41f449f923",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "496ca40f32beed46d37bd91e5a988391b8210d72a75ccc4c62cdcd7d676e63f3"
+    },
+    {
+      "rule_id": "IPEC.RULE.DLE.002",
+      "primary_theorem_id": "T132",
+      "supporting_theorem_ids": [
+        "T123"
+      ],
+      "canonical_name": "dle_history_adequacy",
+      "semantic_role": "DLE historical-source and current-state adequacy",
+      "diagnostic_codes": [
+        "DLE_WITHOUT_HISTORICAL_SOURCE",
+        "DLE_CONFLICTS_WITH_LIVE_TOKEN"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=dle]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "6acfbb93908aa1cbd03bb638bdabbe1d7520467ed057dbed0d509a65166b6c9f",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase2.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "36c0d76d6034ed4865a8577b60e5b5c578d9869429346f463701d4125390845d"
+    },
+    {
+      "rule_id": "IPEC.RULE.TOKEN.001",
+      "primary_theorem_id": "T133",
+      "supporting_theorem_ids": [],
+      "canonical_name": "fresh_token_reactivation",
+      "semantic_role": "fresh reactivation token identity separation",
+      "diagnostic_codes": [
+        "REACTIVATION_TOKEN_ID_REUSED"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=fresh_token_reactivation]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "2da3a4a7ca0567b579b1f0e3cad693bc9c2df26a8db5196e5ad0a1c8b57d9373",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "01bc436b010dccb6ba9bde21ba361d57b5eb750f064108e41e814b42563b00c0"
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.002",
+      "primary_theorem_id": "T134",
+      "supporting_theorem_ids": [],
+      "canonical_name": "raw_residual_obstruction",
+      "semantic_role": "raw relative-V0 live-residual audit",
+      "diagnostic_codes": [
+        "LIVE_RESIDUAL_OBSTRUCTS_RAW_RELATIVE_V0"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=raw_relative_v0]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        },
+        {
+          "source_profile": "VALIDATOR_CORE_V0_12_FINITE_MODEL",
+          "selector": "/links[type=ResidueLink]",
+          "binding_class": "LEGACY_STRUCTURAL_PROXY_BINDING",
+          "evaluation_mode": "DEFERRED_NO_SEMANTIC_CERTIFICATION"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "58eab9c062025ffc1a1c792cdd11562456664f53122b2f676d820da3334f42cd",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "263c93c1d7d83857a534380211f1d20f8bb21df0a13ecf5d2ead069f9b5d9317"
+    },
+    {
+      "rule_id": "IPEC.RULE.RESIDUAL.003",
+      "primary_theorem_id": "T135",
+      "supporting_theorem_ids": [
+        "T124",
+        "T134"
+      ],
+      "canonical_name": "robust_residual_obstruction",
+      "semantic_role": "robust non-eliminable residual audit",
+      "diagnostic_codes": [
+        "LIVE_NONELIMINABLE_RESIDUAL_OBSTRUCTS_ROBUST_RELATIVE_V0"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=robust_relative_v0_noneliminable]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "73d80a3be8e1ee97942f304f68a1d91ad1e668c655d487e8894ddd62b3865301",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "a0223e1968693f193c281ab209a68503bf0afed8a7fb376f6eb00bc14ec11bef"
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.002",
+      "primary_theorem_id": "T136",
+      "supporting_theorem_ids": [
+        "T126"
+      ],
+      "canonical_name": "relative_to_absolute_non_promotion",
+      "semantic_role": "relative-to-absolute non-promotion audit",
+      "diagnostic_codes": [
+        "ABSOLUTE_RELATIVE_FIREWALL"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=absolute_v0]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "15ac52baef0a828ad24d200d1c99b5f774bb9824e3ae66fceea71cf6d0272635",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "8eb0c03e79225393a1ad46a0fbbc205f7856a094ec66d38812496ce0f6b62c26"
+    },
+    {
+      "rule_id": "IPEC.RULE.FIREWALL.003",
+      "primary_theorem_id": "T137",
+      "supporting_theorem_ids": [],
+      "canonical_name": "approximation_non_identity",
+      "semantic_role": "approximation-to-identity non-promotion audit",
+      "diagnostic_codes": [
+        "APPROXIMATION_DOES_NOT_ENTAIL_V0_IDENTITY"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=approximation_v0]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        },
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=v0_identity]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "cb193d0dfed6153718fef1e9189c33ef35a0cfa0758da730e81ee5dfd67b4b17",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "2d4d509f98a6c6305786a2349834994edc08f3c855fbc7dfa0bd8d5af9a00961"
+    },
+    {
+      "rule_id": "IPEC.RULE.OBSERVER.002",
+      "primary_theorem_id": "T138",
+      "supporting_theorem_ids": [
+        "T125"
+      ],
+      "canonical_name": "terminal_self_certification_limit",
+      "semantic_role": "same-state terminal self-certification audit",
+      "diagnostic_codes": [
+        "SAME_STATE_SELF_CERTIFICATION_FORBIDDEN"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=terminal_self_certification_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "ce0b7004c27377f29750e0ea136d3064cfeccda9d3463bc3bd473c5dfd20a2ab",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase3.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "678beea25b1dc75aa6b2ee67f9a997ee11292621e17c85547a5e80d7b0264728"
+    },
+    {
+      "rule_id": "IPEC.RULE.ARCHIVE.001",
+      "primary_theorem_id": "T139",
+      "supporting_theorem_ids": [],
+      "canonical_name": "archive_non_guard_export",
+      "semantic_role": "archive current-guard export prohibition",
+      "diagnostic_codes": [
+        "ARCHIVE_CANNOT_EXPORT_CURRENT_GUARD"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=archive_guard_export]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "aebb1470c81703c674936edb9bfc8f344604dd81452ca4516b4996b6f203adea",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "dd70293d00eccb6ca25d28ce15ec47000fcc4011480d7da72b7e7b845178e714"
+    },
+    {
+      "rule_id": "IPEC.RULE.WITNESS.001",
+      "primary_theorem_id": "T140",
+      "supporting_theorem_ids": [],
+      "canonical_name": "independent_witness_conditional_sufficiency",
+      "semantic_role": "independent witness support audit",
+      "diagnostic_codes": [
+        "INDEPENDENT_WITNESS_CERTIFICATE_UNSUPPORTED"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=independent_witness_certificate]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "CONDITIONAL_THEOREM",
+      "conditional": true,
+      "conditional_premises": [
+        "finite FC-1 witness certificate",
+        "resolved external evidence identifiers",
+        "explicit independence policy and non-circularity"
+      ],
+      "statement_sha256": "d304ebc9b96394e4bef4560373cce1f380908744fb26be88093db1e6e0e6ae7a",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "254cfef0405f05ad0030cbcfdbc24fa3b76ab984f4438b73034b5197a0bff1bc"
+    },
+    {
+      "rule_id": "IPEC.RULE.CONTAINMENT.001",
+      "primary_theorem_id": "T141",
+      "supporting_theorem_ids": [],
+      "canonical_name": "no_container",
+      "semantic_role": "NullMark ordinary-containment firewall",
+      "diagnostic_codes": [
+        "V0_ORDINARY_CONTAINS_FORBIDDEN",
+        "CONTAINMENT_REFERENCE_SORT_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=containment]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "6fc052097ee11289e7f0a2fe67179da0e05f39cc0eac9d5d61e0801e6072b833",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "6fd951c82c43814abdcef7a5dc8781c316fdadec94075a7ad8e17b8af828fa7c"
+    },
+    {
+      "rule_id": "IPEC.RULE.BRANCH.001",
+      "primary_theorem_id": "T142",
+      "supporting_theorem_ids": [],
+      "canonical_name": "branch_label_insufficiency",
+      "semantic_role": "branch distinctness-basis audit",
+      "diagnostic_codes": [
+        "BRANCH_LABELS_DO_NOT_PROVE_DISTINCTNESS",
+        "BRANCH_DISTINCTNESS_EVIDENCE_REQUIRED"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=branch_distinctness]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "7cf7b272ad78fcecb58afa0ac951447214e8f99654132f6985b8f4bc8908f3e0",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "7944b48a412c195b1aca4212b2b8e054cc8f005408ae75bb322f10ac8c8a6c67"
+    },
+    {
+      "rule_id": "IPEC.RULE.CARDINALITY.001",
+      "primary_theorem_id": "T143",
+      "supporting_theorem_ids": [],
+      "canonical_name": "cardinality_licensing",
+      "semantic_role": "non-finite cardinality license audit",
+      "diagnostic_codes": [
+        "DEFERRED_CARDINALITY_CERT"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=cardinality_claim]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "a2a610aebba5a9302279a3d64a74258cf4c49f01805fbfa29541118f7d3b4280",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "bdec21d9c16d2dd1cecfbb86b1fac5625bfc0374995a08e159d4cb7566bcf694"
+    },
+    {
+      "rule_id": "IPEC.RULE.DIAGNOSTIC.001",
+      "primary_theorem_id": "T144",
+      "supporting_theorem_ids": [],
+      "canonical_name": "diagnostic_precedence_totality",
+      "semantic_role": "finite diagnostic primary-status replay",
+      "diagnostic_codes": [
+        "DIAGNOSTIC_PRIMARY_STATUS_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=diagnostic_precedence_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "62804e8e051de8c850b24e0088d681d349852daed0ed1c17b96e58270d495218",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase4.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "c7a083029979b79e04845f3297df22a70bb2b635a7bc1e592e1b5125a5851dfe"
+    },
+    {
+      "rule_id": "IPEC.RULE.CANONICAL.001",
+      "primary_theorem_id": "T145",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Canonical serialization determinism",
+      "semantic_role": "canonical serialization audit",
+      "diagnostic_codes": [
+        "CANONICALIZATION_PROFILE_MISMATCH",
+        "CANONICAL_SERIALIZATION_HASH_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=canonical_serialization_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "2df8857445301e8dda38d555647c198437ed9c9f482922f0880c8be7be1b5893",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "3885c54e8c31149ea9af52faf9a7c373c00ca46dbda3d049b50f8bd165a75e0c"
+    },
+    {
+      "rule_id": "IPEC.RULE.CANONICAL.002",
+      "primary_theorem_id": "T146",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Round-trip identity",
+      "semantic_role": "canonical serialize/parse round-trip audit",
+      "diagnostic_codes": [
+        "ROUND_TRIP_IDENTITY_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=round_trip_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "3c453a5aa785c2f52c21720087ddb0f1ed47ed2256dbad87691bd8df6f4d8478",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "4afb78b8c0e6c260a292393e73a21bf00ba5f0a90db2c72c19a64947de8bdb2e"
+    },
+    {
+      "rule_id": "IPEC.RULE.REPLAY.001",
+      "primary_theorem_id": "T147",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Replay determinism",
+      "semantic_role": "pinned replay determinism audit",
+      "diagnostic_codes": [
+        "REPLAY_INPUTS_NOT_PINNED",
+        "REPLAY_NONDETERMINISTIC_RESULT"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=replay_determinism_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "f762e4b5037e39b17724604a05323e91ecba573f41cda648778b1e65c431434e",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "099fbb2b2a9703f6071a483f00669c99e9eaef3a9f5368669775c64d8c4a5a90"
+    },
+    {
+      "rule_id": "IPEC.RULE.MIGRATION.001",
+      "primary_theorem_id": "T148",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Schema migration visibility",
+      "semantic_role": "schema migration visibility audit",
+      "diagnostic_codes": [
+        "HIDDEN_SCHEMA_MIGRATION_COERCION",
+        "SCHEMA_MIGRATION_RECORD_REQUIRED"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=schema_migration_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "7e0d91ab43ca45ec56177e070e4faff0346e912ccae7f1ac7b6b08f917543074",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "ddc463112538f415d24e08a15d7a9001bdef0d92f8c54bcd1e6d1abb0e353d25"
+    },
+    {
+      "rule_id": "IPEC.RULE.PARITY.001",
+      "primary_theorem_id": "T149",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Backend statement correspondence",
+      "semantic_role": "backend statement-hash correspondence audit",
+      "diagnostic_codes": [
+        "BACKEND_STATEMENT_HASH_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=backend_statement_mapping]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "761c82d404861815d936b908ef52ff2d5514f7b62c7672e010dab8d0bb8938e2",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "3af1fff85e278c9b6c52d8e0ad6723b8cbf051b670e3b0d1897bdcf8b9ecd87e"
+    },
+    {
+      "rule_id": "IPEC.RULE.SOUNDNESS.001",
+      "primary_theorem_id": "T150",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Accepted-fragment checker soundness",
+      "semantic_role": "conditional accepted-fragment checker soundness audit",
+      "diagnostic_codes": [
+        "CHECKER_SOUNDNESS_PREMISES_UNPROVED",
+        "CHECKER_PASS_VIOLATES_ACCEPTED_FRAGMENT_SOUNDNESS"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=accepted_fragment_soundness_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "CONDITIONAL_THEOREM",
+      "conditional": true,
+      "conditional_premises": [
+        "PROVED_RULE_LEMMAS",
+        "IMPLEMENTATION_INVARIANTS",
+        "ACCEPTED_FRAGMENT_BOUNDARY"
+      ],
+      "statement_sha256": "1a755ddc81c06562926e634389401eb42e43fe8ea5f53a5792cd1e46a0012906",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase5.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "0eb6f641aaa31ba5788bbb08b6d381b409a74a3660d0cf3e2bf428772e1f697a"
+    },
+    {
+      "rule_id": "IPEC.RULE.EXTENSION.001",
+      "primary_theorem_id": "T151",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Explicit extension provenance",
+      "semantic_role": "post-v1.1 theorem extension provenance audit",
+      "diagnostic_codes": [
+        "EXTENSION_PROVENANCE_RECORD_REQUIRED",
+        "EXTENSION_BASE_CEILING_MISMATCH",
+        "EXTENSION_THEOREM_RANGE_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=theorem_extension_provenance_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "71b249ed11c2d9db6378b5ccbdd868a62321d4ff7d5c60a200b344b965c7042f",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "56b062cd55fe761e007f2215c8b5f6537631fda922adbf72f70d77cd771665b4"
+    },
+    {
+      "rule_id": "IPEC.RULE.VOCABULARY.001",
+      "primary_theorem_id": "T152",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Declared claim-vocabulary closure",
+      "semantic_role": "declared extension claim-vocabulary closure audit",
+      "diagnostic_codes": [
+        "UNDECLARED_EXTENSION_CLAIM_KIND"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=claim_vocabulary_closure_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "3fbe6f0a13dcd52915789ceb436da7ae4cad1c2bcca4f72c1103a7798917033a",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "bac621de0a426cc697c1637405b77b59b9a8c15221e1950657a51e28d6c25971"
+    },
+    {
+      "rule_id": "IPEC.RULE.DIAGNOSTIC.002",
+      "primary_theorem_id": "T153",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Diagnostic envelope determinism",
+      "semantic_role": "canonical diagnostic-envelope determinism audit",
+      "diagnostic_codes": [
+        "DIAGNOSTIC_REPLAY_INPUTS_NOT_PINNED",
+        "DIAGNOSTIC_ENVELOPE_NONDETERMINISTIC"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=diagnostic_envelope_determinism_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "11c2da228164740868dcbad94fd08e073d8eaca1b6c3a6e31fbac6f9267648d6",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "ae557ba0cc9c29e64a9284e31e749b6a4e3c8886aaebea77b9e81927d3b4c276"
+    },
+    {
+      "rule_id": "IPEC.RULE.PROVENANCE.001",
+      "primary_theorem_id": "T154",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Evidence provenance acyclicity",
+      "semantic_role": "finite evidence-provenance acyclicity audit",
+      "diagnostic_codes": [
+        "EVIDENCE_PROVENANCE_CYCLE"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=evidence_provenance_acyclicity_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "58385a599ea3e1854a9536a752b8bf7873c7f5e0fbc3ca3338c8379338cd861c",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "40944a0ef7c0053925360feea3da8fb5c4a50ec32bb28c62d63b403801a0280e"
+    },
+    {
+      "rule_id": "IPEC.RULE.VERSION.001",
+      "primary_theorem_id": "T155",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Version-lock coherence",
+      "semantic_role": "schema/language/checker/semantics version-lock coherence audit",
+      "diagnostic_codes": [
+        "VERSION_LOCK_RECORD_REQUIRED",
+        "VERSION_LOCK_TUPLE_MISMATCH"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=version_lock_coherence_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "PROVED_THEOREM",
+      "conditional": false,
+      "conditional_premises": [],
+      "statement_sha256": "50ff01353da45dc93e4684801ee108cc3c82e1c4e2fc670ec9fbebb96a5986c2",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "468532c208bec8f3199be27aea678ccc3d3be0ad3f152008d636ece61e5c3d66"
+    },
+    {
+      "rule_id": "IPEC.RULE.CONSERVATIVITY.001",
+      "primary_theorem_id": "T156",
+      "supporting_theorem_ids": [],
+      "canonical_name": "Conservative extension non-interference",
+      "semantic_role": "conditional extension non-interference audit",
+      "diagnostic_codes": [
+        "CONSERVATIVE_EXTENSION_PREMISES_UNPROVED",
+        "BASELINE_RESULT_CHANGED_BY_EXTENSION"
+      ],
+      "source_bindings": [
+        {
+          "source_profile": "OSAP_FC1_V1_1_REGISTRY",
+          "selector": "/claims[kind=conservative_extension_audit]",
+          "binding_class": "EXACT_OSAP_CONSTRUCT_BINDING",
+          "evaluation_mode": "DEFERRED_TO_WP4"
+        }
+      ],
+      "claim_class": "CONDITIONAL_THEOREM",
+      "conditional": true,
+      "conditional_premises": [
+        "BASELINE_ONLY_INPUT",
+        "EXTENSION_HANDLER_ISOLATION",
+        "NO_BASELINE_RULE_OVERRIDE"
+      ],
+      "statement_sha256": "5eaaa1c210ee125c70fd5dfdc83fd1f4ccb46b54baa6d4e58086adc5e1cc495a",
+      "statement_hash_class": "UPSTREAM_CANONICAL_HASH",
+      "mapping_status": "BOUND",
+      "binding_owner": "V0-IPEC-0.1-WP3",
+      "canonical_theorem_owner": "V0_OSAP_V1_3_0",
+      "source_release": {
+        "repository": "olegovation-ship-it/v0-osap-formal-core",
+        "ref": "v1.3.0",
+        "commit": "13bf095688bcabd5b090f188e9bd28a16237edeb",
+        "doi": "10.5281/zenodo.21346728",
+        "source_path": "release/v1.3.0/theorem_crosswalk_phase6.json"
+      },
+      "limitations": [
+        "Rule binding identifies the theorem-backed semantic obligation; WP3 does not bind final typed outcomes.",
+        "Adapter production of a DEFERRED obligation is not evidence that the theorem premises hold.",
+        "No checker completeness, proof-term identity, empirical validation, or physical validation is claimed."
+      ],
+      "rule_record_sha256": "afc19380f667ea9c63e4a3babc58697976c8e903f9b2452405d55a7349c8da6b"
+    }
+  ],
+  "records_sha256": "7f11737615d44d321d9a08780b30332865e5a075b7ff920ecfc4b4f7394d96b2"
+}

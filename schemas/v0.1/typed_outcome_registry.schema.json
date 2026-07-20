@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://v0-ipec.example/spec/v0.1/typed_outcome_registry.schema.json",
+  "title": "V0-IPEC Typed Outcome Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "version",
+    "date",
+    "status",
+    "outcome_count",
+    "precedence",
+    "outcomes",
+    "records_sha256"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "V0_IPEC_WP4_TYPED_OUTCOME_REGISTRY"
+    },
+    "contract_id": {
+      "const": "V0-IPEC-0.1"
+    },
+    "version": {
+      "const": "0.1"
+    },
+    "date": {
+      "type": "string"
+    },
+    "status": {
+      "const": "WP4_TYPED_OUTCOMES_BOUND"
+    },
+    "outcome_count": {
+      "const": 8
+    },
+    "precedence": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/typed_outcome_code"
+      }
+    },
+    "outcomes": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "priority",
+          "logical_verdict",
+          "certification_claimed",
+          "trigger_class",
+          "description",
+          "nonclaims"
+        ],
+        "properties": {
+          "code": {
+            "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/typed_outcome_code"
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "logical_verdict": {
+            "enum": [
+              "SATISFIED",
+              "VIOLATED",
+              "INCONCLUSIVE"
+            ]
+          },
+          "certification_claimed": {
+            "type": "boolean"
+          },
+          "trigger_class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nonclaims": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "records_sha256": {
+      "$ref": "https://v0-ipec.example/spec/v0.1/common.schema.json#/$defs/sha256"
+    }
+  }
+}

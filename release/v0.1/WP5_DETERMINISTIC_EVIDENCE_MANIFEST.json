@@ -1,0 +1,39 @@
+{
+  "artifact_id": "V0_IPEC_WP5_DETERMINISTIC_EVIDENCE_MANIFEST",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "state": "WP5_PASS_CI_GRAPH_DEFINED_DETERMINISTIC_MANIFESTS_CLOSED",
+  "files": {
+    "registries/ci_job_catalog.json": "8743ad17a6678acb82844743202c4a53ea20496d2aacc2c33865ea9eefb04d1f",
+    "schemas/v0.1/schema_bundle_manifest.json": "6e393a17ff1194a88f466ec9e7d4842ac63b3bd6f03eff1f6f361b14dc98a9bc",
+    "evidence/WP5_UPSTREAM_PIN_REPORT.json": "683ec5bd1ad2844a1b502ee507a3b566f84679e060424a61963c19bfb4a0e252",
+    "evidence/WP5_OWNERSHIP_REPORT.json": "9fcb057136474c2882b6975e49486bd6f17c43939503b874873a9f62ff9393d0",
+    "evidence/WP5_CROSSWALK_REPORT.json": "d1897ee59265ddf1591886dbc0139945a13fb5442c7807003e72e73b166af8b0",
+    "evidence/WP5_ADAPTER_REPLAY_REPORT.json": "7c1b3340fb222836de9b4b9ae0f76fb8a7e76ffc3648426c50ea492f35d86cfd",
+    "evidence/WP5_NEGATIVE_CAMPAIGN_REPORT.json": "a0e8da0f115072d0fb50283102520d04f60ef9098a2363c367864aca68483122",
+    "evidence/WP5_DETERMINISTIC_REPLAY_RUN_1.json": "913f7f639cf40cb166a00a3555f204768b2bebc28b2171db313318df8600d386",
+    "evidence/WP5_DETERMINISTIC_REPLAY_RUN_2.json": "6e31842ebec0341c0b0aea8b6f92f4dbe997e57e0a87ee648450d5b7ce6fdfe6",
+    "evidence/WP5_DETERMINISTIC_REPLAY_COMPARISON.json": "bac375a81b959aa70d6463c6f1a6afcd851cbd02a0fee022e3c5f414a5be53ae",
+    "evidence/WP5_SOURCE_SNAPSHOT.json": "600f9e7c6c0ae7112754299284dd7a1157cae535f2273d39ee04bcd82022b5df",
+    "audit/WP5_ACCEPTANCE_GATES.json": "453e6ab773f7e0f870c889b20f9ebb7680db17a23f18c5187205b8de74748b18",
+    "WP5_CI_INTEGRATION_AND_DETERMINISTIC_EVIDENCE_MANIFESTS_SPECIFICATION.md": "cfe8e43b0144ee1cf094feb5db63ab23322a429cdb0a36061f3bc38e73317270"
+  },
+  "metrics": {
+    "theorem_owners": 36,
+    "theorem_rule_bindings": 36,
+    "validator_rules": 36,
+    "adapter_bindings": 40,
+    "typed_outcomes": 8,
+    "procedural_bindings": 11,
+    "negative_fixtures": 24,
+    "negative_fixtures_rejected": 24,
+    "conditional_theorems": [
+      "T140",
+      "T150",
+      "T156"
+    ]
+  },
+  "deterministic_result_sha256": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b",
+  "frozen_upstreams_modified": false
+}

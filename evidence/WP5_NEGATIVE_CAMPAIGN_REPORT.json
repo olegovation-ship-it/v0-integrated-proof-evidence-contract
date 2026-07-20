@@ -1,0 +1,17 @@
+{
+  "artifact_id": "V0_IPEC_WP5_NEGATIVE_CAMPAIGN_REPORT",
+  "status": "PASS",
+  "negative_fixture_count": 24,
+  "negative_fixtures_rejected": 24,
+  "typed_outcomes_exercised": [
+    "BACKEND_PARITY_FAILURE",
+    "CERTIFIED",
+    "INCONCLUSIVE_UNSUPPORTED_FRAGMENT",
+    "REJECTED_BRANCH_PROMOTION",
+    "REJECTED_DLE_FAILURE",
+    "REJECTED_GUARD_FAILURE",
+    "REJECTED_LIVE_RESIDUAL",
+    "REJECTED_NONELIM_OBSTRUCTION"
+  ],
+  "source_report_sha256": "a4cb616a853e38ce6a2cf718c131d52306c4d3ed003ba1c90225be9efbee1f60"
+}

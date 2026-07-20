@@ -1,0 +1,45 @@
+{
+  "artifact_id": "V0_IPEC_WP6_WP5_BASELINE_REFERENCE",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "predecessor": "WP5_CI_INTEGRATION_AND_DETERMINISTIC_EVIDENCE_MANIFESTS",
+  "wp5_package_filename": "V0_Integrated_Proof_Evidence_Contract_v0.1_WP5_CI_Integration_and_Deterministic_Evidence_Manifests_Patch_2026-07-19_package.zip",
+  "wp5_package_sha256": "687fc80455c4a04ed434d4cef64e9b16e9504f3ea7a6afc3525fc516fdd129f6",
+  "baseline_files": {
+    "WP5_CI_INTEGRATION_AND_DETERMINISTIC_EVIDENCE_MANIFESTS_SPECIFICATION.md": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_CI_INTEGRATION_AND_DETERMINISTIC_EVIDENCE_MANIFESTS_SPECIFICATION.md",
+      "sha256": "cfe8e43b0144ee1cf094feb5db63ab23322a429cdb0a36061f3bc38e73317270"
+    },
+    "WP5_AUDIT_REPORT.md": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_AUDIT_REPORT.md",
+      "sha256": "edd78777e375e38ae0ad721d28d8c76aab2d187827e2014f6e75f0cc2ba11828"
+    },
+    "WP5_ACCEPTANCE_GATES.json": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_ACCEPTANCE_GATES.json",
+      "sha256": "453e6ab773f7e0f870c889b20f9ebb7680db17a23f18c5187205b8de74748b18"
+    },
+    "WP5_CI_INTEGRATION_MANIFEST.json": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_CI_INTEGRATION_MANIFEST.json",
+      "sha256": "2d74393f5cc6536165abdf9ee831e14b7caf176fb52215705dd9e50932133f75"
+    },
+    "WP5_DETERMINISTIC_EVIDENCE_MANIFEST.json": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_DETERMINISTIC_EVIDENCE_MANIFEST.json",
+      "sha256": "ba2591db89f17493445e010aa59fe5ada0981fab5d1cbd98d6c12fd3e8676596"
+    },
+    "WP5_DETERMINISTIC_REPLAY_COMPARISON.json": {
+      "path": "baseline/wp5_predecessor_baseline/WP5_DETERMINISTIC_REPLAY_COMPARISON.json",
+      "sha256": "bac375a81b959aa70d6463c6f1a6afcd851cbd02a0fee022e3c5f414a5be53ae"
+    },
+    "ci_job_catalog.json": {
+      "path": "baseline/wp5_predecessor_baseline/ci_job_catalog.json",
+      "sha256": "8743ad17a6678acb82844743202c4a53ea20496d2aacc2c33865ea9eefb04d1f"
+    },
+    "gate2-integration.yml": {
+      "path": "baseline/wp5_predecessor_baseline/gate2-integration.yml",
+      "sha256": "dd731f7b8c60adc1581bbd02468423827aa9a818ee35dfa8d419b5f12d78d4b9"
+    }
+  },
+  "frozen": true,
+  "mutation_authorized": false
+}

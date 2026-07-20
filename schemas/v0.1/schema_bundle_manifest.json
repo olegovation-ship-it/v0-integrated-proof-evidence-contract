@@ -1,0 +1,111 @@
+{
+  "artifact_id": "V0_IPEC_WP6_SCHEMA_BUNDLE",
+  "contract_id": "V0-IPEC-0.1",
+  "version": "0.1",
+  "date": "2026-07-19",
+  "baseline_wp5_schema_count": 21,
+  "wp6_added_schema_count": 4,
+  "schema_count": 25,
+  "files": {
+    "adapter_binding_registry.schema.json": {
+      "sha256": "b42537edef911d77ca3204bbb0296827ec89a4fd40f10617aa3b3a5664745e35",
+      "id": "https://v0-ipec.example/spec/v0.1/adapter_binding_registry.schema.json"
+    },
+    "adapter_result.schema.json": {
+      "sha256": "175de1e48b57d80cfe435d0c0d13dddc96286f45b9137abd556ec044dae55d18",
+      "id": "https://v0-ipec.example/spec/v0.1/adapter_result.schema.json"
+    },
+    "campaign_report.schema.json": {
+      "sha256": "9dc9ffa583215fbab7e6c866ee874880425255ac44a93c95c97571041040c693",
+      "id": "https://v0-ipec.example/spec/v0.1/campaign_report.schema.json"
+    },
+    "canonical_envelope.schema.json": {
+      "sha256": "9b2d4ee210946960f5b8a7b85cf0af92994ecb1d43c286a749f333ffffb68442",
+      "id": "https://v0-ipec.example/spec/v0.1/canonical_envelope.schema.json"
+    },
+    "canonicalization_profile.schema.json": {
+      "sha256": "44eb66646b3bdc65f9d620f9b449978708acd93d9b1282003fac7f98295db4d1",
+      "id": "https://v0-ipec.example/spec/v0.1/canonicalization_profile.schema.json"
+    },
+    "certification_result.schema.json": {
+      "sha256": "7a1b8611898a1fadbc1a22fe04d557a1c56538b2f66ab306de77d7c63f63edb5",
+      "id": "https://v0-ipec.example/spec/v0.1/certification_result.schema.json"
+    },
+    "ci_job_catalog.schema.json": {
+      "sha256": "b1ce03ec983b264e91780d638101feb7787bb63a5c1f8ba2f4a44037b2eec60c",
+      "id": "https://v0-ipec.example/spec/v0.1/ci_job_catalog.schema.json"
+    },
+    "common.schema.json": {
+      "sha256": "72c40c17a15746502740df793d88e9afdf3e9924673ae53be0407aafb5cb0ad9",
+      "id": "https://v0-ipec.example/spec/v0.1/common.schema.json"
+    },
+    "diagnostic_envelope.schema.json": {
+      "sha256": "f53ab2b9bfa144d8597c04092faba7e1af50b09279eeffc4743023b3a962b1ed",
+      "id": "https://v0-ipec.example/spec/v0.1/diagnostic_envelope.schema.json"
+    },
+    "evidence_manifest.schema.json": {
+      "sha256": "e8adc7af9a2cce1648a83848b2109e43b9601290979e42e34eceace6bae6949c",
+      "id": "https://v0-ipec.example/spec/v0.1/evidence_manifest.schema.json"
+    },
+    "evidence_reference.schema.json": {
+      "sha256": "65d8e4f84373aac7d1209461befa89e5a586cc3dd7a92aab56c9338c06604bca",
+      "id": "https://v0-ipec.example/spec/v0.1/evidence_reference.schema.json"
+    },
+    "gate2_acceptance_gates.schema.json": {
+      "sha256": "5e784377f727bf3024870c309862576dacbcbf94a0399f0f0f3167aeda279937",
+      "id": "https://v0-ipec.example/spec/v0.1/gate2_acceptance_gates.schema.json"
+    },
+    "gate2_audit_result.schema.json": {
+      "sha256": "08d453d6ed9507b47ad90ee3662f1815701488ad3bacbecde6f92cffe83794e0",
+      "id": "https://v0-ipec.example/spec/v0.1/gate2_audit_result.schema.json"
+    },
+    "gate2_closure_record.schema.json": {
+      "sha256": "18dbbb4f77ab314c774fb12405ba797d4facf122ee4f5f9cf76670f63728ccf0",
+      "id": "https://v0-ipec.example/spec/v0.1/gate2_closure_record.schema.json"
+    },
+    "hosted_ci_evidence.schema.json": {
+      "sha256": "fc73d792a409b6a69fcb72b3656d8d87831533cbb286cdb2061452998ce8139e",
+      "id": "https://v0-ipec.example/spec/v0.1/hosted_ci_evidence.schema.json"
+    },
+    "integration_request.schema.json": {
+      "sha256": "a995b2f5033456dcfb376e80cee85d18a74724afc6db285b8394256e7809540a",
+      "id": "https://v0-ipec.example/spec/v0.1/integration_request.schema.json"
+    },
+    "negative_fixture.schema.json": {
+      "sha256": "f7f71c034cfd7d6790c8a984baa1014d56e27af25be95669dbe09e8eea70a930",
+      "id": "https://v0-ipec.example/spec/v0.1/negative_fixture.schema.json"
+    },
+    "outcome_binding_registry.schema.json": {
+      "sha256": "18451298eafd92f7767d00d06f1da1d18e8e10e0638c46f8176a2b5dd4b7157a",
+      "id": "https://v0-ipec.example/spec/v0.1/outcome_binding_registry.schema.json"
+    },
+    "procedural_diagnostic_registry.schema.json": {
+      "sha256": "e1d1d6e601d446a6a89a535891fc5ea0dc8588f215f63239623f01e92a2d043f",
+      "id": "https://v0-ipec.example/spec/v0.1/procedural_diagnostic_registry.schema.json"
+    },
+    "proof_obligation.schema.json": {
+      "sha256": "0a1aa65b2d23907ced22d0a35b06a6cca2de1ccb1dda37a18ac3dd2b24f3dd39",
+      "id": "https://v0-ipec.example/spec/v0.1/proof_obligation.schema.json"
+    },
+    "replay_comparison.schema.json": {
+      "sha256": "e2da0d0edd5d0d8b7ff7843cd18e2fd786ae1bef3d5c79f5322d3702003bfd28",
+      "id": "https://v0-ipec.example/spec/v0.1/replay_comparison.schema.json"
+    },
+    "replay_report.schema.json": {
+      "sha256": "5dff906f7adf3b6b628cad763f884c1f59ee1263c1b85d2d4fd3bcd578f14d4a",
+      "id": "https://v0-ipec.example/spec/v0.1/replay_report.schema.json"
+    },
+    "theorem_rule_crosswalk.schema.json": {
+      "sha256": "5f9c2a60268ac1a5cc7307f4f64191b0b2ba322a2f3817af79f4632e6d116f59",
+      "id": "https://v0-ipec.example/spec/v0.1/theorem_rule_crosswalk.schema.json"
+    },
+    "typed_outcome_registry.schema.json": {
+      "sha256": "d40f3bb88019156ccdfaf854b188fed8b86e89168e16efa0ede7971d932f2d8f",
+      "id": "https://v0-ipec.example/spec/v0.1/typed_outcome_registry.schema.json"
+    },
+    "validator_rule_registry.schema.json": {
+      "sha256": "5e9095a225d0c8668ff6b540a5652a760f4e49ebdf08fa47a27e3d773d3cb38b",
+      "id": "https://v0-ipec.example/spec/v0.1/validator_rule_registry.schema.json"
+    }
+  }
+}
