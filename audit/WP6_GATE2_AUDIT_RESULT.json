@@ -2,15 +2,15 @@
   "artifact_id": "V0_IPEC_WP6_GATE2_AUDIT_RESULT",
   "contract_id": "V0-IPEC-0.1",
   "version": "0.1",
-  "date": "2026-07-19",
-  "status": "HOLD",
-  "decision": "HOLD_FOR_HOSTED_CI",
-  "gate2_closed": false,
-  "closure_eligible": false,
+  "date": "2026-07-20",
+  "status": "PASS",
+  "decision": "CLOSE_GATE2",
+  "gate2_closed": true,
+  "closure_eligible": true,
   "gate_summary": {
     "total": 20,
-    "pass": 19,
-    "pending": 1,
+    "pass": 20,
+    "pending": 0,
     "fail": 0
   },
   "metrics": {
@@ -34,7 +34,7 @@
     ],
     "local_replay_digest": "f7cb3a0ced2f396ca59ebb6a02ff165589b3eb70761dbf8304dbd47e5555982b"
   },
-  "single_blocker": "G2-20: authentic green GitHub Actions evidence for four hosted upstream replay jobs is not recorded.",
-  "audit_payload_sha256": "25d7e370930e73e2120e44a18418695567b91cb1b74ac481e615479fb308fd04",
+  "single_blocker": null,
+  "audit_payload_sha256": "0a1a286c838c885d9d3ff4e9fed7cff8704d79ae95ee352025480de794ea0ba6",
   "frozen_upstreams_modified": false
 }

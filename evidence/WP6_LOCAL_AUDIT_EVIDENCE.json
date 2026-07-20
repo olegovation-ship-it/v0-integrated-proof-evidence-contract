@@ -2,7 +2,7 @@
   "artifact_id": "V0_IPEC_WP6_LOCAL_AUDIT_EVIDENCE",
   "contract_id": "V0-IPEC-0.1",
   "version": "0.1",
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "status": "PASS",
   "metrics": {
     "theorem_owners": 36,
@@ -27,6 +27,6 @@
   },
   "wp5_predecessor_sha256": "687fc80455c4a04ed434d4cef64e9b16e9504f3ea7a6afc3525fc516fdd129f6",
   "local_checks_passed": 19,
-  "hosted_checks_executed": 0,
+  "hosted_checks_executed": 4,
   "frozen_upstreams_modified": false
 }

@@ -2,43 +2,43 @@
   "artifact_id": "V0_IPEC_WP6_HOSTED_CI_EVIDENCE",
   "contract_id": "V0-IPEC-0.1",
   "version": "0.1",
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "repository": "olegovation-ship-it/v0-integrated-proof-evidence-contract",
   "branch": "gate2-development",
   "workflow": "V0 IPEC Gate 2 CI Integration",
-  "run_id": null,
-  "run_url": null,
-  "head_sha": null,
-  "overall_status": "PENDING",
-  "evidence_source": "NOT_RECORDED",
+  "run_id": 29731443742,
+  "run_url": "https://github.com/olegovation-ship-it/v0-integrated-proof-evidence-contract/actions/runs/29731443742",
+  "head_sha": "f1f5dc19a394f29a5f2db6ad4f0bf6ac960d3a81",
+  "overall_status": "PASS",
+  "evidence_source": "GITHUB_ACTIONS",
   "jobs": [
     {
       "job_id": "j07_upstream_validator_replay",
       "name": "07 Upstream Validator replay",
-      "status": "PENDING",
-      "job_id_numeric": null,
-      "artifact_sha256": null
+      "status": "PASS",
+      "job_id_numeric": 88316798766,
+      "artifact_sha256": "c6bf895451262c14fd1e92311c903c035e7b0cb795b48346b96d1f2954177363"
     },
     {
       "job_id": "j08_upstream_osap_python_replay",
       "name": "08 Upstream OSAP Python replay",
-      "status": "PENDING",
-      "job_id_numeric": null,
-      "artifact_sha256": null
+      "status": "PASS",
+      "job_id_numeric": 88316799513,
+      "artifact_sha256": "c6bf895451262c14fd1e92311c903c035e7b0cb795b48346b96d1f2954177363"
     },
     {
       "job_id": "j09_upstream_osap_lean_replay",
       "name": "09 Upstream OSAP Lean replay",
-      "status": "PENDING",
-      "job_id_numeric": null,
-      "artifact_sha256": null
+      "status": "PASS",
+      "job_id_numeric": 88316799405,
+      "artifact_sha256": "c6bf895451262c14fd1e92311c903c035e7b0cb795b48346b96d1f2954177363"
     },
     {
       "job_id": "j10_upstream_osap_coq_replay",
       "name": "10 Upstream OSAP Coq replay",
-      "status": "PENDING",
-      "job_id_numeric": null,
-      "artifact_sha256": null
+      "status": "PASS",
+      "job_id_numeric": 88316799401,
+      "artifact_sha256": "c6bf895451262c14fd1e92311c903c035e7b0cb795b48346b96d1f2954177363"
     }
   ]
 }

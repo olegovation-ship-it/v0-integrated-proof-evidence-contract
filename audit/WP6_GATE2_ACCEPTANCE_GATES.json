@@ -2,11 +2,11 @@
   "artifact_id": "V0_IPEC_WP6_GATE2_ACCEPTANCE_GATES",
   "contract_id": "V0-IPEC-0.1",
   "version": "0.1",
-  "date": "2026-07-19",
-  "status": "HOLD",
+  "date": "2026-07-20",
+  "status": "PASS",
   "gate_count": 20,
-  "pass_count": 19,
-  "pending_count": 1,
+  "pass_count": 20,
+  "pending_count": 0,
   "fail_count": 0,
   "gates": [
     {
@@ -171,11 +171,11 @@
     {
       "gate_id": "G2-20",
       "requirement": "Hosted Validator, OSAP Python, OSAP Lean 4, and OSAP Coq replay jobs are green",
-      "status": "PENDING_EXTERNAL_EXECUTION",
+      "status": "PASS",
       "evidence": [
         "evidence/WP6_HOSTED_CI_EVIDENCE_INTAKE_TEMPLATE.json"
       ]
     }
   ],
-  "gate2_closed": false
+  "gate2_closed": true
 }

@@ -2,17 +2,12 @@
   "artifact_id": "V0_IPEC_WP6_GATE2_CLOSURE_RECORD",
   "contract_id": "V0-IPEC-0.1",
   "version": "0.1",
-  "date": "2026-07-19",
-  "decision": "HOLD_FOR_HOSTED_CI",
-  "gate2_closed": false,
-  "closure_authorized": false,
-  "reason": "Nineteen local and structural gates pass; closure is withheld until authentic hosted replay evidence is supplied.",
-  "required_next_evidence": [
-    "GitHub Actions run ID and URL",
-    "Exact integration head SHA",
-    "PASS status for j07, j08, j09, and j10",
-    "Downloaded workflow artifact hash or equivalent immutable evidence"
-  ],
+  "date": "2026-07-20",
+  "decision": "CLOSE_GATE2",
+  "gate2_closed": true,
+  "closure_authorized": true,
+  "reason": "All Gate 2 acceptance conditions are satisfied.",
+  "required_next_evidence": [],
   "release_actions": {
     "tag_created": false,
     "github_release_created": false,

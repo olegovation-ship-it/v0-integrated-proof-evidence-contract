@@ -1,5 +1,9 @@
 # Status and non-claims
 
-Status: `WP6_AUDIT_COMPLETE / LOCAL_GATES_19_OF_19_PASS / HOSTED_GATE_1_PENDING / GATE2_CLOSURE_HOLD`.
+Status: `GATE2_CLOSED / ACCEPTANCE_GATES_20_OF_20_PASS / HOSTED_CI_VERIFIED / CLOSURE_AUTHORIZED`.
 
-The package does not claim that a GitHub Actions workflow ran merely because a workflow file exists. Gate 2 is not closed until authentic evidence for jobs j07–j10 is recorded and the audit is rebuilt. No frozen upstream, DOI, release, or submitted Paper B baseline is modified. CI success is not peer review, checker completeness, empirical confirmation, physical validation, or proof-term identity.
+Authentic GitHub Actions evidence is recorded for the Validator, OSAP Python, OSAP Lean 4, and OSAP Coq replay jobs at integration head `f1f5dc19a394f29a5f2db6ad4f0bf6ac960d3a81`.
+
+No frozen upstream release, source tag, DOI record, submitted Paper B baseline, GitHub Release, or Zenodo record is modified.
+
+CI success is not peer review, empirical confirmation, physical validation, proof-term identity, semantic equivalence, or checker completeness.

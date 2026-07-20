@@ -1,8 +1,10 @@
-WP6 PRE-FLIGHT: AUDIT PASS / CLOSURE HOLD
+WP6 PRE-FLIGHT: AUDIT PASS / GATE 2 CLOSED
 WP5 predecessor verification: PASS
 JSON Schema bundle: 25/25
-Gate 2 local and structural gates: 19/19 PASS
-Hosted upstream replay gate: 1 PENDING_EXTERNAL_EXECUTION
+Gate 2 acceptance gates: 20/20 PASS
+Hosted upstream replay jobs: 4/4 PASS
+GitHub Actions run: 29731443742
+Integration head: f1f5dc19a394f29a5f2db6ad4f0bf6ac960d3a81
 Theorem ownership: 36/36; collisions 0
 Theorem-rule crosswalk: 36/36; unmapped 0
 Adapter bindings: 40
@@ -10,6 +12,9 @@ Typed outcomes: 8/8
 Procedural bindings: 11/11
 Negative fixtures: 24/24
 Deterministic local replay: 2/2 identical
-Regression suite: 33/33 PASS
+IPEC WP6 regression suite: 18/18 PASS
+SHA-256 ledger verification: PASS
 Frozen upstream mutation: NONE
-Gate 2 closed: NO
+Gate 2 closed: YES
+Closure authorized: YES
+Release or DOI action authorized: NO

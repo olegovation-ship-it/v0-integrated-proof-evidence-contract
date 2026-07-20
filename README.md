@@ -1,13 +1,15 @@
-# V0 Integrated Proof-Evidence Contract — WP6
+# V0 Integrated Proof-Evidence Contract - Gate 2 Closure
 
-WP6 is the final Gate 2 audit and closure-decision package. The standalone audit passes 19 of 20 gates and deliberately withholds closure until authentic green GitHub Actions evidence is recorded for the four hosted upstream replay jobs.
+V0-IPEC v0.1 integrates the frozen V0 Validator Core v0.12 and V0 OSAP Formal Core v1.3.0 evidence surfaces without modifying either upstream release or the submitted Paper B baseline.
 
-Local verification:
+## Gate 2 status
 
-```bash
-PYTHONPATH=checker python scripts/build_wp6_schema_manifest.py --check
-PYTHONPATH=checker python scripts/build_wp6_gate2_audit.py --check
-PYTHONPATH=checker python scripts/verify_wp6_gate2_audit.py --allow-pending
-PYTHONPATH=checker pytest -q
-python scripts/verify_sha256s.py
-```
+- Decision: `CLOSE_GATE2`
+- Acceptance gates: `20/20 PASS`
+- Hosted CI: `PASS`
+- GitHub Actions run: `29731443742`
+- Verified integration head: `f1f5dc19a394f29a5f2db6ad4f0bf6ac960d3a81`
+- Gate 2 closed: `true`
+- Closure authorized: `true`
+
+Gate 2 closure creates no tag, GitHub Release, Zenodo publication, DOI mutation, or modification of a frozen upstream.
